@@ -11,29 +11,63 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
-            <section className="bg-gradient-to-b from-blue-50 to-white py-20 px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-                        Hitta rätt a-kassa för ditt yrke
-                    </h1>
-                    <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                        Skriv in ditt yrke eller välj det i listan så matchar vi dig med den
-                        a-kassa som brukar passa bäst.
-                    </p>
-                    <Search />
-                    <div className="mt-8 flex justify-center gap-4">
-                        <Link
-                            href="#alla-akassor"
-                            className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors"
-                        >
-                            Se alla a-kassor
-                        </Link>
+            <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
+                {/* Video Background */}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-black/50 z-10" /> {/* Overlay */}
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/hero-poster.jpg"
+                        className="h-full w-full object-cover"
+                    >
+                        <source src="/hero.mp4" type="video/mp4" />
+                        {/* Fallback for mobile/no-video support */}
+                        <div
+                            className="h-full w-full bg-cover bg-center bg-no-repeat"
+                            style={{
+                                backgroundImage: 'url("/hero-poster.jpg")',
+                            }}
+                        />
+                    </video>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
+                            Hitta rätt a-kassa för ditt yrke
+                        </h1>
+                        <p className="text-xl sm:text-2xl text-gray-100 mb-10 max-w-2xl mx-auto drop-shadow-md">
+                            Vi matchar alla Sveriges a-kassor mot typiska yrken så att du kan känna dig trygg.
+                        </p>
+
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-2xl border border-white/20 mb-8">
+                            <Search />
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <Link
+                                href="#popular-occupations"
+                                className="px-8 py-4 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-500 transition-all transform hover:scale-105"
+                            >
+                                Kom igång
+                            </Link>
+                            <Link
+                                href="#jamfor"
+                                className="px-8 py-4 bg-white/20 backdrop-blur-md text-white font-bold rounded-lg shadow-lg hover:bg-white/30 transition-all border border-white/30"
+                            >
+                                Jämför a-kassor
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Popular Professions Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            <section id="popular-occupations" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -63,7 +97,7 @@ export default function Home() {
 
             {/* All A-kassor Section */}
             <section
-                id="alla-akassor"
+                id="jamfor"
                 className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50"
             >
                 <div className="max-w-7xl mx-auto">
