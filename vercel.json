@@ -2,15 +2,15 @@
     "version": 2,
     "builds": [
         {
-            "src": "alladomstolar/package.json",
+            "src": "blazing-eclipse/package.json",
             "use": "@vercel/next"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "alladomstolar/$1"
+            "dest": "blazing-eclipse/$1"
         }
     ],
-    "rootDirectory": "alladomstolar"
+    "rootDirectory": "blazing-eclipse"
 }
