@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "alladomstolar/package.json",
+            "use": "@vercel/next"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "alladomstolar/$1"
+        }
+    ],
+    "rootDirectory": "alladomstolar"
+}
