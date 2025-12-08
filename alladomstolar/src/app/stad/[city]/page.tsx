@@ -1,4 +1,4 @@
-import { courts } from "@/data/courts";
+import { courts } from "../../../data/courts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";

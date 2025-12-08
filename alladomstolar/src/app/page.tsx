@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { courts } from "@/data/courts";
+import { courts } from "../data/courts";
 
 export default function Home() {
   const [search, setSearch] = useState("");

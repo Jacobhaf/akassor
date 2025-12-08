@@ -1,4 +1,4 @@
-import { Court } from "@/types";
+import { Court } from "../types";
 
 export const courts: Court[] = [
     // --- Tingsrätter ---
