@@ -66,6 +66,12 @@ export default function Footer() {
                                 </Link>
                             </li>
 
+                            <li>
+                                <Link href="/artiklar" className="group flex items-center text-gray-300 hover:text-white transition-colors">
+                                    <span className="h-px w-0 bg-blue-400 mr-0 transition-all group-hover:w-4 group-hover:mr-2"></span>
+                                    <span>Artiklar & Guider</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
