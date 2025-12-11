@@ -3,9 +3,9 @@ import Image from "next/image";
 import AkassaComparison from "@/components/comparison/AkassaComparison";
 
 export const metadata: Metadata = {
-    title: "Jämför a-kassor – hitta bästa a-kassan för ditt yrke",
+    title: "Jämför a-kassor 2025 – hitta bästa a-kassan | Välja A-kassa",
     description:
-        "Jämför a-kassor och hitta den a-kassa som passar ditt yrke bäst. Se avgifter, handläggningstider, villkor och nya regler från 2025. En komplett guide för att välja rätt a-kassa.",
+        "Jämför a-kassor och hitta den som passar ditt yrke bäst. Se avgifter, handläggningstider, villkor och regler för 2025. Din guide till rätt a-kassa.",
 };
 
 export default function JamforPage() {

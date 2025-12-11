@@ -8,10 +8,10 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Jämför alla Sveriges A-kassor | Välja A-kassa",
-    description: "Jämför Sveriges alla a-kassor och hitta rätt kassa för ditt yrke. Snabb jämförelse, tydliga rekommendationer och uppdaterad information.",
+    title: "Jämför alla Sveriges A-kassor 2025 | Välja A-kassa",
+    description: "Jämför Sveriges alla a-kassor och hitta rätt kassa för ditt yrke. Snabb jämförelse, tydliga rekommendationer och uppdaterad information för 2025.",
     openGraph: {
-        title: "Jämför alla Sveriges A-kassor | Välja A-kassa",
+        title: "Jämför alla Sveriges A-kassor 2025 | Välja A-kassa",
         description: "Jämför Sveriges alla a-kassor och hitta rätt kassa för ditt yrke. Snabb jämförelse, tydliga rekommendationer och uppdaterad information.",
         url: "https://www.valjaakassa.se",
         images: [
