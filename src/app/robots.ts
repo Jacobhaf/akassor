@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://akassa-portal-v2-wvsoh22w7-jacobhafs-projects.vercel.app/sitemap.xml",
+        sitemap: "https://www.valjaakassa.se/sitemap.xml",
     };
 }
