@@ -10,7 +10,7 @@ interface Props {
     initialCount?: number;
 }
 
-export default function ExpandableYrkenList({ yrken, initialCount = 20 }: Props) {
+export default function ExpandableYrkenList({ yrken, initialCount = 10 }: Props) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     if (yrken.length === 0) return null;

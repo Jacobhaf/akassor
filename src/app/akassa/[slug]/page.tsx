@@ -172,7 +172,7 @@ export default function AkassaPage({ params }: Props) {
                                 är chansen stor att {akassa.name} är rätt a-kassa för dig.
                             </p>
                             {relatedYrken.length > 0 && (
-                                <ExpandableYrkenList yrken={relatedYrken} initialCount={20} />
+                                <ExpandableYrkenList yrken={relatedYrken} initialCount={10} />
                             )}
                         </div>
                     </section>
