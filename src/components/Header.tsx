@@ -65,6 +65,7 @@ export default function Header() {
                     <NavLink href="/#jamfor" active={isActive("/#jamfor")}>A-kassor</NavLink>
                     <NavLink href="/yrken" active={isActive("/yrken")}>Yrken</NavLink>
                     <NavLink href="/inkomstforsakring" active={isActive("/inkomstforsakring")}>Inkomstförsäkring</NavLink>
+                    <NavLink href="/artiklar" active={isActive("/artiklar")}>Artiklar</NavLink>
                 </nav>
 
                 {/* Desktop CTA */}
