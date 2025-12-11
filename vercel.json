@@ -1,16 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "blazing-eclipse/package.json",
-            "use": "@vercel/next"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "blazing-eclipse/$1"
-        }
-    ],
-    "rootDirectory": "blazing-eclipse"
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_GA_MEASUREMENT_ID": "G-XXXXXXXXXX"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }

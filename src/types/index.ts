@@ -1,3 +1,5 @@
+export type EmployerType = "kommun_region" | "privat_borsnoterat" | "myndighet" | "eget_foretag";
+
 export interface Akassa {
     id: string;
     name: string;
@@ -9,6 +11,12 @@ export interface Akassa {
     primaryIndustries: string[];
     membershipFee: string;
     exampleJobs: string[];
+    // New fields for comparison module
+    members: number;
+    pricePerMonth: number;
+    employerTypes: EmployerType[];
+    partner: boolean;
+    maxCompPerMonth: number;
 }
 
 export interface Yrke {
@@ -16,4 +24,5 @@ export interface Yrke {
     name: string;
     searchPhrase: string;
     recommendedAkassaId: string;
+    image?: string;
 }
