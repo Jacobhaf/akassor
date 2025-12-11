@@ -14,7 +14,7 @@ function NavLink({ href, children, active }: { href: string; children: React.Rea
         <Link
             href={href}
             className={cn(
-                "relative text-base font-medium transition-colors hover:text-white",
+                "relative text-sm font-medium transition-colors hover:text-white",
                 active ? "text-white" : "text-blue-200/80"
             )}
         >
@@ -60,7 +60,7 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-10">
+                <nav className="hidden md:flex items-center gap-6">
                     <NavLink href="/" active={isActive("/")}>Hem</NavLink>
                     <NavLink href="/#jamfor" active={isActive("/#jamfor")}>A-kassor</NavLink>
                     <NavLink href="/yrken" active={isActive("/yrken")}>Yrken</NavLink>
