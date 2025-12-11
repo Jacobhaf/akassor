@@ -145,6 +145,48 @@ export default function YrkePage({ params }: Props) {
                         </div>
                     </section>
 
+                    {/* Image Section */}
+                    <div className="flex flex-col items-center my-8">
+                        <div className="relative w-full max-w-md aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                            {(() => {
+                                // Simple logic to pick an image based on profession category keywords
+                                const name = yrke.name.toLowerCase();
+                                let imagePath = "/assets/images/professions/office_1.png"; // Default
+
+                                if (name.includes("läkare") || name.includes("sjuksköterska") || name.includes("vård") || name.includes("tand") || name.includes("medic")) {
+                                    imagePath = "/assets/images/professions/healthcare_1.png";
+                                } else if (name.includes("snickare") || name.includes("bygg") || name.includes("hantverk") || name.includes("elektriker") || name.includes("målar")) {
+                                    imagePath = "/assets/images/professions/construction_1.png";
+                                } else if (name.includes("chaufför") || name.includes("förare") || name.includes("transport") || name.includes("pilot")) {
+                                    imagePath = "/assets/images/professions/transport_1.png";
+                                } else if (name.includes("lärare") || name.includes("pedagog") || name.includes("skol") || name.includes("utbild")) {
+                                    imagePath = "/assets/images/professions/education_1.png";
+                                } else if (name.includes("säljare") || name.includes("butik") || name.includes("frisör") || name.includes("servering") || name.includes("kock")) {
+                                    imagePath = "/assets/images/professions/retail_1.png";
+                                } else if (name.includes("ingenjör") || name.includes("mekan") || name.includes("industri") || name.includes("montör")) {
+                                    imagePath = "/assets/images/professions/industrial_1.png";
+                                } else {
+                                    // Rotate between office images based on name length
+                                    const officeImages = ["office_1.png", "office_2.png", "office_3.png", "office_4.png"];
+                                    const index = name.length % officeImages.length;
+                                    imagePath = `/assets/images/professions/${officeImages[index]}`;
+                                }
+
+                                return (
+                                    <Image
+                                        src={imagePath}
+                                        alt={`Person som arbetar som ${yrke.name}`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                );
+                            })()}
+                        </div>
+                        <p className="text-sm text-gray-500 mt-2 italic">
+                            {yrke.name} bästa A-kassan
+                        </p>
+                    </div>
+
                     {/* Short Answer */}
                     <section>
                         <h2 className="text-xl font-bold text-gray-900 mb-3">
