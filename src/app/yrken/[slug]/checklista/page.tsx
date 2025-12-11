@@ -12,20 +12,39 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const checklist = checklists[params.slug];
-    if (!checklist) return {};
+    const profession = yrken.find((y) => y.slug === params.slug);
+
+    if (!checklist && !profession) return {};
+
+    const name = checklist ? checklist.professionName : profession?.name || "";
 
     return {
-        title: `Checklista för arbetslös ${checklist.professionName} – så får du rätt ersättning | Välja A-kassa`,
-        description: `Är du arbetslös ${checklist.professionName}? Följ vår checklista för att säkra din a-kassa. Steg-för-steg guide för ${checklist.professionName}.`,
+        title: `Checklista för arbetslös ${name} – så får du rätt ersättning | Välja A-kassa`,
+        description: `Är du arbetslös ${name}? Följ vår checklista för att säkra din a-kassa. Steg-för-steg guide för ${name}.`,
     };
 }
 
 export default function ChecklistPage({ params }: Props) {
-    const checklist = checklists[params.slug];
+    let checklist = checklists[params.slug];
     const profession = yrken.find((y) => y.slug === params.slug);
 
-    if (!checklist) {
+    if (!profession) {
         return notFound();
+    }
+
+    // Fallback if no specific checklist exists
+    if (!checklist) {
+        checklist = {
+            slug: profession.slug,
+            professionName: profession.name,
+            step2List: [
+                "Arbetsgivarintyg från din arbetsgivare",
+                "Anställningsbevis",
+                "Uppsägningsbesked"
+            ],
+            step3Reason: `För en ${profession.name.toLowerCase()} är det viktigt att arbetsgivarintyget är korrekt ifyllt för att din a-kassa ska kunna besluta om rätt ersättning.`,
+            step4Questions: `Många ${profession.name.toLowerCase()} undrar hur handläggningstiden påverkas om intyg saknas och vad som gäller under väntetiden.`
+        };
     }
 
     return (
@@ -158,7 +177,7 @@ export default function ChecklistPage({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-    return Object.keys(checklists).map((slug) => ({
-        slug,
+    return yrken.map((yrke) => ({
+        slug: yrke.slug,
     }));
 }
