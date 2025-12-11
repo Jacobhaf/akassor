@@ -3,7 +3,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { Akassa, EmployerType } from "@/types";
-import { akassor } from "@/data/database";
+import { akassor, yrken } from "@/data/database";
 import AkassaCard from "./AkassaCard";
 import FilterBar from "./FilterBar";
 import SortDropdown, { SortOrder } from "./SortDropdown";
@@ -55,18 +55,33 @@ export default function AkassaComparison({ initialProfession = "", embedded = fa
 
         // 2. Score for Search (Relevance)
         const query = searchQuery.toLowerCase().trim();
+
+        // Find recommended A-kassa IDs from the 'yrken' database first
+        let recommendedAkassaIds: string[] = [];
+        if (query) {
+            const matchedYrken = yrken.filter(y =>
+                y.name.toLowerCase().includes(query) ||
+                y.searchPhrase.toLowerCase().includes(query)
+            );
+            recommendedAkassaIds = matchedYrken.map(y => y.recommendedAkassaId);
+        }
+
         const scoredResult = result.map((a) => {
             let score = 0;
             if (query) {
-                // Exact match in jobs
-                if (a.exampleJobs.some((job) => job.toLowerCase() === query)) {
+                // Priority 1: Direct recommendation from our Yrken database
+                if (recommendedAkassaIds.includes(a.id)) {
+                    score = 200; // Highest priority
+                }
+                // Priority 2: Exact match in example jobs
+                else if (a.exampleJobs.some((job) => job.toLowerCase() === query)) {
                     score = 100;
                 }
-                // Partial match in jobs
+                // Priority 3: Partial match in jobs
                 else if (a.exampleJobs.some((job) => job.toLowerCase().includes(query))) {
                     score = 50;
                 }
-                // Match in industries
+                // Priority 4: Match in industries
                 else if (a.primaryIndustries.some((ind) => ind.toLowerCase().includes(query))) {
                     score = 25;
                 }
@@ -74,10 +89,8 @@ export default function AkassaComparison({ initialProfession = "", embedded = fa
             return { ...a, score };
         });
 
-        // 3. Filter out non-matches IF searching? 
-        // User didn't explicitly say to hide non-matches, but "Relevans" sort implies ranking.
-        // However, usually if you search "Snickare", you ONLY want to see construction unions.
-        // Let's hide zero-score items IF there is a query.
+        // 3. Filter out non-matches IF searching
+        // Hide zero-score items IF there is a query.
         let finalResult = query
             ? scoredResult.filter((a) => a.score > 0)
             : scoredResult;
@@ -88,26 +101,8 @@ export default function AkassaComparison({ initialProfession = "", embedded = fa
                 // Priority 1: Match Score
                 if (a.score !== b.score) return b.score - a.score;
                 // Priority 2: Partner
-                if (a.partner !== b.partner) return a.partner ? -1 : 1;
-                // Priority 3: Price (Low to High) - User said members desc? 
-                // User said: "Relevans ... Members (desc) ... partner ... lowest price"
-                // Let's follow user: Match -> Members -> Partner -> Price
-                // Wait, User said: "Match score ... Members (desc) ... partner = true gets priority ... lowest price".
-                // This hierarchy is a bit mixed. Let's do: Match > Partner > Members > Price? 
-                // "Match score for selected profession" -> "Members desc" -> "partner priority".
-                // Usually Match is #1. Then Partner. Then Members.
-
-                // My interpretation:
-                // 1. Match Score
-                // 2. Partner (if score equal)
-                // 3. Members (desc)
-                // 4. Price (asc)
-
-                if (a.score !== b.score) return b.score - a.score;
                 if (a.partner !== b.partner) return a.partner ? -1 : 1; // True first
-                // if (a.members !== b.members) return b.members - a.members; // Members desc
-                // Let's stick to simple "Partner > Price" for relevance usually?
-                // User said "Members (desc)". Okay.
+                // Priority 3: Members (desc)
                 return b.members - a.members;
             } else if (sortOrder === "popular") {
                 return b.members - a.members;
