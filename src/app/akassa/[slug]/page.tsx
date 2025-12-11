@@ -4,6 +4,7 @@ import { akassor, yrken } from "@/data/database";
 import { akassor as logoData } from "@/data/akassor";
 import Link from "next/link";
 import Image from "next/image";
+import ExpandableYrkenList from "@/components/ExpandableYrkenList";
 
 interface Props {
     params: {
@@ -171,17 +172,7 @@ export default function AkassaPage({ params }: Props) {
                                 är chansen stor att {akassa.name} är rätt a-kassa för dig.
                             </p>
                             {relatedYrken.length > 0 && (
-                                <div className="flex flex-wrap gap-2">
-                                    {relatedYrken.map((yrke) => (
-                                        <Link
-                                            key={yrke.slug}
-                                            href={`/yrken/${yrke.slug}`}
-                                            className="inline-block px-3 py-1 bg-white text-blue-600 text-sm font-medium rounded-full border border-blue-200 hover:border-blue-400 transition-colors"
-                                        >
-                                            {yrke.name}
-                                        </Link>
-                                    ))}
-                                </div>
+                                <ExpandableYrkenList yrken={relatedYrken} initialCount={20} />
                             )}
                         </div>
                     </section>
