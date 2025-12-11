@@ -1964,7 +1964,28 @@ export const yrken: Yrke[] = [
         "slug": "egenforetagare",
         "name": "Egenföretagare",
         "searchPhrase": "egenföretagare a-kassa",
-        "recommendedAkassaId": "alfa",
+        "recommendedAkassaId": "smaa",
+        "image": "/assets/images/categories/office.png"
+    },
+    {
+        "slug": "foretagare",
+        "name": "Företagare",
+        "searchPhrase": "företagare a-kassa",
+        "recommendedAkassaId": "smaa",
+        "image": "/assets/images/categories/office.png"
+    },
+    {
+        "slug": "konsult",
+        "name": "Konsult",
+        "searchPhrase": "konsult a-kassa",
+        "recommendedAkassaId": "smaa",
+        "image": "/assets/images/categories/office.png"
+    },
+    {
+        "slug": "smaforetagare",
+        "name": "Småföretagare",
+        "searchPhrase": "småföretagare a-kassa",
+        "recommendedAkassaId": "smaa",
         "image": "/assets/images/categories/office.png"
     },
     {
