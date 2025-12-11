@@ -116,6 +116,17 @@ export default function YrkePage({ params }: Props) {
                             {akassa.primaryIndustries.join(", ")} vilket stämmer väl överens
                             med arbetsmarknaden för {yrke.name}.
                         </p>
+
+                        {akassa.relatedFack && (
+                            <div className="mb-6 rounded-lg bg-green-100 p-4 text-green-800">
+                                <h3 className="font-semibold mb-1">Fackförbund för {yrke.name}</h3>
+                                <p className="text-sm">
+                                    Många som är med i denna a-kassa är också med i fackförbundet <strong>{akassa.relatedFack}</strong>.
+                                    Att vara med i facket kan ge extra inkomstförsäkring utöver a-kassan.
+                                </p>
+                            </div>
+                        )}
+
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link
                                 href={`/akassa/${akassa.slug}`}

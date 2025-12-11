@@ -17,6 +17,7 @@ export interface Akassa {
     employerTypes: EmployerType[];
     partner: boolean;
     maxCompPerMonth: number;
+    relatedFack?: string;
 }
 
 export interface Yrke {

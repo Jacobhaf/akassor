@@ -17,6 +17,11 @@ export default function AkassaCard({ akassa }: Props) {
                     </span>
                 )}
             </div>
+            {akassa.relatedFack && (
+                <p className="mb-4 text-xs font-medium text-gray-500">
+                    Fackförbund: <span className="text-gray-900">{akassa.relatedFack}</span>
+                </p>
+            )}
 
             <div className="mb-6 flex-grow">
                 <p className="text-sm text-gray-500 mb-2">Passar för:</p>

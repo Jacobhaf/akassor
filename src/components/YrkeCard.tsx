@@ -34,9 +34,16 @@ export default function YrkeCard({ yrke, akassa }: Props) {
             </h3>
 
             {akassa && (
-                <p className="mt-2 text-sm text-gray-500">
-                    Rekommenderad a-kassa: <span className="font-medium text-gray-900">{akassa.name}</span>
-                </p>
+                <div className="mt-2 space-y-1">
+                    <p className="text-sm text-gray-500">
+                        Rekommenderad a-kassa: <span className="font-medium text-gray-900">{akassa.name}</span>
+                    </p>
+                    {akassa.relatedFack && (
+                        <p className="text-sm text-gray-500">
+                            Fackförbund: <span className="font-medium text-gray-900">{akassa.relatedFack}</span>
+                        </p>
+                    )}
+                </div>
             )}
 
             <div className="mt-4 flex items-center text-sm font-medium text-blue-600 opacity-0 transition-opacity group-hover:opacity-100">
