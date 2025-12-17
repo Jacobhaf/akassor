@@ -215,7 +215,7 @@ export default function AkassaGlossaryPage() {
                             <ul className="space-y-3">
                                 <li>
                                     <Link
-                                        href="/jamfor-akassor"
+                                        href="/akassor"
                                         className="flex items-center text-gray-700 hover:text-[#005B8C]"
                                     >
                                         <span className="mr-2 text-blue-500">→</span>
@@ -224,7 +224,7 @@ export default function AkassaGlossaryPage() {
                                 </li>
                                 <li>
                                     <Link
-                                        href="/valja-akassa"
+                                        href="/akassor"
                                         className="flex items-center text-gray-700 hover:text-[#005B8C]"
                                     >
                                         <span className="mr-2 text-blue-500">→</span>
@@ -252,7 +252,7 @@ export default function AkassaGlossaryPage() {
                                 Osäker på vilken a-kassa du ska välja? Använd vår guide för att hitta rätt.
                             </p>
                             <Link
-                                href="/valja-akassa"
+                                href="/akassor"
                                 className="block w-full rounded-lg bg-white px-4 py-3 text-center font-semibold text-[#003B5C] transition-colors hover:bg-blue-50"
                             >
                                 Hitta din a-kassa
@@ -305,7 +305,7 @@ export default function AkassaGlossaryPage() {
                 </p>
                 <div className="flex flex-col justify-center gap-4 sm:flex-row">
                     <Link
-                        href="/jamfor-akassor"
+                        href="/jamfor"
                         className="rounded-lg bg-[#003B5C] px-8 py-3 font-semibold text-white shadow-lg transition-all hover:bg-[#002840] hover:shadow-xl"
                     >
                         Jämför a-kassor

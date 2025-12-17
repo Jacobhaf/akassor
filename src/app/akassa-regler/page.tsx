@@ -171,7 +171,7 @@ export default function AkassaReglerPage() {
                             Nu när du har koll på reglerna kan du enkelt jämföra och hitta den bästa a-kassan för ditt yrke.
                         </p>
                         <Link
-                            href="/jamfor-akassor"
+                            href="/jamfor"
                             className="inline-block rounded-lg bg-white px-8 py-3 font-bold text-[#003B5C] transition-transform hover:scale-105"
                         >
                             Jämför a-kassor nu
@@ -224,7 +224,7 @@ export default function AkassaReglerPage() {
                                 Vi hjälper dig hitta rätt a-kassa baserat på ditt yrke.
                             </p>
                             <Link
-                                href="/valja-akassa"
+                                href="/akassor"
                                 className="block w-full rounded-lg bg-[#003B5C] py-2.5 text-center text-sm font-semibold text-white shadow-md hover:bg-[#002840]"
                             >
                                 Hitta din a-kassa
