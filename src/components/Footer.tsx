@@ -87,6 +87,21 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/akassa-regler" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    A-kassa regler
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ordlista" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    A-kassa ordlista
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/friskvardsbidrag" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Friskvårdsbidrag
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/integritetspolicy" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     Integritetspolicy
                                 </Link>
