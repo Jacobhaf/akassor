@@ -1,17 +1,14 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
+import * as CookieConsent from "vanilla-cookieconsent";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
+import config from "./cookie-consent/Config";
 
-export default function CookieConsent() {
-    const CBID = "4e4fca99-a807-4906-bfa6-ede56a2a3e20";
+export default function CookieConsentComponent() {
+    useEffect(() => {
+        CookieConsent.run(config);
+    }, []);
 
-    return (
-        <Script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid={CBID}
-            data-blockingmode="auto"
-            strategy="afterInteractive"
-        />
-    );
+    return null;
 }
