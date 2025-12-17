@@ -10,83 +10,76 @@ export const metadata: Metadata = {
 export default function CookiesPage() {
     return (
         <div className="container mx-auto max-w-4xl px-4 py-12">
+            {/* Hero Section */}
             <div className="mb-12 text-center">
-                <h1 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
+                <h1 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
                     Om kakor (cookies)
                 </h1>
-                <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                    Här förklarar vi vad kakor är, vilka vi använder och hur du kan
-                    hantera dina inställningar.
+                <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
+                    Vi värnar om din integritet. Här förklarar vi vad kakor är, hur vi använder dem och hur du kan styra vilka kakor som sparas.
                 </p>
             </div>
 
             <article className="prose prose-lg prose-blue mx-auto max-w-none rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100">
-                <h3>Vad är kakor?</h3>
+
+                <h2 className="text-[#003B5C] mt-0">Vad är en kaka?</h2>
                 <p>
-                    En kaka (cookie) är en liten textfil som webbplatsen du besöker begär
-                    att få spara på din dator, surfplatta eller mobiltelefon. Kakor
-                    används på de flesta webbplatser för att ge besökaren tillgång till
-                    olika funktioner och för att vi ska kunna analysera hur webbplatsen
-                    används.
+                    En kaka (cookie) är en liten textfil som webbplatsen du besöker ber att få spara på din enhet (dator, surfplatta eller mobil). Kakan fungerar som ett tekniskt stöd som möjliggör olika funktioner och förbättrar din användarupplevelse.
+                </p>
+                <p>
+                    Enligt <em>Lagen om elektronisk kommunikation</em> ska alla besökare på en webbplats få information om att webbplatsen innehåller kakor, vad de används till och hur de kan undvikas. Du som besökare ska också ge ditt samtycke till att kakor används.
                 </p>
 
-                <h3>Vilka typer av kakor använder vi?</h3>
+                <h2 className="text-[#003B5C]">Så använder vi kakor</h2>
                 <p>
-                    På <strong>valjaakassa.se</strong> använder vi två kategorier av
-                    kakor:
+                    På <strong>valjaakassa.se</strong> strävar vi efter att samla in så lite data som möjligt. Vi använder två typer av kakor för att säkerställa att hemsidan fungerar bra och för att förstå hur den används.
                 </p>
 
-                <h4>1. Nödvändiga kakor</h4>
-                <p>
-                    Dessa kakor krävs för att webbplatsens grundläggande funktioner ska
-                    fungera. Utan dessa kan vi inte garantera att webbplatsen fungerar som
-                    tänkt. De sparar inga personuppgifter som kan spåra dig.
-                </p>
+                <div className="mt-6 grid gap-6 md:grid-cols-2">
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-6">
+                        <h3 className="mt-0 text-lg font-bold text-blue-900">1. Nödvändiga kakor</h3>
+                        <p className="mb-0 text-sm text-gray-700">
+                            Dessa kakor är tekniskt nödvändiga för att webbplatsen ska fungera säkert och korrekt. De sparar inga personuppgifter och används till exempel för att komma ihåg dina val i cookiemenyn. Dessa går inte att stänga av.
+                        </p>
+                    </div>
 
-                <h4>2. Analys-kakor</h4>
-                <p>
-                    Vi använder anonymiserad statistik för att förstå hur besökare
-                    interagerar med webbplatsen. Detta hjälper oss att förbättra innehållet
-                    och användarupplevelsen. Vi använder Google Analytics för detta
-                    ändamål.
-                </p>
-                <ul>
-                    <li>
-                        <strong>_ga</strong> & <strong>_gid</strong>: Används för att skilja
-                        på unika besökare (anonymiserat) och analysera besöksstatistik.
-                    </li>
-                </ul>
-
-                <h3>Hantera dina inställningar</h3>
-                <p>
-                    Du kan när som helst ändra dina inställningar för kakor genom att
-                    klicka på den lilla ikonen för kak-inställningar längst ner i hörnet
-                    på skärmen.
-                </p>
-                <p>
-                    Du kan också ställa in din webbläsare så att du automatiskt nekar till
-                    lagring av kakor eller informeras varje gång en webbplats begär att få
-                    lagra en kaka. Genom webbläsaren kan du också radera tidigare lagrade
-                    kakor.
-                </p>
-
-                <div className="mt-8 rounded-lg bg-blue-50 p-6">
-                    <h4 className="mt-0 text-[#003B5C]">Har du framgor?</h4>
-                    <p className="mb-0 text-sm">
-                        Om du har frågor om vår användning av kakor är du välkommen att
-                        kontakta oss på{' '}
-                        <a
-                            href="mailto:info@valjaakassa.se"
-                            className="font-semibold text-blue-700 hover:underline"
-                        >
-                            info@valjaakassa.se
-                        </a>
-                        .
-                    </p>
+                    <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-6">
+                        <h3 className="mt-0 text-lg font-bold text-blue-900">2. Analys-kakor</h3>
+                        <p className="mb-0 text-sm text-gray-700">
+                            Vi använder anonymiserad statistik (genom Google Analytics) för att se hur många som besöker oss och vilka sidor som är populärast. Detta hjälper oss att förbättra innehållet.
+                            <br /><br />
+                            <strong>Exempel på kakor:</strong> <code>_ga</code>, <code>_gid</code>.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="mt-8 border-t pt-8">
-                    <Link href="/" className="text-blue-600 hover:text-blue-800 hover:underline">
+                <h2 className="text-[#003B5C]">Dina val och inställningar</h2>
+                <p>
+                    Du bestämmer själv över dina kakor. När du besöker vår hemsida för första gången får du välja vilka kategorier du vill godkänna.
+                </p>
+                <p>
+                    <strong>Ångra eller ändra ditt val:</strong><br />
+                    Du kan när som helst ändra dina inställningar genom att klicka på den lilla runda cookie-ikonen längst ner i hörnet på skärmen.
+                </p>
+                <p>
+                    Du kan också ställa in din webbläsare så att den automatiskt nekar kakor eller informerar dig varje gång en webbplats vill spara en kaka. Se webbläsarens hjälpsidor för instruktioner.
+                </p>
+
+                <div className="mt-10 rounded-xl bg-[#003B5C] p-8 text-center text-white">
+                    <h3 className="mt-0 mb-4 text-xl font-bold text-white">Har du frågor?</h3>
+                    <p className="text-blue-100 mb-6">
+                        Vi är transparenta med hur vi arbetar. Om du undrar något om våra kakor eller vår integritetspolicy är du varmt välkommen att höra av dig.
+                    </p>
+                    <a
+                        href="mailto:info@valjaakassa.se"
+                        className="inline-flex items-center rounded-lg bg-white px-6 py-2.5 font-semibold text-[#003B5C] transition-colors hover:bg-blue-50"
+                    >
+                        ✉️ info@valjaakassa.se
+                    </a>
+                </div>
+
+                <div className="mt-8 border-t pt-8 flex justify-center">
+                    <Link href="/" className="font-medium text-blue-600 hover:text-blue-800 hover:underline">
                         ← Tillbaka till startsidan
                     </Link>
                 </div>
