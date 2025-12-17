@@ -48,7 +48,7 @@ export default function CookiesPage() {
                         <p className="mb-0 text-sm text-gray-700">
                             Vi använder anonymiserad statistik (genom Google Analytics) för att se hur många som besöker oss och vilka sidor som är populärast. Detta hjälper oss att förbättra innehållet.
                             <br /><br />
-                            <strong>Exempel på kakor:</strong> <code>_ga</code>, <code>_gid</code>.
+                            <strong>Exempel på kakor:</strong> _ga, _gid.
                         </p>
                     </div>
                 </div>
