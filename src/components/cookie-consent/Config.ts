@@ -38,7 +38,7 @@ const config = {
                 consent_modal: {
                     title: 'Vi använder kakor',
                     description:
-                        'Vi använder kakor för att förbättra din upplevelse på vår webbplats. Genom att surfa vidare godkänner du att vi använder kakor.',
+                        'Vi använder kakor för att förbättra din upplevelse på vår webbplats. Läs mer i vår <a href="/cookies" class="cc-link">cookiepolicy</a>.',
                     primary_btn: {
                         text: 'Godkänn alla',
                         role: 'accept_all',
