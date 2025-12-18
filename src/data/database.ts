@@ -8307,7 +8307,7 @@ export const yrken: Yrke[] = [
         "name": "Elektriker",
         "searchPhrase": "elektriker a-kassa",
         "recommendedAkassaId": "eak",
-        "image": "/images/professions/hantverkare.png"
+        "image": "/images/professions/elektriker.jpg"
     },
     {
         "slug": "elingenjor",
@@ -8979,7 +8979,7 @@ export const yrken: Yrke[] = [
         "name": "Lokalvårdare",
         "searchPhrase": "lokalvårdare a-kassa",
         "recommendedAkassaId": "fastighets",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/lokalvardare.jpg"
     },
     {
         "slug": "lassmed",
@@ -11611,7 +11611,7 @@ export const yrken: Yrke[] = [
         "name": "Kock",
         "searchPhrase": "kock a-kassa",
         "recommendedAkassaId": "hrak",
-        "image": "/assets/images/categories/service.png"
+        "image": "/images/professions/kock.jpg"
     },
     {
         "slug": "kokerska",
@@ -12283,7 +12283,7 @@ export const yrken: Yrke[] = [
         "name": "Ingenjör",
         "searchPhrase": "ingenjör a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/ingenjor.jpg"
     },
     {
         "slug": "instrumenttekniker",
@@ -13893,7 +13893,7 @@ export const yrken: Yrke[] = [
         "name": "Frisör",
         "searchPhrase": "frisör a-kassa",
         "recommendedAkassaId": "handels",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/frisor.jpg"
     },
     {
         "slug": "hudterapeut",
@@ -17554,7 +17554,7 @@ export const yrken: Yrke[] = [
         "name": "Polis",
         "searchPhrase": "polis a-kassa",
         "recommendedAkassaId": "alfa",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/polis.jpg"
     },
     {
         "slug": "polisassistent",
@@ -18646,7 +18646,7 @@ export const yrken: Yrke[] = [
         "name": "Läkare",
         "searchPhrase": "läkare a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/lakare.jpg"
     },
     {
         "slug": "lakarsekreterare",
@@ -19024,7 +19024,7 @@ export const yrken: Yrke[] = [
         "name": "Sjuksköterska",
         "searchPhrase": "sjuksköterska a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/images/professions/sjukvard.png"
+        "image": "/images/professions/sjukskoterska.jpg"
     },
     {
         "slug": "sjukvardsbitrade",
@@ -19164,7 +19164,7 @@ export const yrken: Yrke[] = [
         "name": "Undersköterska",
         "searchPhrase": "undersköterska a-kassa",
         "recommendedAkassaId": "kommunal",
-        "image": "/images/professions/sjukvard.png"
+        "image": "/images/professions/sjukskoterska.jpg"
     },
     {
         "slug": "urolog",
@@ -20830,7 +20830,7 @@ export const yrken: Yrke[] = [
         "name": "Lärare",
         "searchPhrase": "lärare a-kassa",
         "recommendedAkassaId": "la",
-        "image": "/images/professions/skola.png"
+        "image": "/images/professions/larare.jpg"
     },
     {
         "slug": "mellanstadielarare",
@@ -22006,7 +22006,7 @@ export const yrken: Yrke[] = [
         "name": "Barnskötare",
         "searchPhrase": "barnskötare a-kassa",
         "recommendedAkassaId": "kommunal",
-        "image": "/images/professions/skola.png"
+        "image": "/images/professions/barnskotare.jpg"
     },
     {
         "slug": "begravningsentreprenor",
@@ -23994,7 +23994,7 @@ export const yrken: Yrke[] = [
         "name": "Lagerarbetare",
         "searchPhrase": "lagerarbetare a-kassa",
         "recommendedAkassaId": "handels",
-        "image": "/images/professions/lagerarbetare.png"
+        "image": "/images/professions/lagerarbetare.jpg"
     },
     {
         "slug": "lagerchef",
@@ -24022,7 +24022,7 @@ export const yrken: Yrke[] = [
         "name": "Lastbilschaufför",
         "searchPhrase": "lastbilschaufför a-kassa",
         "recommendedAkassaId": "transport",
-        "image": "/assets/images/categories/transport.png"
+        "image": "/images/professions/lastbilschauffor.jpg"
     },
     {
         "slug": "lastbilsmekaniker",
