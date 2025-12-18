@@ -8307,7 +8307,7 @@ export const yrken: Yrke[] = [
         "name": "Elektriker",
         "searchPhrase": "elektriker a-kassa",
         "recommendedAkassaId": "eak",
-        "image": "/images/professions/hantverkare.png"
+        "image": "/images/professions/elektriker.png"
     },
     {
         "slug": "elingenjor",
@@ -8979,7 +8979,7 @@ export const yrken: Yrke[] = [
         "name": "Lokalvårdare",
         "searchPhrase": "lokalvårdare a-kassa",
         "recommendedAkassaId": "fastighets",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/lokalvardare.png"
     },
     {
         "slug": "lassmed",
@@ -11611,7 +11611,7 @@ export const yrken: Yrke[] = [
         "name": "Kock",
         "searchPhrase": "kock a-kassa",
         "recommendedAkassaId": "hrak",
-        "image": "/assets/images/categories/service.png"
+        "image": "/images/professions/kock.png"
     },
     {
         "slug": "kokerska",
@@ -12283,7 +12283,7 @@ export const yrken: Yrke[] = [
         "name": "Ingenjör",
         "searchPhrase": "ingenjör a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/ingenjor.png"
     },
     {
         "slug": "instrumenttekniker",
@@ -13893,7 +13893,7 @@ export const yrken: Yrke[] = [
         "name": "Frisör",
         "searchPhrase": "frisör a-kassa",
         "recommendedAkassaId": "handels",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/frisor.png"
     },
     {
         "slug": "hudterapeut",
@@ -17554,7 +17554,7 @@ export const yrken: Yrke[] = [
         "name": "Polis",
         "searchPhrase": "polis a-kassa",
         "recommendedAkassaId": "alfa",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/polis.png"
     },
     {
         "slug": "polisassistent",
@@ -19024,7 +19024,7 @@ export const yrken: Yrke[] = [
         "name": "Sjuksköterska",
         "searchPhrase": "sjuksköterska a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/images/professions/sjukvard.png"
+        "image": "/images/professions/sjukskoterska.png"
     },
     {
         "slug": "sjukvardsbitrade",
@@ -19164,7 +19164,7 @@ export const yrken: Yrke[] = [
         "name": "Undersköterska",
         "searchPhrase": "undersköterska a-kassa",
         "recommendedAkassaId": "kommunal",
-        "image": "/images/professions/sjukvard.png"
+        "image": "/images/professions/sjukskoterska.png"
     },
     {
         "slug": "urolog",
