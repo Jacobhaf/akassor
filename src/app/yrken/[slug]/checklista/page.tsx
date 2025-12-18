@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: `Checklista för arbetslös ${name} – så får du rätt ersättning | Välja A-kassa`,
-        description: `Är du arbetslös ${name}? Följ vår checklista för att säkra din a-kassa. Steg-för-steg guide för ${name}.`,
+        description: `Komplett checklista för arbetslös ${name}. Följ våra 4 enkla steg för att maximera din ersättning och undvika problem med a-kassan. Läs guiden här.`,
     };
 }
 
