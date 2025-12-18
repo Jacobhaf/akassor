@@ -99,7 +99,7 @@ export default function OmOssPage() {
                                     </svg>
                                 </dt>
                                 <dd>
-                                    <a href="mailto:kontakt@valjaakassa.se" className="hover:text-slate-900">kontakt@valjaakassa.se</a>
+                                    <a href="mailto:info@valjaakassa.se" className="hover:text-slate-900">info@valjaakassa.se</a>
                                 </dd>
                             </div>
                             <div className="flex gap-x-4">
@@ -113,9 +113,9 @@ export default function OmOssPage() {
                                 <dd>
                                     Välja A-kassa
                                     <br />
-                                    Box 123 45
+                                    Vallgatan 25
                                     <br />
-                                    111 22 Stockholm
+                                    411 16 Göteborg
                                 </dd>
                             </div>
                         </dl>

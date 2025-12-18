@@ -3,6 +3,7 @@ import Image from "next/image";
 import { yrken, akassor } from "@/data/database";
 import Search from "@/components/Search";
 import YrkeCard from "@/components/YrkeCard";
+import YrkenList from "@/components/YrkenList";
 
 export const metadata = {
     title: "Alla yrken – Hitta rätt a-kassa för ditt jobb | Välja A-kassa",
@@ -23,9 +24,6 @@ export const metadata = {
 };
 
 export default function YrkenPage() {
-    // Sort professions alphabetically
-    const sortedYrken = [...yrken].sort((a, b) => a.name.localeCompare(b.name));
-
     return (
         <main>
             {/* Hero Section */}
@@ -55,20 +53,7 @@ export default function YrkenPage() {
             </div>
 
             <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {sortedYrken.map((yrke) => {
-                        const recommendedAkassa = akassor.find(
-                            (a) => a.id === yrke.recommendedAkassaId
-                        );
-                        return (
-                            <YrkeCard
-                                key={yrke.slug}
-                                yrke={yrke}
-                                akassa={recommendedAkassa}
-                            />
-                        );
-                    })}
-                </div>
+                <YrkenList yrken={yrken} akassor={akassor} />
             </div>
         </main>
     );
