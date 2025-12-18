@@ -2,10 +2,10 @@ import AkassorGrid from "@/components/AkassorGrid";
 import Image from "next/image";
 
 export const metadata = {
-    title: "Lista på alla a-kassor i Sverige 2025 | Välja A-kassa",
+    title: "Lista på alla a-kassor i Sverige 2026 | Välja A-kassa",
     description: "Här hittar du en komplett lista över alla a-kassor i Sverige. Jämför avgifter, villkor och hitta rätt a-kassa för dig.",
     openGraph: {
-        title: "Lista på alla a-kassor i Sverige 2025 | Välja A-kassa",
+        title: "Lista på alla a-kassor i Sverige 2026 | Välja A-kassa",
         description: "Här hittar du en komplett lista över alla a-kassor i Sverige. Jämför avgifter, villkor och hitta rätt a-kassa för dig.",
         url: "https://www.valjaakassa.se/akassor",
         images: [

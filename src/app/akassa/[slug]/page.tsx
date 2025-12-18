@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${akassa.name} – avgift, villkor och yrken 2025 | Välja A-kassa`,
-        description: `Ta reda på om ${akassa.name} är rätt a-kassa för dig. Avgift, medlemskrav och vilka yrken som omfattas 2025.`,
+        title: `${akassa.name} – avgift, villkor och yrken 2026 | Välja A-kassa`,
+        description: `Ta reda på om ${akassa.name} är rätt a-kassa för dig. Avgift, medlemskrav och vilka yrken som omfattas 2026.`,
     };
 }
 
@@ -91,7 +91,7 @@ export default function AkassaPage({ params }: Props) {
                                 return null;
                             })()}
                             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                                {akassa.name} – avgift, villkor och vilka yrken som passar 2025
+                                {akassa.name} – avgift, villkor och vilka yrken som passar 2026
                             </h1>
                         </div>
                         <p className="text-blue-100 text-lg max-w-2xl mb-8 leading-relaxed">
@@ -234,7 +234,7 @@ export default function AkassaPage({ params }: Props) {
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    Hur mycket kostar {akassa.name} 2025?
+                                    Hur mycket kostar {akassa.name} 2026?
                                 </h3>
                                 <p className="text-gray-600">
                                     Just nu är medlemsavgiften {akassa.membershipFee}. Kontrollera

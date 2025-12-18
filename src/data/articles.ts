@@ -113,7 +113,7 @@ export const articles: Article[] = [
   {
     slug: "ersattning-karens-villkor",
     title: "Hur mycket får jag i ersättning? (Belopp, Tak & Karens)",
-    summary: "Vi dyker ner i detaljerna kring dagpenning, inkomsttak och hur 80%-regeln faktiskt fungerar i praktiken år 2025.",
+    summary: "Vi dyker ner i detaljerna kring dagpenning, inkomsttak och hur 80%-regeln faktiskt fungerar i praktiken år 2026.",
     image: "/artiklar/money-calculator.png",
     publishedAt: "2023-11-20",
     content: `
@@ -145,7 +145,7 @@ export const articles: Article[] = [
       </div>
 
       <h2>Inkomsttaket – vad innebär det?</h2>
-      <p>A-kassan har ett tak. Det innebär att du får 80% av din lön, men bara upp till en viss inkomstnivå. År 2024/2025 ligger taket på <strong>33 000 kr</strong> i månaden de första 100 dagarna.</p>
+      <p>A-kassan har ett tak. Det innebär att du får 80% av din lön, men bara upp till en viss inkomstnivå. År 2025/2026 ligger taket på <strong>33 000 kr</strong> i månaden de första 100 dagarna.</p>
       
       <p>Tjänar du mer än 33 000 kr? Då får du ändå bara ut maxbeloppet (ca 26 400 kr före skatt). För att försäkra lönen över detta tak behöver du en <strong>inkomstförsäkring</strong>, som oftast ingår i fackmedlemskap eller kan tecknas separat.</p>
 
@@ -168,12 +168,12 @@ export const articles: Article[] = [
   },
   {
     slug: "nya-regler-akassa-2025",
-    title: "Nya regler för a-kassan 2025 – Det här gäller nu",
-    summary: "Det sker förändringar i a-kassan under 2025. Vi går igenom vad det nya systemet innebär för dig, din plånbok och din trygghet.",
+    title: "Nya regler för a-kassan 2026 – Det här gäller nu",
+    summary: "Det sker förändringar i a-kassan under 2026. Vi går igenom vad det nya systemet innebär för dig, din plånbok och din trygghet.",
     image: "/artiklar/rules-2025.png",
     publishedAt: "2024-12-15",
     content: `
-      <p class="lead text-xl text-gray-600 mb-8">Arbetslöshetsförsäkringen är under ständig utredning och förändring. För 2025 ligger fokus på att göra försäkringen mer träffsäker men också att öka drivkrafterna till arbete. Här är en genomgång av de viktigaste förändringarna du behöver ha koll på.</p>
+      <p class="lead text-xl text-gray-600 mb-8">Arbetslöshetsförsäkringen är under ständig utredning och förändring. För 2026 ligger fokus på att göra försäkringen mer träffsäker men också att öka drivkrafterna till arbete. Här är en genomgång av de viktigaste förändringarna du behöver ha koll på.</p>
 
       <h2>Inkomstbaserad a-kassa</h2>
       <p>Ett av de största förslagen som diskuterats under lång tid är övergången till en helt inkomstbaserad arbetslöshetsförsäkring. Istället för att räkna på arbetad tid (timmar), baseras rätten till ersättning på din inkomst.</p>
@@ -191,12 +191,12 @@ export const articles: Article[] = [
       </div>
 
       <h2>Höjda tak och inflation</h2>
-      <p>Taken i a-kassan har justerats uppåt de senaste åren för att möta inflationen, men många kritiker menar att det inte räcker. Under 2025 förväntas debatten om nivåerna fortsätta, särskilt i ljuset av ökade levnadskostnader.</p>
+      <p>Taken i a-kassan har justerats uppåt de senaste åren för att möta inflationen, men många kritiker menar att det inte räcker. Under 2026 förväntas debatten om nivåerna fortsätta, särskilt i ljuset av ökade levnadskostnader.</p>
     `
   },
   {
     slug: "inflationen-och-akassa-2025",
-    title: "Så påverkar inflationen din ersättning 2025",
+    title: "Så påverkar inflationen din ersättning 2026",
     summary: "Matpriserna stiger och hyrorna går upp. Hänger a-kassan med? Vi tittar på hur köpkraften påverkas och varför en inkomstförsäkring är viktigare än någonsin.",
     image: "/artiklar/inflation.png",
     publishedAt: "2025-01-10",
@@ -220,7 +220,7 @@ export const articles: Article[] = [
   },
   {
     slug: "byta-karriar-2025-trygghet",
-    title: "Byta bransch 2025? Så behåller du din SGI och a-kassa",
+    title: "Byta bransch 2026? Så behåller du din SGI och a-kassa",
     summary: "Funderar du på att sadla om? Det är viktigt att du inte hamnar mellan stolarna. Här är checklistan för att byta jobb säkert utan att nollställa din ersättning.",
     image: "/artiklar/career-switch.png",
     publishedAt: "2025-02-01",

@@ -22,14 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${yrke.name} a-kassa – Bästa val 2025 | Välja A-kassa`,
-        description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2025.`,
+        title: `${yrke.name} a-kassa – Bästa val 2026 | Välja A-kassa`,
+        description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
         alternates: {
             canonical: `/yrken/${yrke.slug}`,
         },
         openGraph: {
-            title: `${yrke.name} a-kassa – Bästa val 2025 | Välja A-kassa`,
-            description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2025.`,
+            title: `${yrke.name} a-kassa – Bästa val 2026 | Välja A-kassa`,
+            description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
             url: `https://www.valjaakassa.se/yrken/${yrke.slug}`,
             images: [
                 {
@@ -82,13 +82,13 @@ export default function YrkePage({ params }: Props) {
                     </div>
                     <div className="relative z-10 px-8 py-12 sm:py-16">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                            {yrke.name} a-kassa – vilken a-kassa ska jag välja 2025?
+                            {yrke.name} a-kassa – vilken a-kassa ska jag välja 2026?
                         </h1>
                         <p className="text-blue-100 text-lg sm:text-xl max-w-2xl leading-relaxed mb-8">
                             Jobbar du som {yrke.name} och undrar vilken a-kassa du ska välja?
                             Här går vi igenom vilken a-kassa som rekommenderas för {yrke.name}{" "}
                             och varför, hur ersättningen fungerar och ungefär vad en {yrke.name}{" "}
-                            tjänar 2025.
+                            tjänar 2026.
                         </p>
                         <div className="mt-8">
                             <Link
@@ -200,7 +200,7 @@ export default function YrkePage({ params }: Props) {
 
                     {/* Salary Info (Simulated) */}
                     <section className="prose prose-green max-w-none">
-                        <h2>Vad tjänar en {yrke.name} 2025?</h2>
+                        <h2>Vad tjänar en {yrke.name} 2026?</h2>
                         <p>
                             Lönen för en {yrke.name} kan variera beroende på erfarenhet,
                             arbetsgivare och var i landet du arbetar. Generellt sett ligger

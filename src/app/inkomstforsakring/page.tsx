@@ -6,7 +6,7 @@ import { TrendingUp, Clock, ShieldAlert, Briefcase } from "lucide-react";
 import { akassor } from "@/data/akassor";
 
 export const metadata = {
-    title: "Inkomstförsäkring – komplett guide med a-kassa & fack 2025 | Välja A-kassa",
+    title: "Inkomstförsäkring – komplett guide med a-kassa & fack 2026 | Välja A-kassa",
     description: "Lär dig hur inkomstförsäkring fungerar med a-kassan. När lönar det sig, vilka villkor gäller och hur ser det ut hos Unionen, Akademikernas, Kommunal, Handels, Seko m.fl.?",
 };
 

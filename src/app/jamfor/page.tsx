@@ -3,9 +3,9 @@ import Image from "next/image";
 import AkassaComparison from "@/components/comparison/AkassaComparison";
 
 export const metadata: Metadata = {
-    title: "Jämför a-kassor 2025 – hitta bästa a-kassan | Välja A-kassa",
+    title: "Jämför a-kassor 2026 – hitta bästa a-kassan | Välja A-kassa",
     description:
-        "Jämför a-kassor och hitta den som passar ditt yrke bäst. Se avgifter, handläggningstider, villkor och regler för 2025. Din guide till rätt a-kassa.",
+        "Jämför a-kassor och hitta den som passar ditt yrke bäst. Se avgifter, handläggningstider, villkor och regler för 2026. Din guide till rätt a-kassa.",
 };
 
 export default function JamforPage() {
@@ -126,13 +126,13 @@ export default function JamforPage() {
                             </p>
                         </article>
 
-                        {/* 4. Nya regler 2025 */}
+                        {/* 4. Nya regler 2026 */}
                         <article>
                             <h2 className="text-2xl font-bold text-gray-900">
-                                4. Nya regler 2025 – så påverkar de dig
+                                4. Nya regler 2026 – så påverkar de dig
                             </h2>
                             <p>
-                                Den 1 oktober 2025 infördes nya regler för arbetslöshetsförsäkringen. Den största förändringen är att du nu kvalificerar dig med tidigare inkomst i stället för arbetad tid.
+                                Den 1 oktober 2026 infördes nya regler för arbetslöshetsförsäkringen. Den största förändringen är att du nu kvalificerar dig med tidigare inkomst i stället för arbetad tid.
                             </p>
                             <p>För att få ersättning måste du:</p>
                             <ul>
@@ -145,7 +145,7 @@ export default function JamforPage() {
 
                             <h3 className="text-xl font-semibold text-gray-900 mt-6">Övergångsregler</h3>
                             <p>
-                                Har du påbörjat din ersättningsperiod före 30 september 2025 gäller de gamla reglerna för den perioden.
+                                Har du påbörjat din ersättningsperiod före 30 september 2026 gäller de gamla reglerna för den perioden.
                             </p>
                         </article>
 

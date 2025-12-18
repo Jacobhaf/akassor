@@ -4,8 +4,8 @@ import { articles } from "@/data/articles";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Guider om a-kassa & inkomstförsäkring 2025 | Välja A-kassa",
-    description: "Lär dig allt om a-kassa och inkomstförsäkring. Våra guider hjälper dig att förstå regler, ersättning och hur du maximerar din trygghet 2025.",
+    title: "Guider om a-kassa & inkomstförsäkring 2026 | Välja A-kassa",
+    description: "Lär dig allt om a-kassa och inkomstförsäkring. Våra guider hjälper dig att förstå regler, ersättning och hur du maximerar din trygghet 2026.",
 };
 
 export default function ArticlesPage() {
