@@ -4548,7 +4548,7 @@ export const yrken: Yrke[] = [
         "name": "Kassapersonal",
         "searchPhrase": "kassapersonal a-kassa",
         "recommendedAkassaId": "alfa",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/butikschef.png"
     },
     {
         "slug": "kassor",
