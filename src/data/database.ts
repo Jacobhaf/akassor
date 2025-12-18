@@ -4506,7 +4506,7 @@ export const yrken: Yrke[] = [
         "name": "Butikssäljare",
         "searchPhrase": "butikssäljare a-kassa",
         "recommendedAkassaId": "handels",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/butikssaljare.png"
     },
     {
         "slug": "centrumledare",
@@ -5171,7 +5171,7 @@ export const yrken: Yrke[] = [
         "name": "Snickare",
         "searchPhrase": "snickare a-kassa",
         "recommendedAkassaId": "byggnads",
-        "image": "/assets/images/categories/construction.png"
+        "image": "/images/professions/hantverkare.png"
     },
     {
         "slug": "stadsarkitekt",
@@ -8307,7 +8307,7 @@ export const yrken: Yrke[] = [
         "name": "Elektriker",
         "searchPhrase": "elektriker a-kassa",
         "recommendedAkassaId": "eak",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/hantverkare.png"
     },
     {
         "slug": "elingenjor",
@@ -19024,7 +19024,7 @@ export const yrken: Yrke[] = [
         "name": "Sjuksköterska",
         "searchPhrase": "sjuksköterska a-kassa",
         "recommendedAkassaId": "aea",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/sjukvard.png"
     },
     {
         "slug": "sjukvardsbitrade",
@@ -19164,7 +19164,7 @@ export const yrken: Yrke[] = [
         "name": "Undersköterska",
         "searchPhrase": "undersköterska a-kassa",
         "recommendedAkassaId": "kommunal",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/sjukvard.png"
     },
     {
         "slug": "urolog",
@@ -20830,7 +20830,7 @@ export const yrken: Yrke[] = [
         "name": "Lärare",
         "searchPhrase": "lärare a-kassa",
         "recommendedAkassaId": "la",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/skola.png"
     },
     {
         "slug": "mellanstadielarare",
@@ -22006,7 +22006,7 @@ export const yrken: Yrke[] = [
         "name": "Barnskötare",
         "searchPhrase": "barnskötare a-kassa",
         "recommendedAkassaId": "kommunal",
-        "image": "/assets/images/categories/healthcare.png"
+        "image": "/images/professions/skola.png"
     },
     {
         "slug": "begravningsentreprenor",
@@ -23994,7 +23994,7 @@ export const yrken: Yrke[] = [
         "name": "Lagerarbetare",
         "searchPhrase": "lagerarbetare a-kassa",
         "recommendedAkassaId": "handels",
-        "image": "/assets/images/categories/office.png"
+        "image": "/images/professions/lagerarbetare.png"
     },
     {
         "slug": "lagerchef",

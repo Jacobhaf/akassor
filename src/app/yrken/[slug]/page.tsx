@@ -22,13 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${yrke.name} a-kassa – Bästa val 2026 | Välja A-kassa`,
+        title: `A-kassa för ${yrke.name} 2026 – jämför | Välja A-kassa`,
         description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
         alternates: {
             canonical: `/yrken/${yrke.slug}`,
         },
         openGraph: {
-            title: `${yrke.name} a-kassa – Bästa val 2026 | Välja A-kassa`,
+            title: `A-kassa för ${yrke.name} 2026 – jämför | Välja A-kassa`,
             description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
             url: `https://www.valjaakassa.se/yrken/${yrke.slug}`,
             images: [
