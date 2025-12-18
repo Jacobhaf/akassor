@@ -17,8 +17,8 @@ export default function InkomstforsakringPage() {
             <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
-                        src="/assets/images/inkomstforsakring-hero.png"
-                        alt="Inkomstförsäkring Hero"
+                        src="/images/content/inkomstforsakring-hero-woman.jpg"
+                        alt="Kvinna som ser över sin ekonomi och inkomstförsäkring framför datorn"
                         fill
                         className="object-cover"
                         priority
@@ -52,8 +52,8 @@ export default function InkomstforsakringPage() {
                 </div>
                 <div className="relative h-80 lg:h-[500px] w-full bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                        src="/assets/images/inkomstforsakring-what.png"
-                        alt="Diagram som visar hur inkomstförsäkring fyller glappet"
+                        src="/images/content/inkomstforsakring-details-man.jpg"
+                        alt="Man som läser om inkomstförsäkring och a-kassa ersättning på papper och mobil"
                         fill
                         className="object-cover"
                     />
