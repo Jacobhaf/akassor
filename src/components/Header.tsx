@@ -61,7 +61,7 @@ export default function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-6">
-                    <NavLink href="/" active={isActive("/")}>Hem</NavLink>
+
                     <NavLink href="/#jamfor" active={isActive("/#jamfor")}>A-kassor</NavLink>
                     <NavLink href="/yrken" active={isActive("/yrken")}>Yrken</NavLink>
                     <NavLink href="/inkomstforsakring" active={isActive("/inkomstforsakring")}>Inkomstförsäkring</NavLink>
@@ -128,13 +128,7 @@ export default function Header() {
 
                         <div className="flex flex-col space-y-2">
                             {/* Main Navigation Items */}
-                            <Link href="/" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
-                                <div className="flex items-center gap-3 mb-1">
-                                    <ArrowRight className="h-4 w-4 text-gray-900 transition-transform group-hover:translate-x-1" />
-                                    <span className="text-lg font-bold text-gray-900">Hemsida</span>
-                                </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Sveriges guide till a-kassor</p>
-                            </Link>
+
 
                             <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
