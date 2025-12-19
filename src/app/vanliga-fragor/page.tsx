@@ -138,18 +138,23 @@ export default function FAQPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">
                                 {section.category}
                             </h2>
-                            <dl className="space-y-6 divide-y divide-gray-100">
+                            <div className="space-y-4">
                                 {section.questions.map((item, qIdx) => (
-                                    <div key={qIdx} className="pt-6 sm:first:pt-0">
-                                        <dt className="text-lg font-semibold leading-7 text-gray-900">
-                                            {item.q}
-                                        </dt>
-                                        <dd className="mt-2 text-base leading-7 text-gray-600">
-                                            {item.a}
-                                        </dd>
-                                    </div>
+                                    <details key={qIdx} className="group border-b border-gray-100 last:border-0">
+                                        <summary className="flex justify-between items-center font-semibold cursor-pointer list-none py-4 text-lg text-gray-900 group-hover:text-blue-700 transition-colors">
+                                            <span>{item.q}</span>
+                                            <span className="transition-transform group-open:rotate-180">
+                                                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                            </span>
+                                        </summary>
+                                        <div className="text-gray-600 pb-4 leading-relaxed">
+                                            <p>{item.a}</p>
+                                        </div>
+                                    </details>
                                 ))}
-                            </dl>
+                            </div>
 
                             {/* Insert Image in the middle (e.g., after 3rd section) */}
                             {idx === 2 && (
