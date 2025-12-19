@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/integritetspolicy",
         "/ga-ur-a-kassa",
         "/byta-a-kassa",
+        "/vanliga-fragor",
         "/cookies",
     ].map((route) => ({
         url: `${baseUrl}${route}`,
