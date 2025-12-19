@@ -14,10 +14,10 @@ export default function BytaAkassaPage() {
             <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
-                        src="/assets/images/hero-generic.png"
-                        alt="Personer som diskuterar byte av a-kassa"
+                        src="/images/content/byta_akassa_hero_real.png"
+                        alt="Person som byter a-kassa vid köksbordet"
                         fill
-                        className="object-cover"
+                        className="object-cover opacity-30"
                         priority
                     />
                 </div>
@@ -68,6 +68,19 @@ export default function BytaAkassaPage() {
                         </ul>
                     </div>
 
+                    <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
+                        <Image
+                            src="/images/content/byta_akassa_step_real.png"
+                            alt="Närbild på händer som signerar dokument digitalt"
+                            width={1000}
+                            height={500}
+                            className="w-full h-64 object-cover object-center sm:h-80"
+                        />
+                        <div className="bg-gray-50 p-4 text-center text-sm text-gray-500 italic">
+                            Många a-kassor hanterar hela bytet åt dig digitalt via BankID.
+                        </div>
+                    </div>
+
                     <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Viktigt att tillhöra rätt a-kassa</h3>
 
                     <p>
@@ -94,6 +107,20 @@ export default function BytaAkassaPage() {
                         Kom ihåg att informera Arbetsförmedlingen om att du har bytt a-kassa
                         och att skicka tidrapporter till rätt a-kassa från och med bytdatumet.
                     </p>
+
+                    <div className="my-12 relative rounded-2xl overflow-hidden shadow-xl aspect-video sm:aspect-[21/9]">
+                        <Image
+                            src="/images/content/byta_akassa_career_real.png"
+                            alt="Självsäker person på väg mot nya karriärmål"
+                            fill
+                            className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <p className="text-white font-medium text-lg">
+                                Ett byte av a-kassa kan vara startskottet för nästa steg i karriären.
+                            </p>
+                        </div>
+                    </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Vanliga frågor om att byta a-kassa</h3>
 
