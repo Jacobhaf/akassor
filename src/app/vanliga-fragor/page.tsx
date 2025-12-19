@@ -9,8 +9,8 @@ import Link from "next/link";
 // Let's use simple semantic HTML for FAQs with styles.
 
 export const metadata: Metadata = {
-    title: "Vanliga frågor och svar om a-kassa | Välja A-kassa",
-    description: "Hitta svar på dina frågor om a-kassa, ersättning, regler och medlemskap. Vi samlar allt du behöver veta på ett ställe.",
+    title: "Vanliga frågor om A-kassa – Svar på allt om ersättning | Välja A-kassa",
+    description: "Undrar du över a-kassa, ersättning eller regler? Här hittar du svar på de vanligaste frågorna för 2026. Läs vår omfattande FAQ här.",
 };
 
 const faqData = [

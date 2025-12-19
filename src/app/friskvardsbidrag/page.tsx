@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Är friskvård avdragsgillt? | Regler för företag och anställda',
+    title: 'Friskvårdsbidrag 2026 – Regler för avdrag & aktiebolag | Välja A-kassa',
     description:
-        'Guide om friskvård och avdrag. Se vad som gäller för aktiebolag, enskild firma och anställda. Företaget betalar exklusive moms vid godkänd friskvård.',
+        'Guide om friskvård och avdrag för 2026. Se vad som gäller för aktiebolag, enskild firma och anställda. Företaget betalar exklusive moms vid godkänd friskvård.',
 };
 
 export default function FriskvardsbidragPage() {

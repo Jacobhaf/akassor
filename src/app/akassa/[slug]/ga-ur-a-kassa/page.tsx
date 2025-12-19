@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `Gå ur ${akassa.name} – så kan du avsluta ${akassa.name} | Välja A-kassa`,
-        description: `Ska du gå ur ${akassa.name}? Läs om hur du gör för att avsluta medlemskapet i ${akassa.name}, vad du bör tänka på och vilka konsekvenser det kan få.`,
+        title: `Gå ur ${akassa.name} – Avsluta medlemskap & Regler 2026 | Välja A-kassa`,
+        description: `Ska du gå ur ${akassa.name}? Läs vår guide om hur du avslutar medlemskapet korrekt hos ${akassa.name}, vad du bör tänka på och konsekvenser.`,
     };
 }
 

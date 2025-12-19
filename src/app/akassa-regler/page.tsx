@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'A-kassa regler och villkor – så fungerar ersättningen | Välja A-kassa',
+    title: 'A-kassa Regler 2026 – Ersättning, Villkor & Karensdagar | Välja A-kassa',
     description:
-        'Läs om a-kassa regler, arbetsvillkor, ramtid, karensdagar och ersättning. En enkel guide till hur a-kassan fungerar i Sverige.',
+        'Läs om a-kassans regler, arbetsvillkor, ramtid, karensdagar och ersättning. En enkel guide till hur a-kassan fungerar och vad som gäller för dig 2026.',
 };
 
 export default function AkassaReglerPage() {

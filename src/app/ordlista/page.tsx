@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'A-kassa ordlista – förklaring av viktiga begrepp | Välja A-kassa',
+    title: 'A-kassa Ordlista & Begrepp – Förklaringar A-Ö | Välja A-kassa',
     description:
-        'Läs vår a-kassa ordlista för att förstå begrepp som arbetsvillkor, ramtid, karensdagar och inkomstförsäkring. En enkel guide till a-kassans regler.',
+        'Osäker på orden? Läs vår a-kassa ordlista för att förstå begrepp som arbetsvillkor, ramtid, karensdagar och inkomstförsäkring. Enkel guide till a-kassans språk.',
 };
 
 export default function AkassaGlossaryPage() {
