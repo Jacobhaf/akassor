@@ -31,11 +31,12 @@ export default function JamforPage() {
                 <div className="prose prose-lg prose-slate mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-sm">
                     <div className="mb-10 rounded-xl overflow-hidden shadow-md">
                         <Image
-                            src="/jamfor-comparison.png"
-                            alt="Jämför a-kassor illustration"
+                            src="/images/content/jamfor_hero_real.png"
+                            alt="Människor som jämför alternativ på laptop"
                             width={1000}
-                            height={500}
+                            height={563} // 16:9 ratio
                             className="w-full object-cover h-auto m-0"
+                            priority
                         />
                         <p className="text-center text-sm text-gray-500 mt-2 italic">
                             Jämför a-kassa - Hitta den bästa A-kassan för dig
