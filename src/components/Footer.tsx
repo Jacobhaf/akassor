@@ -101,16 +101,7 @@ export default function Footer() {
                                     Friskvårdsbidrag
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="/integritetspolicy" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
-                                    Integritetspolicy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/cookies" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
-                                    Cookies
-                                </Link>
-                            </li>
+
                             <li>
                                 <Link href="/kontakt" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     Kontakta oss
@@ -144,6 +135,12 @@ export default function Footer() {
                         &copy; {currentYear} Välja a-kassa. Alla rättigheter förbehållna.
                     </p>
                     <div className="flex space-x-6">
+                        <Link href="/integritetspolicy" className="text-xs text-gray-500 hover:text-white transition-colors">
+                            Integritetspolicy
+                        </Link>
+                        <Link href="/cookies" className="text-xs text-gray-500 hover:text-white transition-colors">
+                            Cookies
+                        </Link>
                         <Link href="/sitemap" className="text-xs text-gray-500 hover:text-white transition-colors">
                             Sidkarta
                         </Link>
