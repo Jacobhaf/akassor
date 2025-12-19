@@ -92,6 +92,11 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/byta-a-kassa" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Byta a-kassa
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/ordlista" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     A-kassa ordlista
                                 </Link>
