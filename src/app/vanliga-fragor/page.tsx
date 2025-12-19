@@ -138,18 +138,18 @@ export default function FAQPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">
                                 {section.category}
                             </h2>
-                            <div className="space-y-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {section.questions.map((item, qIdx) => (
-                                    <details key={qIdx} className="group border-b border-gray-100 last:border-0">
-                                        <summary className="flex justify-between items-center font-semibold cursor-pointer list-none py-4 text-lg text-gray-900 group-hover:text-blue-700 transition-colors">
-                                            <span>{item.q}</span>
-                                            <span className="transition-transform group-open:rotate-180">
-                                                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500">
+                                    <details key={qIdx} className="group bg-gray-50/50 rounded-xl px-6 hover:bg-gray-100/80 transition-colors duration-200">
+                                        <summary className="flex justify-between items-center font-semibold cursor-pointer list-none py-5 text-base text-gray-900 group-hover:text-blue-700">
+                                            <span className="pr-4">{item.q}</span>
+                                            <span className="transition-transform duration-200 group-open:rotate-180 flex-shrink-0 text-blue-500">
+                                                <svg fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-5 h-5">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                                 </svg>
                                             </span>
                                         </summary>
-                                        <div className="text-gray-600 pb-4 leading-relaxed">
+                                        <div className="text-gray-600 pb-6 leading-relaxed text-sm">
                                             <p>{item.a}</p>
                                         </div>
                                     </details>
