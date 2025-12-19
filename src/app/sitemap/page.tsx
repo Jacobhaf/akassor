@@ -53,11 +53,14 @@ export default function SitemapPage() {
                     {/* A-kassor */}
                     <div>
                         <h2 className="text-xl font-bold text-gray-900 mb-6 border-b pb-2">A-kassor</h2>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                             {akassor.map((akassa) => (
-                                <li key={akassa.slug}>
-                                    <Link href={`/akassa/${akassa.slug}`} className="text-gray-600 hover:text-blue-600 hover:underline">
+                                <li key={akassa.slug} className="flex flex-col gap-1">
+                                    <Link href={`/akassa/${akassa.slug}`} className="font-medium text-gray-900 hover:text-blue-600 hover:underline">
                                         {akassa.name}
+                                    </Link>
+                                    <Link href={`/akassa/${akassa.slug}/ga-ur-a-kassa`} className="text-sm text-gray-500 hover:text-blue-600 hover:underline">
+                                        Gå ur {akassa.name}
                                     </Link>
                                 </li>
                             ))}
