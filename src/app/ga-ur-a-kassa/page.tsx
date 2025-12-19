@@ -109,16 +109,18 @@ export default function GaUrAkassaPage() {
                                 />
                             </div>
                             <div className="p-8 md:p-12 flex flex-col justify-center">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Hur avslutar man medlemskapet?</h3>
+
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Gör så här för att avsluta medlemskapet</h3>
                                 <p className="mb-4 text-gray-700">
-                                    För att <strong>gå ur a-kassan</strong> behöver du kontakta din a-kassa och begära att medlemskapet avslutas.
-                                    Det görs oftast via inloggning med e-legitimation, till exempel BankID. Om du saknar e-legitimation kan
-                                    det i regel även finnas möjlighet att avsluta medlemskapet skriftligen.
+                                    Det lättaste sättet att avsluta ditt medlemskap är oftast att logga in i "Mitt medlemskap" (eller motsvarande e-tjänst hos din a-kassa) och klicka på länken för att avsluta medlemskap. Den finns vanligtvis under frågor och svar eller inställningar i inloggat läge. Det går också ofta bra att skicka en begäran om utträde via post.
                                 </p>
+                                <p className="mb-4 text-gray-700">
+                                    När du har avslutat ditt medlemskap får du ett beslut av a-kassan, ofta direkt i deras digitala tjänst.
+                                </p>
+
+                                <h4 className="text-xl font-bold text-gray-900 mb-3">Medlemskapet avslutas i slutet av månaden</h4>
                                 <p className="text-gray-700">
-                                    Medlemskapet avslutas vanligtvis från slutet av en månad. Det går inte att avsluta medlemskapet
-                                    retroaktivt, vilket innebär att din begäran måste skickas in innan det datum du vill att medlemskapet
-                                    ska upphöra. Du får normalt en bekräftelse när avslutet är genomfört.
+                                    Vanligtvis avslutas ditt medlemskap i slutet av den månaden du skickat in din ansökan om att avsluta medlemskapet. Vill du avsluta medlemskapet tidigare än så bör du kontakta din a-kassa så kan de ofta hjälpa dig med det. Det går inte att avsluta ditt medlemskap retroaktivt. Det betyder att a-kassan behöver ta emot din ansökan om att avsluta innan det datum du vill gå ur.
                                 </p>
                                 <div className="mt-6">
                                     <Link

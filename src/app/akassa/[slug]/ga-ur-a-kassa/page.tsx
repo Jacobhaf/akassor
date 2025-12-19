@@ -85,18 +85,20 @@ export default function LeaveAkassaPage({ params }: Props) {
                         </p>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Hur gör man för att gå ur {akassa.name}?</h2>
+
+                    <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Gör så här för att avsluta medlemskapet</h2>
 
                     <p>
-                        För att <strong>gå ur {akassa.name}</strong> behöver du själv begära att medlemskapet avslutas.
-                        Det sker vanligtvis genom att logga in på a-kassans medlemssidor med e-legitimation,
-                        till exempel BankID. I vissa fall finns även möjlighet att <strong>avsluta {akassa.name}</strong> genom skriftlig begäran.
+                        Det lättaste sättet att avsluta ditt medlemskap hos {akassa.name} är att logga in i Mitt medlemskap och klicka på länken Avsluta medlemskap. Den finns under frågor och svar på startsidan i e-tjänsten. Det går också bra att skicka en begäran om utträde via post.
                     </p>
 
                     <p>
-                        Medlemskapet avslutas oftast från slutet av en månad. Det är inte möjligt att avsluta
-                        medlemskapet retroaktivt, vilket innebär att din begäran måste skickas in innan det datum
-                        du vill att avslutet ska gälla.
+                        När du har avslutat ditt medlemskap får du ett beslut av {akassa.name} i Mitt medlemskap.
+                    </p>
+
+                    <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Medlemskapet avslutas i slutet av månaden</h3>
+                    <p>
+                        Vanligtvis avslutas ditt medlemskap i slutet av den månaden du skickat in din ansökan om att avsluta medlemskapet. Vill du avsluta medlemskapet tidigare än så är du välkommen att kontakta {akassa.name} så kan de hjälpa dig med det. Det går inte att avsluta ditt medlemskap retroaktivt. Det betyder att {akassa.name} behöver ta emot din ansökan om att avsluta.
                     </p>
 
                     <div className="my-8">
