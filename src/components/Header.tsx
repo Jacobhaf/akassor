@@ -108,7 +108,7 @@ export default function Header() {
                     {/* Drawer */}
                     <div className="fixed inset-y-0 right-0 z-50 w-full bg-[#0B1B3F] px-6 py-6 shadow-2xl md:hidden md:max-w-sm sm:max-w-sm overflow-y-auto">
                         <div className="flex items-center justify-between mb-8">
-                            <div className="relative h-10 w-32">
+                            <div className="relative h-14 w-48">
                                 <Image
                                     src="/logo-valja-akassa-white.png"
                                     alt="Välja A-kassa Logo"
