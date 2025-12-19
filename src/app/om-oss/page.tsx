@@ -75,9 +75,63 @@ export default function OmOssPage() {
                         />
                     </div>
                 </div>
-
-                {/* Team / Values Section could go here if requested, keeping it focused for now */}
             </div>
+
+            {/* Core Values / Important Issues Section */}
+            <div className="bg-[#0B1B3F] py-24 sm:py-32 text-white">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto max-w-3xl text-center">
+                        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
+                            Våra viktigaste frågor
+                        </h2>
+                        <p className="text-lg leading-8 text-blue-100 mb-8">
+                            På valjaakassa.se lyfter vi frågor som är viktiga för a-kassorna och för den svenska arbetsmarknaden i stort. Vi vill bidra till kunskap och förståelse kring arbetslöshetsförsäkringen och varför systemet med oberoende a-kassor spelar en central roll i Sverige.
+                        </p>
+                        <p className="text-lg leading-8 text-blue-100">
+                            Sverige har en lång tradition av fristående a-kassor som bidrar till trygghet för både arbetstagare och företagare. Dessa a-kassor är en viktig del av den svenska modellen och stärker arbetsmarknadens stabilitet.
+                        </p>
+                    </div>
+
+                    <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                        <h3 className="text-2xl font-bold tracking-tight text-white mb-10 text-center">
+                            Därför är oberoende a-kassor viktiga
+                        </h3>
+                        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                            <div className="flex flex-col bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                                <dt className="flex items-center gap-x-3 text-xl font-bold leading-7 text-white mb-4">
+                                    Valfrihet
+                                </dt>
+                                <dd className="flex flex-auto flex-col text-base leading-7 text-blue-100">
+                                    <p className="flex-auto">
+                                        I dag har varje individ möjlighet att själv välja om man vill vara medlem i en a-kassa – och i vilken. Alla som arbetar omfattas av en grundläggande trygghet, men ett medlemskap i en a-kassa ger ett betydligt starkare ekonomiskt skydd vid arbetslöshet.
+                                    </p>
+                                </dd>
+                            </div>
+                            <div className="flex flex-col bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                                <dt className="flex items-center gap-x-3 text-xl font-bold leading-7 text-white mb-4">
+                                    Branschkännedom
+                                </dt>
+                                <dd className="flex flex-auto flex-col text-base leading-7 text-blue-100">
+                                    <p className="flex-auto">
+                                        A-kassorna är självständiga organisationer som samarbetar med både fackförbund och näringsliv. Det ger dem djup kunskap om olika branscher och yrken. Genom sin närhet till medlemmarna kan a-kassorna erbjuda personlig service och vägledning anpassad efter individens situation.
+                                    </p>
+                                </dd>
+                            </div>
+                            <div className="flex flex-col bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                                <dt className="flex items-center gap-x-3 text-xl font-bold leading-7 text-white mb-4">
+                                    Hög nöjdhet och trygg hantering
+                                </dt>
+                                <dd className="flex flex-auto flex-col text-base leading-7 text-blue-100">
+                                    <p className="flex-auto">
+                                        A-kassorna är kostnadseffektiva, rättssäkra och har tydliga regelverk. Återkommande undersökningar visar att medlemmarna i hög grad är nöjda med sin a-kassa och den service de får.
+                                    </p>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
 
             {/* Contact Section */}
             <div className="bg-slate-50 py-16 sm:py-24">

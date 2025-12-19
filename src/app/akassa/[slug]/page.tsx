@@ -152,12 +152,22 @@ export default function AkassaPage({ params }: Props) {
                                 . Avgiften kan ändras över tid, men nivån ligger normalt i linje
                                 med andra a-kassor inom {akassa.primaryIndustries[0]}.
                             </p>
-                            <div className="mt-4 pt-4 border-t border-gray-100">
+                            <div className="mt-6">
                                 <Link
                                     href={`/akassa/${akassa.slug}/ga-ur-a-kassa`}
-                                    className="text-sm text-gray-500 hover:text-gray-700 underline"
+                                    className="block p-4 bg-amber-50 rounded-lg border border-amber-200 hover:bg-amber-100 transition-colors"
                                 >
-                                    Gå ur {akassa.name}
+                                    <div className="flex items-start gap-3">
+                                        <span className="text-xl mt-0.5">⚠️</span>
+                                        <div>
+                                            <div className="font-semibold text-amber-900">
+                                                Funderar du på att gå ur {akassa.name}?
+                                            </div>
+                                            <div className="text-amber-800 text-sm font-medium mt-1 flex items-center gap-1">
+                                                Läs detta först <span aria-hidden="true">&rarr;</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Link>
                             </div>
                         </div>
