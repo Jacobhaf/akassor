@@ -158,7 +158,7 @@ export default function LeaveAkassaPage({ params }: Props) {
                                 Läs mer om {akassa.name}
                             </Link>
 
-                            <Link href="/akassor" className="text-blue-600 font-semibold hover:underline">
+                            <Link href="/jamfor" className="text-blue-600 font-semibold hover:underline">
                                 Jämför andra a-kassor här
                             </Link>
                         </div>
