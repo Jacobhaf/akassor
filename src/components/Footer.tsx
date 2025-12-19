@@ -97,6 +97,11 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/ga-ur-a-kassa" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Gå ur a-kassa
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/ordlista" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     A-kassa ordlista
                                 </Link>
@@ -104,6 +109,11 @@ export default function Footer() {
                             <li>
                                 <Link href="/friskvardsbidrag" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     Friskvårdsbidrag
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/vanliga-fragor" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Vanliga frågor
                                 </Link>
                             </li>
 
