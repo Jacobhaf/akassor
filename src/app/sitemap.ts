@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/om-oss",
         "/kontakt",
         "/integritetspolicy",
+        "/ga-ur-a-kassa",
+        "/cookies",
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
@@ -60,5 +62,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...routes, ...articleRoutes, ...professionRoutes, ...checklistRoutes, ...akassaRoutes];
+
+    // Dynamic routes for akassa exit pages
+    const akassaExitRoutes = akassor.map((akassa) => ({
+        url: `${baseUrl}/akassa/${akassa.slug}/ga-ur-a-kassa`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+    }));
+
+    return [...routes, ...articleRoutes, ...professionRoutes, ...checklistRoutes, ...akassaRoutes, ...akassaExitRoutes];
 }
