@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X, ArrowRight, Scale, List, Briefcase, Shield, ArrowLeftRight, LogOut } from "lucide-react";
+import { Menu, X, ArrowRight, Scale, LayoutGrid, Briefcase, ShieldCheck, RefreshCw, UserMinus } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"; // Assuming utils exists, otherwise I'll mock className joining
 
@@ -132,50 +132,50 @@ export default function Header() {
 
                             <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <Scale className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <Scale className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Jämför a-kassor</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Hitta bästa a-kassan för dig</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Hitta bästa a-kassan för dig</p>
                             </Link>
 
                             <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <List className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <LayoutGrid className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Alla a-kassor</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Jämför villkor och priser</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Jämför villkor och priser</p>
                             </Link>
 
                             <Link href="/yrken" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <Briefcase className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <Briefcase className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Hitta via yrke</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Se a-kassor för ditt jobb</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Se a-kassor för ditt jobb</p>
                             </Link>
 
                             <Link href="/inkomstforsakring" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <Shield className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <ShieldCheck className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Inkomstförsäkring</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Extra trygghet vid arbetslöshet</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Extra trygghet vid arbetslöshet</p>
                             </Link>
 
                             <Link href="/byta-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <ArrowLeftRight className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <RefreshCw className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Byta a-kassa</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Guide för att byta smidigt</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Guide för att byta smidigt</p>
                             </Link>
 
                             <Link href="/ga-ur-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
-                                    <LogOut className="h-4 w-4 text-gray-900 transition-transform group-hover:scale-110" />
+                                    <UserMinus className="h-5 w-5 text-gray-900 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-gray-900">Gå ur A-kassa</span>
                                 </div>
-                                <p className="pl-7 text-sm text-gray-500 font-medium">Regler för att avsluta a-kassa</p>
+                                <p className="pl-8 text-sm text-gray-500 font-medium">Regler för att avsluta a-kassa</p>
                             </Link>
 
 
