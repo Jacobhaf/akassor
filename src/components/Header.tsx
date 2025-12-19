@@ -65,6 +65,7 @@ export default function Header() {
                     <NavLink href="/#jamfor" active={isActive("/#jamfor")}>A-kassor</NavLink>
                     <NavLink href="/yrken" active={isActive("/yrken")}>Yrken</NavLink>
                     <NavLink href="/inkomstforsakring" active={isActive("/inkomstforsakring")}>Inkomstförsäkring</NavLink>
+                    <NavLink href="/ga-ur-a-kassa" active={isActive("/ga-ur-a-kassa")}>Gå ur A-kassa</NavLink>
 
                 </nav>
 
@@ -157,6 +158,14 @@ export default function Header() {
                                     <span className="text-lg font-bold text-gray-900">Inkomstförsäkring</span>
                                 </div>
                                 <p className="pl-7 text-sm text-gray-500 font-medium">Extra trygghet vid arbetslöshet</p>
+                            </Link>
+
+                            <Link href="/ga-ur-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
+                                <div className="flex items-center gap-3 mb-1">
+                                    <ArrowRight className="h-4 w-4 text-gray-900 transition-transform group-hover:translate-x-1" />
+                                    <span className="text-lg font-bold text-gray-900">Gå ur A-kassa</span>
+                                </div>
+                                <p className="pl-7 text-sm text-gray-500 font-medium">Regler för att avsluta a-kassa</p>
                             </Link>
 
 
