@@ -167,7 +167,25 @@ export default function Header() {
 
                         {/* Secondary Links */}
                         <div className="mt-8 flex flex-col space-y-4 px-2">
-                            <Link href="/om-oss" className="text-base font-medium text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
+                            <details className="group">
+                                <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-medium text-gray-900 list-none pr-5">
+                                    Om tjänsten
+                                    <span className="transition delay-150 group-open:rotate-180">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-100 ml-1">
+                                    <Link href="/om-oss" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
+                                    <Link href="/akassa-regler" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
+                                    <Link href="/byta-a-kassa" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Byta a-kassa</Link>
+                                    <Link href="/ga-ur-a-kassa" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Gå ur a-kassa</Link>
+                                    <Link href="/ordlista" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
+                                    <Link href="/friskvardsbidrag" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
+                                    <Link href="/vanliga-fragor" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>
+                                </div>
+                            </details>
                             <Link href="/integritetspolicy" className="text-base font-medium text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Integritetspolicy</Link>
                             <Link href="/cookies" className="text-base font-medium text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Cookies</Link>
                             <Link href="/kontakt" className="text-base font-medium text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
