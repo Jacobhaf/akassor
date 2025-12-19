@@ -111,11 +111,7 @@ export default function Footer() {
                                     Friskvårdsbidrag
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="/vanliga-fragor" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
-                                    Vanliga frågor
-                                </Link>
-                            </li>
+
 
                             <li>
                                 <Link href="/kontakt" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
@@ -155,6 +151,9 @@ export default function Footer() {
                         </Link>
                         <Link href="/cookies" className="text-xs text-gray-500 hover:text-white transition-colors">
                             Cookies
+                        </Link>
+                        <Link href="/vanliga-fragor" className="text-xs text-gray-500 hover:text-white transition-colors">
+                            Vanliga frågor
                         </Link>
                         <Link href="/sitemap" className="text-xs text-gray-500 hover:text-white transition-colors">
                             Sidkarta
