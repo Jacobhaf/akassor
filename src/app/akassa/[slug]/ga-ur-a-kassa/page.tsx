@@ -153,9 +153,15 @@ export default function LeaveAkassaPage({ params }: Props) {
                             Sammanfattningsvis bör beslutet att <strong>avsluta {akassa.name}</strong> vara väl genomtänkt och
                             anpassat efter din nuvarande och framtida situation.
                         </p>
-                        <Link href="/akassor" className="text-blue-600 font-semibold hover:underline">
-                            Jämför andra a-kassor här
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-center items-center">
+                            <Link href={`/akassa/${akassa.slug}`} className="text-blue-600 font-semibold hover:underline">
+                                Läs mer om {akassa.name}
+                            </Link>
+
+                            <Link href="/akassor" className="text-blue-600 font-semibold hover:underline">
+                                Jämför andra a-kassor här
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
