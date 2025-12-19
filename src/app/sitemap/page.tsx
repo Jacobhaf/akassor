@@ -29,10 +29,18 @@ export default function SitemapPage() {
                             <li><Link href="/" className="text-gray-600 hover:text-blue-600 hover:underline">Hem</Link></li>
                             <li><Link href="/akassor" className="text-gray-600 hover:text-blue-600 hover:underline">Alla a-kassor</Link></li>
                             <li><Link href="/yrken" className="text-gray-600 hover:text-blue-600 hover:underline">Alla yrken</Link></li>
+                            <li><Link href="/inkomstforsakring" className="text-gray-600 hover:text-blue-600 hover:underline">Inkomstförsäkring</Link></li>
+                            <li><Link href="/vanliga-fragor" className="text-gray-600 hover:text-blue-600 hover:underline">Vanliga frågor</Link></li>
+                            <li><Link href="/akassa-regler" className="text-gray-600 hover:text-blue-600 hover:underline">A-kassa regler</Link></li>
+                            <li><Link href="/byta-a-kassa" className="text-gray-600 hover:text-blue-600 hover:underline">Byta a-kassa</Link></li>
+                            <li><Link href="/ga-ur-a-kassa" className="text-gray-600 hover:text-blue-600 hover:underline">Gå ur a-kassa</Link></li>
+                            <li><Link href="/ordlista" className="text-gray-600 hover:text-blue-600 hover:underline">Ordlista</Link></li>
+                            <li><Link href="/friskvardsbidrag" className="text-gray-600 hover:text-blue-600 hover:underline">Friskvårdsbidrag</Link></li>
                             <li><Link href="/artiklar" className="text-gray-600 hover:text-blue-600 hover:underline">Artiklar</Link></li>
                             <li><Link href="/om-oss" className="text-gray-600 hover:text-blue-600 hover:underline">Om oss</Link></li>
                             <li><Link href="/kontakt" className="text-gray-600 hover:text-blue-600 hover:underline">Kontakt</Link></li>
                             <li><Link href="/integritetspolicy" className="text-gray-600 hover:text-blue-600 hover:underline">Integritetspolicy</Link></li>
+                            <li><Link href="/cookies" className="text-gray-600 hover:text-blue-600 hover:underline">Cookies</Link></li>
                         </ul>
                     </div>
 
