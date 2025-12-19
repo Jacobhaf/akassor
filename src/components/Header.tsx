@@ -154,6 +154,14 @@ export default function Header() {
                                 <p className="pl-7 text-sm text-gray-500 font-medium">Extra trygghet vid arbetslöshet</p>
                             </Link>
 
+                            <Link href="/byta-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
+                                <div className="flex items-center gap-3 mb-1">
+                                    <ArrowRight className="h-4 w-4 text-gray-900 transition-transform group-hover:translate-x-1" />
+                                    <span className="text-lg font-bold text-gray-900">Byta a-kassa</span>
+                                </div>
+                                <p className="pl-7 text-sm text-gray-500 font-medium">Guide för att byta smidigt</p>
+                            </Link>
+
                             <Link href="/ga-ur-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-gray-100">
                                 <div className="flex items-center gap-3 mb-1">
                                     <ArrowRight className="h-4 w-4 text-gray-900 transition-transform group-hover:translate-x-1" />
@@ -178,9 +186,8 @@ export default function Header() {
                                 </summary>
                                 <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-100 ml-1">
                                     <Link href="/om-oss" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
+                                    <Link href="/artiklar" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Artiklar & Guider</Link>
                                     <Link href="/akassa-regler" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
-                                    <Link href="/byta-a-kassa" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Byta a-kassa</Link>
-                                    <Link href="/ga-ur-a-kassa" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Gå ur a-kassa</Link>
                                     <Link href="/ordlista" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
                                     <Link href="/friskvardsbidrag" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
                                     <Link href="/vanliga-fragor" className="block py-2 text-sm text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>

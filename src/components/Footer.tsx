@@ -65,11 +65,16 @@ export default function Footer() {
                                     <span>Inkomstförsäkring</span>
                                 </Link>
                             </li>
-
                             <li>
-                                <Link href="/artiklar" className="group flex items-center text-gray-300 hover:text-white transition-colors">
+                                <Link href="/byta-a-kassa" className="group flex items-center text-gray-300 hover:text-white transition-colors">
                                     <span className="h-px w-0 bg-blue-400 mr-0 transition-all group-hover:w-4 group-hover:mr-2"></span>
-                                    <span>Artiklar & Guider</span>
+                                    <span>Byta a-kassa</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ga-ur-a-kassa" className="group flex items-center text-gray-300 hover:text-white transition-colors">
+                                    <span className="h-px w-0 bg-blue-400 mr-0 transition-all group-hover:w-4 group-hover:mr-2"></span>
+                                    <span>Gå ur a-kassa</span>
                                 </Link>
                             </li>
                         </ul>
@@ -87,18 +92,13 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/artiklar" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Artiklar & Guider
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/akassa-regler" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
                                     A-kassa regler
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/byta-a-kassa" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
-                                    Byta a-kassa
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/ga-ur-a-kassa" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
-                                    Gå ur a-kassa
                                 </Link>
                             </li>
                             <li>
