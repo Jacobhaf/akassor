@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Byta a-kassa 2026 – Guide för att byta utan avbrott | Välja A-kassa",
+    title: "Byta a-kassa 2026 – Guide för att byta utan avbrott",
     description: "Vill du byta a-kassa? Vi guidar dig steg för steg så du kan byta utan avbrott, behålla din ersättning och göra bytet smidigt och tryggt.",
 };
 

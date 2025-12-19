@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${akassa.name} – avgift, villkor och yrken 2026 | Välja A-kassa`,
+        title: `${akassa.name} – avgift, villkor och yrken 2026`,
         description: `Ta reda på om ${akassa.name} är rätt a-kassa för dig. Avgift, medlemskrav och vilka yrken som omfattas 2026.`,
     };
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-    title: "Gå ur a-kassa – Avsluta medlemskap & regler 2026 | Välja A-kassa",
+    title: "Gå ur a-kassa – Avsluta medlemskap & regler 2026",
     description: "Ska du gå ur a-kassan? Läs vår guide om hur du avslutar medlemskapet korrekt, konsekvenser du bör känna till och vad som gäller för 2026.",
 };
 

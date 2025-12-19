@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'A-kassa Ordlista & Begrepp – Förklaringar A-Ö | Välja A-kassa',
+    title: 'A-kassa Ordlista & Begrepp – Förklaringar A-Ö',
     description:
         'Osäker på orden? Läs vår a-kassa ordlista för att förstå begrepp som arbetsvillkor, ramtid, karensdagar och inkomstförsäkring. Enkel guide till a-kassans språk.',
 };

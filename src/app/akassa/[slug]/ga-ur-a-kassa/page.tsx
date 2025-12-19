@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `Gå ur ${akassa.name} – Avsluta medlemskap & Regler 2026 | Välja A-kassa`,
+        title: `Gå ur ${akassa.name} – Avsluta medlemskap & Regler 2026`,
         description: `Ska du gå ur ${akassa.name}? Läs vår guide om hur du avslutar medlemskapet korrekt hos ${akassa.name}, vad du bör tänka på och konsekvenser.`,
     };
 }
