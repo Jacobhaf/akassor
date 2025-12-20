@@ -198,6 +198,7 @@ export default function Header() {
                                     <Link href="/akassa-regler" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
                                     <Link href="/ordlista" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
                                     <Link href="/friskvardsbidrag" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
+                                    <Link href="/aktivitetsstod" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Aktivitetsstöd</Link>
                                     <Link href="/vanliga-fragor" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>
                                 </div>
                             </details>

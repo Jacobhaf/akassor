@@ -111,6 +111,11 @@ export default function Footer() {
                                     Friskvårdsbidrag
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/aktivitetsstod" className="text-gray-300 hover:text-white transition-colors hover:translate-x-1 inline-block">
+                                    Aktivitetsstöd
+                                </Link>
+                            </li>
 
 
                             <li>
