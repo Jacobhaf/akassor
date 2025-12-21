@@ -106,19 +106,21 @@ export default function Header() {
                     />
 
                     {/* Drawer */}
-                    <div className="fixed inset-y-0 right-0 z-50 w-full bg-[#0B1B3F] px-6 py-6 shadow-2xl md:hidden md:max-w-sm sm:max-w-sm overflow-y-auto">
-                        <div className="flex items-center justify-between mb-8">
+                    <div className="fixed inset-y-0 right-0 z-50 w-full bg-[#0B1B3F] p-0 shadow-2xl md:hidden md:max-w-sm sm:max-w-sm flex flex-col overflow-y-auto">
+
+                        {/* Section 1: Header (White Background) */}
+                        <div className="bg-white px-6 py-6 flex items-center justify-between shrink-0">
                             <div className="relative h-20 w-64">
                                 <Image
                                     src="/logo-valja-akassa-white.png"
                                     alt="Välja A-kassa Logo"
                                     fill
-                                    className="object-contain object-left"
+                                    className="object-contain object-left invert"
                                 />
                             </div>
                             <button
                                 type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-white hover:bg-white/10 transition-colors"
+                                className="-m-2.5 rounded-md p-2.5 text-[#0B1B3F] hover:bg-gray-100 transition-colors"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="sr-only">Stäng meny</span>
@@ -126,11 +128,9 @@ export default function Header() {
                             </button>
                         </div>
 
-                        <div className="flex flex-col space-y-2">
-                            {/* Main Navigation Items */}
-
-
-                            <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                        {/* Section 2: Main Navigation (Dark Background) */}
+                        <div className="flex-1 px-6 py-6 space-y-2">
+                            <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <Scale className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Jämför a-kassor</span>
@@ -138,7 +138,7 @@ export default function Header() {
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Hitta bästa a-kassan för dig</p>
                             </Link>
 
-                            <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                            <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <LayoutGrid className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Alla a-kassor</span>
@@ -146,7 +146,7 @@ export default function Header() {
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Jämför villkor och priser</p>
                             </Link>
 
-                            <Link href="/yrken" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                            <Link href="/yrken" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <Briefcase className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Hitta via yrke</span>
@@ -154,7 +154,7 @@ export default function Header() {
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Se a-kassor för ditt jobb</p>
                             </Link>
 
-                            <Link href="/inkomstforsakring" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                            <Link href="/inkomstforsakring" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <ShieldCheck className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Inkomstförsäkring</span>
@@ -162,7 +162,7 @@ export default function Header() {
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Extra trygghet vid arbetslöshet</p>
                             </Link>
 
-                            <Link href="/byta-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                            <Link href="/byta-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <RefreshCw className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Byta a-kassa</span>
@@ -170,51 +170,52 @@ export default function Header() {
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Guide för att byta smidigt</p>
                             </Link>
 
-                            <Link href="/ga-ur-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10">
+                            <Link href="/ga-ur-a-kassa" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <UserMinus className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
                                     <span className="text-lg font-bold text-white">Gå ur A-kassa</span>
                                 </div>
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Regler för att avsluta a-kassa</p>
                             </Link>
-
-
                         </div>
 
-                        {/* Secondary Links */}
-                        <div className="mt-8 flex flex-col space-y-4 px-2">
-                            <details className="group">
-                                <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-medium text-white list-none pr-5">
-                                    Om tjänsten
-                                    <span className="transition delay-150 group-open:rotate-180 text-blue-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <div className="mt-2 space-y-2 pl-4 border-l-2 border-white/10 ml-1">
-                                    <Link href="/om-oss" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
-                                    <Link href="/artiklar" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Artiklar & Guider</Link>
-                                    <Link href="/akassa-regler" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
-                                    <Link href="/ordlista" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
-                                    <Link href="/friskvardsbidrag" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
-                                    <Link href="/aktivitetsstod" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Aktivitetsstöd</Link>
-                                    <Link href="/vanliga-fragor" className="block py-2 text-sm text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>
+                        {/* Section 3: Footer (White Background) */}
+                        <div className="bg-white px-6 py-8 mt-auto shrink-0">
+                            {/* Secondary Links */}
+                            <div className="flex flex-col space-y-4">
+                                <details className="group">
+                                    <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-bold text-[#0B1B3F] list-none pr-5">
+                                        Om tjänsten
+                                        <span className="transition delay-150 group-open:rotate-180 text-blue-600">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200 ml-1">
+                                        <Link href="/om-oss" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
+                                        <Link href="/artiklar" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Artiklar & Guider</Link>
+                                        <Link href="/akassa-regler" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
+                                        <Link href="/ordlista" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
+                                        <Link href="/friskvardsbidrag" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
+                                        <Link href="/aktivitetsstod" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Aktivitetsstöd</Link>
+                                        <Link href="/vanliga-fragor" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>
+                                    </div>
+                                </details>
+                                <Link href="/integritetspolicy" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Integritetspolicy</Link>
+                                <Link href="/cookies" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Cookies</Link>
+                                <Link href="/kontakt" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
+                            </div>
+
+                            {/* Social */}
+                            <div className="mt-8 pb-4">
+                                <a href="#" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                                    <span className="sr-only">Twitter</span>
+                                    <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                                </a>
+                                <div className="mt-4 text-xs font-bold uppercase tracking-wider text-blue-900">
+                                    Välja A-kassa
                                 </div>
-                            </details>
-                            <Link href="/integritetspolicy" className="text-base font-medium text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Integritetspolicy</Link>
-                            <Link href="/cookies" className="text-base font-medium text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Cookies</Link>
-                            <Link href="/kontakt" className="text-base font-medium text-blue-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
-                        </div>
-
-                        {/* Social */}
-                        <div className="mt-12 px-2 pb-8">
-                            <a href="#" className="inline-flex items-center text-blue-300 hover:text-white transition-colors">
-                                <span className="sr-only">Twitter</span>
-                                <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
-                            </a>
-                            <div className="mt-4 text-xs font-bold uppercase tracking-wider text-blue-400">
-                                Välja A-kassa
                             </div>
                         </div>
                     </div>
