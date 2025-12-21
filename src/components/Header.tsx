@@ -109,17 +109,28 @@ export default function Header() {
                     <div className="fixed inset-y-0 right-0 z-50 w-full bg-[#0B1B3F] p-0 shadow-2xl md:hidden md:max-w-sm sm:max-w-sm flex flex-col overflow-y-auto">
 
                         {/* Section 1: Header (White Background) */}
-                        <div className="bg-white px-4 py-4 flex items-center justify-between shrink-0 gap-2">
-                            <div className="relative h-20 w-40 sm:h-24 sm:w-56">
-                                <Image
-                                    src="/logo-valja-akassa-white.png"
-                                    alt="Välja A-kassa Logo"
-                                    fill
-                                    className="object-contain object-left invert"
-                                />
-                            </div>
+                        <div className="bg-white px-4 pt-2 pb-6 shrink-0 relative">
+                            {/* Close Button (Moved Up & Smaller) */}
+                            <button
+                                type="button"
+                                className="absolute top-3 right-3 rounded-md p-2 text-[#0B1B3F] hover:bg-gray-100 transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <span className="sr-only">Stäng meny</span>
+                                <X className="h-6 w-6" aria-hidden="true" />
+                            </button>
 
-                            <div className="flex items-center gap-3">
+                            {/* Logo & CTA (Moved Down) */}
+                            <div className="mt-8 flex items-center justify-between gap-2">
+                                <div className="relative h-20 w-40 sm:h-24 sm:w-56">
+                                    <Image
+                                        src="/logo-valja-akassa-white.png"
+                                        alt="Välja A-kassa Logo"
+                                        fill
+                                        className="object-contain object-left invert"
+                                    />
+                                </div>
+
                                 <Link
                                     href="/jamfor"
                                     onClick={() => setIsMenuOpen(false)}
@@ -127,15 +138,6 @@ export default function Header() {
                                 >
                                     Jämför a-kassor
                                 </Link>
-
-                                <button
-                                    type="button"
-                                    className="-m-2.5 rounded-md p-2.5 text-[#0B1B3F] hover:bg-gray-100 transition-colors"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="sr-only">Stäng meny</span>
-                                    <X className="h-8 w-8" aria-hidden="true" />
-                                </button>
                             </div>
                         </div>
 
