@@ -287,11 +287,12 @@ export const articles: Article[] = [
       </ul>
 
       <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 my-8">
-        <h4 class="text-amber-900 font-bold mt-0 mb-2 text-lg">Varning för "Kombinatörsfällan"</h4>
+        <h4 class="text-amber-900 font-bold mt-0 mb-2 text-lg">Varning för ”kombinatörsfällan”</h4>
+        <p class="text-amber-800 mb-4">
+            Många kombinerar en deltidsanställning med att fakturera vid sidan av. Inom arbetslöshetsförsäkringen betraktas detta som att vara kombinatör. Om du förlorar din anställning kan din näringsverksamhet påverka rätten till a-kassa, även om företaget bara bedrivs i liten omfattning.
+        </p>
         <p class="text-amber-800">
-            Många har en anställning på 50% och fakturerar lite vid sidan av. A-kassan kallar detta för att vara "kombinatör". 
-            <strong>Risken:</strong> Om du blir av med din anställning kan din bisyssla (företaget) hindra dig från att få a-kassa för den förlorade anställningen. 
-            Reglerna har mjukats upp, men ofta krävs att din bisyssla är godkänd som just "bisyssla" (att du skött den vid sidan av heltidsarbete i minst 12 månader) för att du ska få behålla den samtidigt som du stämplar.
+            Reglerna har delvis mjukats upp, men för att få behålla en verksamhet samtidigt som du får ersättning krävs ofta att den bedöms som bisyssla. Det innebär bland annat att den ska ha bedrivits vid sidan av heltidsarbete under minst 12 månader före arbetslösheten och inte ha utökats därefter.
         </p>
       </div>
 
