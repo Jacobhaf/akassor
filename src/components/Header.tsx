@@ -109,8 +109,8 @@ export default function Header() {
                     <div className="fixed inset-y-0 right-0 z-50 w-full bg-[#0B1B3F] p-0 shadow-2xl md:hidden md:max-w-sm sm:max-w-sm flex flex-col overflow-y-auto">
 
                         {/* Section 1: Header (White Background) */}
-                        <div className="bg-white px-6 py-6 flex items-center justify-between shrink-0">
-                            <div className="relative h-28 w-72">
+                        <div className="bg-white px-4 py-4 flex items-center justify-between shrink-0 gap-2">
+                            <div className="relative h-20 w-40 sm:h-24 sm:w-56">
                                 <Image
                                     src="/logo-valja-akassa-white.png"
                                     alt="Välja A-kassa Logo"
@@ -118,26 +118,29 @@ export default function Header() {
                                     className="object-contain object-left invert"
                                 />
                             </div>
-                            <button
-                                type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-[#0B1B3F] hover:bg-gray-100 transition-colors"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="sr-only">Stäng meny</span>
-                                <X className="h-8 w-8" aria-hidden="true" />
-                            </button>
+
+                            <div className="flex items-center gap-3">
+                                <Link
+                                    href="/jamfor"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="rounded-md bg-blue-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-blue-500 whitespace-nowrap"
+                                >
+                                    Jämför a-kassor
+                                </Link>
+
+                                <button
+                                    type="button"
+                                    className="-m-2.5 rounded-md p-2.5 text-[#0B1B3F] hover:bg-gray-100 transition-colors"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    <span className="sr-only">Stäng meny</span>
+                                    <X className="h-8 w-8" aria-hidden="true" />
+                                </button>
+                            </div>
                         </div>
 
                         {/* Section 2: Main Navigation (Dark Background) */}
                         <div className="flex-1 px-6 pt-6 pb-2 space-y-2">
-                            <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
-                                <div className="flex items-center gap-3 mb-1">
-                                    <Scale className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
-                                    <span className="text-lg font-bold text-white">Jämför a-kassor</span>
-                                </div>
-                                <p className="pl-8 text-sm text-blue-200/80 font-medium">Hitta bästa a-kassan för dig</p>
-                            </Link>
-
                             <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <LayoutGrid className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
