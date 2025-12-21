@@ -248,32 +248,73 @@ export const articles: Article[] = [
     `
   },
   {
-    slug: "a-kassa-for-frilansare-2025",
-    title: "A-kassa för frilansare och gig-jobbare – så funkar det",
-    summary: "Arbetsmarknaden förändras och allt fler jobbar projektbaserat. Men a-kassan hänger inte alltid med. Här är guiden för dig som är giggare eller konsult.",
+    slug: "a-kassa-for-frilansare-2026",
+    title: "A-kassa för frilansare och gig-jobbare 2026 – så funkar det",
+    summary: "Arbetsmarknaden förändras snabbt. Allt fler väljer friheten som giggare eller konsult, men trygghetssystemen släpar efter. Här är den ultimata guiden för dig som vill säkra din inkomst som frilansare 2026.",
     image: "/artiklar/digital-nomad.png",
     publishedAt: "2025-02-20",
     content: `
-      <p class="lead text-xl text-gray-600 mb-8">Gig-ekonomin växer, men det svenska trygghetssystemet bygger fortfarande på den traditionella tillsvidareanställningen. Som frilansare eller "giggare" måste du vara extra smart för att få samma trygghet.</p>
+      <p class="lead text-xl text-gray-600 mb-8">Gig-ekonomin är här för att stanna. År 2026 beräknas över 20% av arbetskraften ha någon form av inkomst från gig eller frilansuppdrag. Men det svenska a-kassesystemet är i grunden byggt för traditionella anställningar. Det betyder inte att du står utan skydd – men du måste veta exakt hur reglerna fungerar för att inte gå miste om ersättning.</p>
 
-      <h2>Anställd eller Företagare?</h2>
-      <div class="space-y-4 my-6">
-        <div class="border-l-4 border-blue-500 pl-4">
-            <h4 class="font-bold">Egenanställd (via Faktureringsbolag)</h4>
-            <p>Räknas oftast som anställd. A-kassan bedömer dig som en anställd som arbetar per timme. Du måste samla intyg från ditt egenanställningsföretag (t.ex. Cool Company, Frilans Finans).</p>
+      <h2>Tre sätt att vara frilansare – tre olika regler</h2>
+      <p>Det första du måste reda ut är <em>hur</em> du frilansar. A-kassan gör stor skillnad på om du betraktas som anställd eller företagare.</p>
+
+      <div class="space-y-6 my-8">
+        <div class="bg-white p-6 rounded-xl border-l-4 border-blue-500 shadow-sm">
+            <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">1. Egenanställd (Giggare)</h3>
+            <p class="text-gray-700 mb-2"><strong>Vad är det?</strong> Du fakturerar via bolag som Frilans Finans, Cool Company eller Gigapay. Du har ingen F-skatt.</p>
+            <p class="text-gray-700"><strong>A-kassans syn:</strong> Du räknas normalt som <strong>anställd</strong>. Det är bra! Det betyder att du kan stämpla upp till heltid om du får färre uppdrag, precis som en timanställd. <br><span class="text-sm italic">Varning: Vissa a-kassor kan bedöma dig som "självständig uppdragstagare" om du är för oberoende, vilket kan likställas med företagare.</span></p>
         </div>
-        <div class="border-l-4 border-purple-500 pl-4">
-            <h4 class="font-bold">Eget bolag (F-skatt)</h4>
-            <p>Du räknas som företagare. För att få a-kassa måste du ofta lägga företaget "vilande" – du får alltså inte göra NÅGOT i bolaget, inte ens svara på mail, under tiden du lyfter ersättning.</p>
+
+        <div class="bg-white p-6 rounded-xl border-l-4 border-purple-500 shadow-sm">
+            <h3 class="text-purple-900 font-bold text-lg mt-0 mb-2">2. Enskild Firma</h3>
+            <p class="text-gray-700 mb-2"><strong>Vad är det?</strong> Du har F-skatt och driver verksamheten i eget namn.</p>
+            <p class="text-gray-700"><strong>A-kassans syn:</strong> Du är <strong>företagare</strong>. Huvudregeln är att du inte kan få a-kassa så länge verksamheten är igång. För att få ersättning måste du ofta lägga företaget "vilande" (pausa verksamheten helt) eller avregistrera F-skatten.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm">
+            <h3 class="text-emerald-900 font-bold text-lg mt-0 mb-2">3. Aktiebolag</h3>
+            <p class="text-gray-700 mb-2"><strong>Vad är det?</strong> Du är anställd i ditt eget aktiebolag.</p>
+            <p class="text-gray-700"><strong>A-kassans syn:</strong> Du räknas som <strong>företagare</strong> om du eller din familj äger en väsentlig del av bolaget och du har inflytande över driften. Samma regler om "vilande företag" gäller oftast här.</p>
         </div>
       </div>
 
-      <h2>Kombinatören – det svåra mellanläget</h2>
-      <p>Många har en anställning på 50% och driver eget vid sidan av. Detta kallas att vara kombinatör. A-kassorna har särskilda regler här. Om du blir arbetslös från din anställning kan du ibland få fyllnadsmarkering, men ofta krävs att du pausar din bisyssla (företaget) för att få full ersättning. Kolla alltid med din specifika a-kassa i förväg.</p>
+      <h2>Arbetsvillkoret för giggare</h2>
+      <p>För att få a-kassa måste du uppfylla arbetsvillkoret (jobbat ca halvtid i 6 månader). För frilansare kan detta vara klurigt:</p>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li><strong>Samla timmar:</strong> Alla små uppdrag räknas! Spara alla lönespecifikationer från dina egenanställningsbolag.</li>
+        <li><strong>Kreativa yrken:</strong> För vissa konstnärliga yrken finns särskilda regler där man räknar om inkomst till arbetad tid ("schablonisering"), vilket kan hjälpa dig att nå villkoret.</li>
+      </ul>
 
-      <h3>Småföretagarnas a-kassa</h3>
-      <p>För dig som driver eget eller frilansar är <strong><a href="/akassa/smaa" class="text-blue-600 hover:underline">Småa</a></strong> ofta det bästa valet då de har bäst koll på dessa speciella villkor.</p>
-    `
+      <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 my-8">
+        <h4 class="text-amber-900 font-bold mt-0 mb-2 text-lg">Varning för "Kombinatörsfällan"</h4>
+        <p class="text-amber-800">
+            Många har en anställning på 50% och fakturerar lite vid sidan av. A-kassan kallar detta för att vara "kombinatör". 
+            <strong>Risken:</strong> Om du blir av med din anställning kan din bisyssla (företaget) hindra dig från att få a-kassa för den förlorade anställningen. 
+            Reglerna har mjukats upp, men ofta krävs att din bisyssla är godkänd som just "bisyssla" (att du skött den vid sidan av heltidsarbete i minst 12 månader) för att du ska få behålla den samtidigt som du stämplar.
+        </p>
+      </div>
+
+      <h2>Vilken a-kassa ska jag välja 2026?</h2>
+      <p>Det är avgörande att du väljer en a-kassa som förstår din situation.</p>
+      
+      <h3>För dig med eget företag (F-skatt/AB)</h3>
+      <p>Här är <strong><a href="/akassa/smaa" class="text-blue-600 hover:underline">Småföretagarnas a-kassa (Småa)</a></strong> det absolut starkaste kortet. De är specialister på regler kring vilande företag, familjeföretagande och entreprenörskap. De förstår att en företagare inte alltid har en "chef" att få intyg ifrån.</p>
+
+      <h3>För dig som är Egenanställd/Giggare</h3>
+      <p>Om du främst fakturerar via faktureringstjänster kan <strong><a href="/akassa/unionen" class="text-blue-600 hover:underline">Unionens a-kassa</a></strong> vara ett bra val. De är Sveriges största a-kassa för privata tjänstemän och är vana vid moderna anställningsformer. Även <strong><a href="/akassa/alfa" class="text-blue-600 hover:underline">Alfa-kassan</a></strong> är ett alternativ som är öppet för alla yrkesgrupper.</p>
+
+      <h3>För Kulturella och Kreativa yrken</h3>
+      <p>Jobbar du inom media, teater, musik eller formgivning? Då är <strong><a href="/akassa/kultur" class="text-blue-600 hover:underline">Kulturarbetarnas a-kassa</a></strong> eller <strong>Journalisternas a-kassa</strong> ofta bäst. De har specifik kunskap om projektanställningar, upphovsrättsliga ersättningar och stipendier.</p>
+
+      <h2>Checklista för frilansare</h2>
+      <ol class="list-decimal pl-5 space-y-3 mt-4 mb-8">
+        <li><strong>Dokumentera allt:</strong> Spara alla avtal, fakturor och tidsrapporter. Du är din egen HR-avdelning.</li>
+        <li><strong>Ta ut lön!</strong> Om du har AB, kom ihåg att din a-kassa baseras på din <em>utbetalda lön</em>, inte bolagets vinst. Tar du bara utdelning får du 0 kr i a-kassa.</li>
+        <li><strong>Gå med i rätt tid:</strong> Vänta inte tills uppdragen sinar. Gå med i a-kassan nu när du har inkomst.</li>
+        <li><strong>Skaffa inkomstförsäkring:</strong> Som frilansare varierar inkomsten. En privat inkomstförsäkring kan ge dig trygghet baserat på dina bästa inkomstår.</li>
+      </ol>
+    `,
   },
   {
     slug: "student-till-jobb-guide",
