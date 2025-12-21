@@ -7,6 +7,16 @@ const nextConfig = {
                 destination: '/yrken/:slug',
                 permanent: true,
             },
+            {
+                source: '/artiklar/a-kassa-for-frilansare-2025',
+                destination: '/artiklar/a-kassa-for-gigarbetare-och-frilansare',
+                permanent: true,
+            },
+            {
+                source: '/artiklar/a-kassa-for-frilansare-2026',
+                destination: '/artiklar/a-kassa-for-gigarbetare-och-frilansare',
+                permanent: true,
+            },
         ];
     },
     images: {

@@ -248,7 +248,7 @@ export const articles: Article[] = [
     `
   },
   {
-    slug: "a-kassa-for-frilansare-2026",
+    slug: "a-kassa-for-gigarbetare-och-frilansare",
     title: "A-kassa för frilansare och gig-jobbare 2026 – så funkar det",
     summary: "Arbetsmarknaden förändras snabbt. Allt fler väljer friheten som giggare eller konsult, men trygghetssystemen släpar efter. Här är den ultimata guiden för dig som vill säkra din inkomst som frilansare 2026.",
     image: "/artiklar/digital-nomad.png",
