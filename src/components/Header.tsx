@@ -192,7 +192,7 @@ export default function Header() {
                                     <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-bold text-[#0B1B3F] list-none pr-5 hover:text-blue-600 transition-colors">
                                         <div className="flex items-center gap-3">
                                             <Info className="h-5 w-5 text-blue-600" />
-                                            Om tjänsten
+                                            Mer om Välja A-kassa
                                         </div>
                                         <span className="transition delay-150 group-open:rotate-180 text-blue-600">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
