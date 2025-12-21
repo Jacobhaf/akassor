@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import FaqAccordion from '@/components/FaqAccordion';
 
 export const metadata = {
     title: "Gå ur a-kassa – Avsluta medlemskap & regler 2026",
