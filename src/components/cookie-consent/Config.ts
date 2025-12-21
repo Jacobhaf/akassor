@@ -1,8 +1,9 @@
 const config = {
+    revision: 1, // Force re-consent if config changes
     gui_options: {
         consent_modal: {
-            layout: 'box',
-            position: 'bottom right',
+            layout: 'bar',
+            position: 'bottom',
             equal_weight_buttons: true,
             flip_buttons: false,
         },

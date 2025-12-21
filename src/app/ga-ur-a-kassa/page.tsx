@@ -135,22 +135,42 @@ export default function GaUrAkassaPage() {
                     </div>
 
                     {/* FAQ Section */}
-                    <div className="bg-white border-t border-gray-100 pt-12">
+                    <div className="bg-white border-t border-gray-100 pt-12 pb-12">
                         <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">Vanliga frågor om att avsluta a-kassa</h3>
-                        <ul className="space-y-4 max-w-2xl mx-auto">
-                            <li className="flex gap-4 p-4 rounded-lg bg-gray-50">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">?</span>
-                                <span className="font-medium text-gray-800">Det finns normalt ingen uppsägningstid för medlemskap i a-kassan</span>
-                            </li>
-                            <li className="flex gap-4 p-4 rounded-lg bg-gray-50">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">?</span>
-                                <span className="font-medium text-gray-800">Medlemskapet kan inte avslutas retroaktivt</span>
-                            </li>
-                            <li className="flex gap-4 p-4 rounded-lg bg-gray-50">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">?</span>
-                                <span className="font-medium text-gray-800">Ersättning kan påverkas om du avslutar medlemskapet vid fel tidpunkt</span>
-                            </li>
-                        </ul>
+                        <FaqAccordion items={[
+                            {
+                                question: "Hur avslutar jag mitt medlemskap i a-kassan?",
+                                answer: "För att avsluta ditt medlemskap behöver du kontakta din a-kassa direkt. De flesta a-kassor erbjuder möjlighet att avsluta medlemskapet via:\n\n* Mina sidor på a-kassans webbplats\n* Ett digitalt formulär eller e-post\n* I vissa fall via brev\n\nUppsägningen gäller vanligtvis från och med det datum a-kassan registrerar avslutet."
+                            },
+                            {
+                                question: "Kan jag avsluta a-kassan när som helst?",
+                                answer: "Ja, medlemskap i a-kassa är frivilligt och kan avslutas när som helst. Tänk på att du efter avslut:\n\n* inte längre omfattas av a-kassans ersättningsskydd\n* kan behöva uppfylla ett nytt medlemsvillkor om du går med igen"
+                            },
+                            {
+                                question: "Behöver jag avsluta a-kassan om jag byter jobb?",
+                                answer: "Nej. A-kassan är inte kopplad till din arbetsgivare utan till dig som person. Du kan behålla samma a-kassa även om du byter arbetsplats.\n\nEtt byte eller avslut är endast aktuellt om du:\n\n* byter yrkesområde och vill tillhöra en annan a-kassa\n* inte längre vill vara medlem i någon a-kassa"
+                            },
+                            {
+                                question: "Vad händer om jag avslutar a-kassan och senare blir arbetslös?",
+                                answer: "Om du inte är medlem i en a-kassa när du blir arbetslös har du normalt inte rätt till inkomstbaserad ersättning. För att få full ersättning igen behöver du vanligtvis:\n\n* vara medlem i minst 12 månader\n* uppfylla arbetsvillkoret"
+                            },
+                            {
+                                question: "Kan jag avsluta min a-kassa och gå med i en annan?",
+                                answer: "Ja. Om du vill byta a-kassa är det viktigt att inte avsluta ditt nuvarande medlemskap själv först. Ansök istället om medlemskap i den nya a-kassan, som då sköter överflyttningen så att din medlemstid kan räknas vidare."
+                            },
+                            {
+                                question: "Får jag tillbaka medlemsavgiften om jag avslutar?",
+                                answer: "Nej. Medlemsavgiften betalas normalt månadsvis och återbetalas vanligtvis inte, även om du avslutar ditt medlemskap mitt i en betalningsperiod."
+                            },
+                            {
+                                question: "Påverkas min inkomstförsäkring om jag avslutar a-kassan?",
+                                answer: "Ja. De flesta inkomstförsäkringar kräver att du är medlem i en a-kassa. Om du avslutar a-kassan kan även inkomstförsäkringen upphöra att gälla."
+                            },
+                            {
+                                question: "När kan det vara olämpligt att avsluta a-kassan?",
+                                answer: "Det kan innebära en ekonomisk risk att avsluta a-kassan om du exempelvis:\n\n* har en tidsbegränsad anställning\n* arbetar som konsult eller egenföretagare\n* befinner dig i en osäker arbetsmarknadssituation\n\nA-kassan är grunden för ersättning vid arbetslöshet."
+                            }
+                        ]} />
                     </div>
 
                 </div>
