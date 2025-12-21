@@ -15,7 +15,7 @@ export const articles: Article[] = [
     image: "/artiklar/guide-person.png",
     publishedAt: "2023-11-15",
     content: `
-      <p class="lead text-xl text-gray-600 mb-8">Att bli medlem i en a-kassa är ett av de viktigaste stegen du kan ta för din ekonomiska trygghet. Men hur fungerar systemet egentligen, och vad är skillnaden på att bara "få pengar" och att ha en riktig inkomstförsäkring? Här går vi igenom allt du behöver veta.</p>
+      <p class="lead text-xl text-gray-600 mb-8"><a href="/jamfor" class="text-blue-600 hover:underline">Att bli medlem i en a-kassa</a> är ett av de viktigaste stegen du kan ta för din ekonomiska trygghet. Men hur fungerar systemet egentligen, och vad är skillnaden på att bara "få pengar" och att ha en riktig inkomstförsäkring? Här går vi igenom allt du behöver veta.</p>
 
       <div class="bg-blue-50 p-8 rounded-2xl border border-blue-100 my-10 shadow-sm">
         <h3 class="text-blue-900 font-bold text-xl mb-4 mt-0 flex items-center">
@@ -37,7 +37,7 @@ export const articles: Article[] = [
       <ul>
         <li>Gäller från att du fyllt 20 år.</li>
         <li>Ger en lägre ersättning per dag (max 510 kr/dag före skatt).</li>
-        <li>Utbetalas oftast av Alfa-kassan om du inte är medlem någonstans.</li>
+        <li>Utbetalas oftast av <a href="/akassa/alfa" class="text-blue-600 hover:underline">Alfa-kassan</a> om du inte är medlem någonstans.</li>
       </ul>
 
       <h3>2. Inkomstbortfallsförsäkringen (Medlemskap)</h3>
@@ -84,7 +84,7 @@ export const articles: Article[] = [
       <h2>Vanliga a-kassor per yrkesområde</h2>
 
       <h3>För Akademiker</h3>
-      <p><strong>Akademikernas a-kassa (AEA)</strong> är det självklara valet om du har 180 högskolepoäng eller mer, eller studerar. Det är Sveriges största a-kassa med över 750 000 medlemmar. De är kända för låg avgift och effektiv handläggning.</p>
+      <p><strong><a href="/akassa/aea" class="text-blue-600 hover:underline">Akademikernas a-kassa (AEA)</a></strong> är det självklara valet om du har 180 högskolepoäng eller mer, eller studerar. Det är Sveriges största a-kassa med över 750 000 medlemmar. De är kända för låg avgift och effektiv handläggning.</p>
 
       <div class="bg-green-50 p-6 rounded-xl border border-green-100 my-6">
         <h4 class="text-green-900 font-bold mt-0 mb-2">Exempel på yrken för AEA:</h4>
@@ -92,13 +92,13 @@ export const articles: Article[] = [
       </div>
 
       <h3>För Tjänstemän</h3>
-      <p>Om du jobbar på kontor i privat sektor är <strong>Unionens a-kassa</strong> ofta rätt val. De organiserar allt från administratörer och säljare till IT-konsulter och chefer.</p>
+      <p>Om du jobbar på kontor i privat sektor är <strong><a href="/akassa/unionen" class="text-blue-600 hover:underline">Unionens a-kassa</a></strong> ofta rätt val. De organiserar allt från administratörer och säljare till IT-konsulter och chefer.</p>
 
       <h3>För Vård och Omsorg</h3>
-      <p><strong>Kommunals a-kassa</strong> är störst inom kommunala yrken som undersköterska, barnskötare och personlig assistent.</p>
+      <p><strong><a href="/akassa/kommunal" class="text-blue-600 hover:underline">Kommunals a-kassa</a></strong> är störst inom kommunala yrken som undersköterska, barnskötare och personlig assistent.</p>
 
       <h3>För Egenföretagare</h3>
-      <p>Som företagare har du specifika regler kring "vilande företag" för att få ersättning. <strong>Småföretagarnas a-kassa (Småa)</strong> är experter på detta och kan guida dig rätt så att du inte riskerar din ersättning.</p>
+      <p>Som företagare har du specifika regler kring "vilande företag" för att få ersättning. <strong><a href="/akassa/smaa" class="text-blue-600 hover:underline">Småföretagarnas a-kassa (Småa)</a></strong> är experter på detta och kan guida dig rätt så att du inte riskerar din ersättning.</p>
 
       <h2>Kan jag vara med i vilken a-kassa som helst?</h2>
       <p>Nej, de flesta a-kassor har stadgar som reglerar vem som får bli medlem. Om du byter bransch helt (t.ex. från lärare till snickare) måste du oftast byta a-kassa. Det är dock enkelt gjort och din intjänade medlemstid följer med dig.</p>
@@ -147,7 +147,7 @@ export const articles: Article[] = [
       <h2>Inkomsttaket – vad innebär det?</h2>
       <p>A-kassan har ett tak. Det innebär att du får 80% av din lön, men bara upp till en viss inkomstnivå. År 2025/2026 ligger taket på <strong>33 000 kr</strong> i månaden de första 100 dagarna.</p>
       
-      <p>Tjänar du mer än 33 000 kr? Då får du ändå bara ut maxbeloppet (ca 26 400 kr före skatt). För att försäkra lönen över detta tak behöver du en <strong>inkomstförsäkring</strong>, som oftast ingår i fackmedlemskap eller kan tecknas separat.</p>
+      <p>Tjänar du mer än 33 000 kr? Då får du ändå bara ut maxbeloppet (ca 26 400 kr före skatt). För att försäkra lönen över detta tak behöver du en <strong><a href="/inkomstforsakring" class="text-blue-600 hover:underline">inkomstförsäkring</a></strong>, som oftast ingår i fackmedlemskap eller kan tecknas separat.</p>
 
       <h2>Karensdagar</h2>
       <p>När du blir arbetslös får du inte ersättning direkt från dag 1. Du har en karensperiod på vanligtvis <strong>2 dagar</strong> (tidigare 6 dagar). Dessa dagar dras av från din ersättning, vilket innebär att din första utbetalning blir något lägre.</p>
@@ -187,7 +187,7 @@ export const articles: Article[] = [
       
       <div class="bg-gray-100 p-6 rounded-lg my-6">
         <h4 class="font-bold mb-2">Vad innebär det för mig?</h4>
-        <p>Om förslaget går igenom fullt ut innebär det att det blir ännu viktigare att ha en <strong>privat inkomstförsäkring</strong> eller facklig försäkring som täcker upp när den statliga a-kassan trappas ner efter de första 100 dagarna.</p>
+        <p>Om förslaget går igenom fullt ut innebär det att det blir ännu viktigare att ha en <strong><a href="/inkomstforsakring" class="text-blue-600 hover:underline">privat inkomstförsäkring</a></strong> eller facklig försäkring som täcker upp när den statliga a-kassan trappas ner efter de första 100 dagarna.</p>
       </div>
 
       <h2>Höjda tak och inflation</h2>
@@ -210,7 +210,7 @@ export const articles: Article[] = [
       <p>Om din a-kassa ger dig 20 000 kr ut efter skatt, och inflationen är 5%, så kan du köpa varor för 19 000 kr "i dagens värde" om ett år. På några år kan detta göra stor skillnad i plånboken för den som är långtidsarbetslös.</p>
 
       <h2>Inkomstförsäkring som skydd</h2>
-      <p>Det bästa sättet att skydda sig mot att kalkylen spricker är att ha en inkomstförsäkring. Den garanterar ofta upp till 80% av din faktiska lön, oavsett taket i a-kassan. Många fackförbund har dessutom förhandlat fram bra villkor som justeras bättre över tid.</p>
+      <p>Det bästa sättet att skydda sig mot att kalkylen spricker är att ha en <a href="/inkomstforsakring" class="text-blue-600 hover:underline">inkomstförsäkring</a>. Den garanterar ofta upp till 80% av din faktiska lön, oavsett taket i a-kassan. Många fackförbund har dessutom förhandlat fram bra villkor som justeras bättre över tid.</p>
       
       <div class="bg-red-50 p-6 rounded-xl border border-red-100 my-6">
          <h4 class="text-red-900 font-bold mt-0 mb-2">Tips!</h4>
@@ -231,7 +231,7 @@ export const articles: Article[] = [
       <p>Om du säger upp dig själv utan "giltigt skäl" (som t.ex. sjukdom eller mobbning) blir du avstängd från a-kassan i <strong>45 ersättningsdagar</strong>. Det motsvarar ungefär 9-10 veckor utan ersättning. Planera din ekonomi för detta glapp!</p>
 
       <h2>Byta a-kassa utan glapp</h2>
-      <p>Om du byter från att vara lärare till att bli ingenjör ska du byta från Lärarnas a-kassa till Akademikernas a-kassa. <br><strong>Gör så här:</strong></p>
+      <p>Om du byter från att vara lärare till att bli ingenjör ska du byta från <a href="/akassa/la" class="text-blue-600 hover:underline">Lärarnas a-kassa</a> till <a href="/akassa/aea" class="text-blue-600 hover:underline">Akademikernas a-kassa</a>. <br><strong>Gör så här:</strong></p>
       <ol>
         <li>Ansök om medlemskap i den NYA kassan.</li>
         <li>Begär utträde ur den GAMLA kassan tidigast samma månad som du går med i den nya.</li>
@@ -272,7 +272,7 @@ export const articles: Article[] = [
       <p>Många har en anställning på 50% och driver eget vid sidan av. Detta kallas att vara kombinatör. A-kassorna har särskilda regler här. Om du blir arbetslös från din anställning kan du ibland få fyllnadsmarkering, men ofta krävs att du pausar din bisyssla (företaget) för att få full ersättning. Kolla alltid med din specifika a-kassa i förväg.</p>
 
       <h3>Småföretagarnas a-kassa</h3>
-      <p>För dig som driver eget eller frilansar är <strong>Småa</strong> ofta det bästa valet då de har bäst koll på dessa speciella villkor.</p>
+      <p>För dig som driver eget eller frilansar är <strong><a href="/akassa/smaa" class="text-blue-600 hover:underline">Småa</a></strong> ofta det bästa valet då de har bäst koll på dessa speciella villkor.</p>
     `
   },
   {
@@ -301,8 +301,8 @@ export const articles: Article[] = [
 
       <h2>Tips för nyexaminerade</h2>
       <ol>
-        <li><strong>Alfa-kassan:</strong> Om du inte är medlem någonstans kan du ändå söka grundersättning hos Alfa-kassan om du uppfyller arbetsvillkoret.</li>
-        <li><strong>Facket:</strong> Gå med i facket (t.ex. Unionen, Sveriges Ingenjörer). De har ofta karriärtjänster, CV-granskning och inkomstförsäkring som ingår för framtiden.</li>
+        <li><strong><a href="/akassa/alfa" class="text-blue-600 hover:underline">Alfa-kassan</a>:</strong> Om du inte är medlem någonstans kan du ändå söka grundersättning hos Alfa-kassan om du uppfyller arbetsvillkoret.</li>
+        <li><strong>Facket:</strong> Gå med i facket (t.ex. <a href="/akassa/unionen" class="text-blue-600 hover:underline">Unionen</a>, Sveriges Ingenjörer). De har ofta karriärtjänster, CV-granskning och inkomstförsäkring som ingår för framtiden.</li>
       </ol>
     `
   }

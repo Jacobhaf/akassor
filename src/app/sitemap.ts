@@ -43,12 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    // Dynamic routes for akassor (if we had individual pages for them, which we seem to link to in AkassaCard but I haven't created /akassa/[slug] page yet? 
-    // Wait, AkassaCard links to `/akassa/${akassa.slug}`. 
-    // I should check if that page exists. I don't recall creating it or seeing it in the file list.
-    // Let's check the file list again.
-    // Ah, I saw `src/app/akassa` folder in Step 50. Let's assume it exists.
-    // I will include them in sitemap.
+    // Dynamic routes for akassa pages
     const akassaRoutes = akassor.map((akassa) => ({
         url: `${baseUrl}/akassa/${akassa.slug}`,
         lastModified: new Date(),

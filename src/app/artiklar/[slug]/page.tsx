@@ -16,6 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: `${article.title} | Välja A-kassa`,
         description: article.summary,
+        keywords: [article.title, "a-kassa", "arbetslöshetsförsäkring", "ersättning", article.slug.replace(/-/g, " ")],
+        alternates: {
+            canonical: `https://www.valjaakassa.se/artiklar/${article.slug}`,
+        },
         openGraph: {
             title: `${article.title} | Välja A-kassa`,
             description: article.summary,

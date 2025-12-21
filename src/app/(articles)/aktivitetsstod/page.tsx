@@ -4,7 +4,24 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Aktivitetsstöd – belopp, utbetalning & a-kassa | valjaakassa.se",
-    description: "Hur mycket är aktivitetsstöd? När betalas det ut och hur påverkar a-kassa ersättningen? Få full koll och välj rätt a-kassa.",
+    keywords: ["aktivitetsstod", "aktivitetsstöd belopp", "a-kassa aktivitetsstöd", "ersättning arbetsförmedlingen", "aktivitetsstöd utbetalning"],
+    alternates: {
+        canonical: "https://www.valjaakassa.se/aktivitetsstod",
+    },
+    openGraph: {
+        title: "Aktivitetsstöd – belopp, utbetalning & a-kassa | valjaakassa.se",
+        description: "Hur mycket är aktivitetsstöd? När betalas det ut och hur påverkar a-kassa ersättningen? Få full koll och välj rätt a-kassa.",
+        url: "https://www.valjaakassa.se/aktivitetsstod",
+        type: "article",
+        images: [
+            {
+                url: "/images/content/aktivitetsstod.png",
+                width: 1200,
+                height: 630,
+                alt: "Aktivitetsstöd och a-kassa guide",
+            },
+        ],
+    },
 };
 
 export default function AktivitetsstodPage() {
@@ -115,8 +132,8 @@ export default function AktivitetsstodPage() {
                         Ja. Aktivitetsstöd är skattepliktig inkomst och pensionsgrundande, precis som:
                     </p>
                     <ul className="list-disc pl-6 space-y-2 mt-4 mb-6">
-                        <li><Link href="/vad-ar-a-kassa" className="text-blue-600 hover:underline">A-kassa</Link></li>
-                        <li><Link href="/arbetsloshetsersattning" className="text-blue-600 hover:underline">Arbetslöshetsersättning</Link></li>
+                        <li><Link href="/artiklar/vad-ar-akassa" className="text-blue-600 hover:underline">A-kassa</Link></li>
+                        <li><Link href="/artiklar/ersattning-karens-villkor" className="text-blue-600 hover:underline">Arbetslöshetsersättning</Link></li>
                         <li>Sjukpenning</li>
                     </ul>
                     <p>
