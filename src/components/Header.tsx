@@ -122,7 +122,7 @@ export default function Header() {
 
                             {/* Logo & CTA (Moved Down) */}
                             <div className="mt-8 flex items-center justify-between gap-2">
-                                <div className="relative h-20 w-40 sm:h-24 sm:w-56">
+                                <div className="relative h-24 w-48 sm:h-28 sm:w-64">
                                     <Image
                                         src="/logo-valja-akassa-white.png"
                                         alt="Välja A-kassa Logo"
