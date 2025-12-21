@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X, ArrowRight, Scale, LayoutGrid, Briefcase, ShieldCheck, RefreshCw, UserMinus } from "lucide-react";
+import { Menu, X, ArrowRight, Scale, LayoutGrid, Briefcase, ShieldCheck, RefreshCw, UserMinus, Info, FileText, BookOpen, Book, HeartPulse, Banknote, HelpCircle, Shield, Cookie, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"; // Assuming utils exists, otherwise I'll mock className joining
 
@@ -110,7 +110,7 @@ export default function Header() {
 
                         {/* Section 1: Header (White Background) */}
                         <div className="bg-white px-6 py-6 flex items-center justify-between shrink-0">
-                            <div className="relative h-20 w-64">
+                            <div className="relative h-28 w-72">
                                 <Image
                                     src="/logo-valja-akassa-white.png"
                                     alt="Välja A-kassa Logo"
@@ -124,12 +124,12 @@ export default function Header() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="sr-only">Stäng meny</span>
-                                <X className="h-6 w-6" aria-hidden="true" />
+                                <X className="h-8 w-8" aria-hidden="true" />
                             </button>
                         </div>
 
                         {/* Section 2: Main Navigation (Dark Background) */}
-                        <div className="flex-1 px-6 py-6 space-y-2">
+                        <div className="flex-1 px-6 pt-6 pb-2 space-y-2">
                             <Link href="/jamfor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <Scale className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
@@ -180,35 +180,58 @@ export default function Header() {
                         </div>
 
                         {/* Section 3: Footer (White Background) */}
-                        <div className="bg-white px-6 py-8 mt-auto shrink-0">
+                        <div className="bg-white px-6 pt-4 pb-8 shrink-0">
                             {/* Secondary Links */}
                             <div className="flex flex-col space-y-4">
                                 <details className="group">
-                                    <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-bold text-[#0B1B3F] list-none pr-5">
-                                        Om tjänsten
+                                    <summary className="flex cursor-pointer items-center justify-between py-2 text-base font-bold text-[#0B1B3F] list-none pr-5 hover:text-blue-600 transition-colors">
+                                        <div className="flex items-center gap-3">
+                                            <Info className="h-5 w-5 text-blue-600" />
+                                            Om tjänsten
+                                        </div>
                                         <span className="transition delay-150 group-open:rotate-180 text-blue-600">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                             </svg>
                                         </span>
                                     </summary>
-                                    <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200 ml-1">
-                                        <Link href="/om-oss" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Om oss</Link>
-                                        <Link href="/artiklar" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Artiklar & Guider</Link>
-                                        <Link href="/akassa-regler" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>A-kassa regler</Link>
-                                        <Link href="/ordlista" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>A-kassa ordlista</Link>
-                                        <Link href="/friskvardsbidrag" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Friskvårdsbidrag</Link>
-                                        <Link href="/aktivitetsstod" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Aktivitetsstöd</Link>
-                                        <Link href="/vanliga-fragor" className="block py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Vanliga frågor</Link>
+                                    <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200 ml-3">
+                                        <Link href="/om-oss" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <Info className="h-4 w-4" /> Om oss
+                                        </Link>
+                                        <Link href="/artiklar" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <FileText className="h-4 w-4" /> Artiklar & Guider
+                                        </Link>
+                                        <Link href="/akassa-regler" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <BookOpen className="h-4 w-4" /> A-kassa regler
+                                        </Link>
+                                        <Link href="/ordlista" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <Book className="h-4 w-4" /> A-kassa ordlista
+                                        </Link>
+                                        <Link href="/friskvardsbidrag" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <HeartPulse className="h-4 w-4" /> Friskvårdsbidrag
+                                        </Link>
+                                        <Link href="/aktivitetsstod" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <Banknote className="h-4 w-4" /> Aktivitetsstöd
+                                        </Link>
+                                        <Link href="/vanliga-fragor" className="flex items-center gap-3 py-2 text-sm text-gray-600 hover:text-blue-600 font-medium" onClick={() => setIsMenuOpen(false)}>
+                                            <HelpCircle className="h-4 w-4" /> Vanliga frågor
+                                        </Link>
                                     </div>
                                 </details>
-                                <Link href="/integritetspolicy" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Integritetspolicy</Link>
-                                <Link href="/cookies" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Cookies</Link>
-                                <Link href="/kontakt" className="text-base font-bold text-[#0B1B3F] hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
+                                <Link href="/integritetspolicy" className="flex items-center gap-3 py-2 text-base font-bold text-[#0B1B3F] hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                    <Shield className="h-5 w-5 text-blue-600" /> Integritetspolicy
+                                </Link>
+                                <Link href="/cookies" className="flex items-center gap-3 py-2 text-base font-bold text-[#0B1B3F] hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                    <Cookie className="h-5 w-5 text-blue-600" /> Cookies
+                                </Link>
+                                <Link href="/kontakt" className="flex items-center gap-3 py-2 text-base font-bold text-[#0B1B3F] hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                    <Phone className="h-5 w-5 text-blue-600" /> Kontakt
+                                </Link>
                             </div>
 
                             {/* Social */}
-                            <div className="mt-8 pb-4">
+                            <div className="mt-8 pb-4 pl-1">
                                 <a href="#" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                                     <span className="sr-only">Twitter</span>
                                     <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
