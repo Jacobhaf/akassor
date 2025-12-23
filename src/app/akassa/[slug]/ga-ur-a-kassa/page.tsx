@@ -89,6 +89,15 @@ export default function LeaveAkassaPage({ params }: Props) {
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Gör så här för att avsluta medlemskapet</h2>
 
+                    <div className="my-8 relative h-64 md:h-96 w-full rounded-xl overflow-hidden shadow-md">
+                        <Image
+                            src="/images/content/bankid_signin.png"
+                            alt="Logga in med BankID för att avsluta a-kassa"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+
                     <p>
                         Det lättaste sättet att avsluta ditt medlemskap hos {akassa.name} är att logga in i Mitt medlemskap och klicka på länken Avsluta medlemskap. Den finns under frågor och svar på startsidan i e-tjänsten. Det går också bra att skicka en begäran om utträde via post.
                     </p>
