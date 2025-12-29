@@ -104,7 +104,7 @@ export default function AkassaPage({ params }: Props) {
                             <a
                                 href={akassa.website}
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer nofollow"
                                 className="inline-block bg-white text-blue-900 font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-100 transition-colors"
                             >
                                 Se om {akassa.name} passar dig
@@ -124,7 +124,7 @@ export default function AkassaPage({ params }: Props) {
                                     <a
                                         href={akassa.website}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="noopener noreferrer nofollow"
                                         className="text-blue-600 hover:underline break-all"
                                     >
                                         {akassa.website}
