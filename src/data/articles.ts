@@ -9,6 +9,56 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "bingohall-lon-okning",
+    title: "Så mycket höjs lönen för anställda på bingohallar",
+    summary: "Anställda på bingohallar har fått ett nytt kollektivavtal som innebär tydliga förbättringar – både när det gäller lön och ersättning för arbetstid. För dig som arbetar inom bingoverksamhet är avtalet en viktig signal.",
+    image: "/artiklar/bingohall-salary.jpg",
+    publishedAt: "2025-12-29",
+    content: `
+      <p class="lead text-xl text-gray-600 mb-8">Anställda på bingohallar har fått ett nytt kollektivavtal som innebär tydliga förbättringar – både när det gäller lön och ersättning för arbetstid. För dig som arbetar inom bingoverksamhet, eller funderar på att göra det, är avtalet en viktig signal om villkoren i branschen.</p>
+
+      <h2>Nytt kollektivavtal klart</h2>
+      <p>Det är Hotell- och restaurangfacket (HRF) som har tecknat ett nytt kollektivavtal med arbetsgivarorganisationen Almega. Avtalet gäller anställda på bingohallar som omfattas av Almegas medlemsföretag och innebär att 2025 års avtalsrörelse nu är avslutad för branschen.</p>
+
+      <h2>Löneökning med totalt 1 920 kronor</h2>
+      <p>Det nya avtalet sträcker sig över två år och ger sammanlagda löneökningar på 1 920 kronor:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-center"><span class="font-bold w-20 text-green-700">År 1:</span> +1 000 kronor</li>
+        <li class="flex items-center"><span class="font-bold w-20 text-green-700">År 2:</span> +920 kronor</li>
+      </ul>
+      <p>Utöver detta höjs ersättningar som ob-tillägg och semesterersättning med 3,4 procent första året och 3,0 procent andra året.</p>
+
+      <h2>Mertid ger övertidsersättning</h2>
+      <p>En av de största förändringarna i avtalet är att deltidsanställda får övertidsersättning när de arbetar mertid. Regeln börjar gälla från och med 1 juli 2026.</p>
+
+      <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-6 italic">
+        "Det blir samma upplägg som i många andra avtal. Jobbar man mertid så är det övertidsersättning som gäller."
+        <div class="not-italic text-sm font-bold mt-2 text-blue-900">– Emil Bäckström, ombudsman på Hotell- och restaurangfacket</div>
+      </div>
+
+      <p>Det finns dock ett undantag. Om en deltidsanställd går in som vikarie, exempelvis vid sjukdom eller semester, gäller ordinarie lön även om arbetstiden ökar.</p>
+
+      <h2>Förhandlingar med både vinster och eftergifter</h2>
+      <p>Fackliga företrädare beskriver förhandlingarna som utdragna. Evelina Frehse, som arbetar på Idrottens Bingo i Linköping och deltog i förhandlingsdelegationen, menar att resultatet är blandat:</p>
+
+      <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 my-6">
+         <p class="mb-0 italic">"Övertidsersättning för mertid är ju bra. Då kan mertid inte nyttjas på samma sätt. Det negativa är att allmän visstid blev kvar."</p>
+      </div>
+
+      <p>För att få igenom övertidsersättningen tvingades HRF acceptera en förändring som arbetsgivarsidan drivit: gränsen för när rast måste ges höjs från fem till sex timmars arbete.</p>
+
+      <h2>Allmän visstid finns kvar</h2>
+      <p>Ett annat resultat av förhandlingarna är att anställningsformen allmän visstid fortsätter att gälla inom bingoavtalet. I många andra branscher har den ersatts av särskild visstid, som ger snabbare väg till tillsvidareanställning.</p>
+
+      <p>– Allmän visstid finns inte längre i lagen, men Almega menar att den kan finnas kvar genom kollektivavtal. För att få bort den hade vi behövt betala ett högt pris, säger Emil Bäckström.</p>
+
+      <h2>Vill du veta mer om bingoarbete?</h2>
+      <p>För dig som är nyfiken på hur det är att arbeta på bingohall, vilka arbetsgivare som finns och hur verksamheten fungerar i praktiken kan du läsa mer hos <a href="https://dinbingohall.se" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">dinbingohall.se</a> – en sajt med fokus på bingohallar runt om i Sverige.</p>
+
+      <p class="text-sm text-gray-500 mt-8 pt-4 border-t">På valjaakassa.se fortsätter vi att följa utvecklingen av kollektivavtal och arbetsvillkor, så att du kan göra informerade val kring jobb, a-kassa och trygghet i arbetslivet.</p>
+    `
+  },
+  {
     slug: "vad-ar-akassa",
     title: "Vad är a-kassa och hur fungerar den?",
     summary: "En heltäckande guide om det svenska trygghetssystemet. Lär dig skillnaden mellan grundförsäkring och inkomstbortfallsförsäkring, och hur du säkrar din ekonomiska framtid.",
