@@ -1,52 +1,13 @@
 import OpenAI from 'openai';
 import { MasterProfileSchema, GeneratedDocumentsSchema, MasterProfile, GeneratorSettings } from './schemas';
 import { z } from 'zod';
-import * as cheerio from 'cheerio';
 
 const apiKey = process.env.OPENAI_API_KEY;
 
 // Fallback logic to allow UI testing without API key
 const MOCK_DELAY = 1500;
 
-async function fetchLinkedInData(url: string): Promise<string> {
-    try {
-        console.log(`Attempting to fetch LinkedIn data from: ${url}`);
-        const response = await fetch(url, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-                'Accept-Language': 'sv-SE,sv;q=0.9,en-US;q=0.8,en;q=0.7'
-            }
-        });
-
-        if (!response.ok) {
-            console.warn(`Failed to fetch LinkedIn URL: ${response.status} ${response.statusText}`);
-            return "";
-        }
-
-        const html = await response.text();
-        const $ = cheerio.load(html);
-
-        // Remove scripts, styles, and other non-content elements
-        $('script, style, nav, footer, iframe, svg, path').remove();
-
-        // Extract text content
-        const text = $('body').text().replace(/\s+/g, ' ').trim();
-        return text.substring(0, 15000); // Limit length to avoid token limits
-    } catch (error) {
-        console.error("Error fetching LinkedIn data:", error);
-        return "";
-    }
-}
-
 export async function normalizeProfile(rawData: any): Promise<MasterProfile> {
-
-    // Check for LinkedIn URL and try to fetch data
-    let linkedInData = "";
-    if (rawData.personal?.linkedinUrl && rawData.personal.linkedinUrl.includes('linkedin.com')) {
-        linkedInData = await fetchLinkedInData(rawData.personal.linkedinUrl);
-    }
-
     if (!apiKey) {
         console.warn("No OpenAI API key found, using mock normalization.");
         await new Promise(resolve => setTimeout(resolve, MOCK_DELAY));
@@ -86,27 +47,14 @@ export async function normalizeProfile(rawData: any): Promise<MasterProfile> {
                 role: "system",
                 content: `You are an expert resume consultant for the Swedish market. 
         Your task is to normalize unstructured user data into a structured Master Profile JSON.
-        
-        INSTRUCTIONS:
         - Correct spelling and grammar (Swedish).
         - Improve formulations to be more professional but strictly stick to the facts provided.
         - If 'achievements' are missing in experience, suggest generic professional ones based on the title, but mark them for review if possible (here just include them).
-        - Output strictly matching the provided JSON schema.
-        - If provided, use the 'LINKEDIN_SCRAPED_DATA' to fill in experience, education, and skills. Prioritize this data if 'rawData' is empty.
-        - BEWARE: LinkedIn data might be messy. Try to find "Experience" / "Erfarenhet" sections.`
+        - Output strictly matching the provided JSON schema.`
             },
             {
                 role: "user",
-                content: `
-        USER INPUT DATA: ${JSON.stringify(rawData)}
-
-        LINKEDIN_SCRAPED_DATA (Might be empty or messy):
-        """
-        ${linkedInData}
-        """
-
-        Normalize this into the MasterProfile schema.
-        `
+                content: `Normalize this data into the schema: ${JSON.stringify(rawData)}`
             }
         ]
     });
