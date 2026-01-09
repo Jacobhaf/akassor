@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X, ArrowRight, Scale, LayoutGrid, Briefcase, ShieldCheck, RefreshCw, UserMinus, Info, FileText, BookOpen, Book, HeartPulse, Banknote, HelpCircle, Shield, Cookie, Phone } from "lucide-react";
+import { Menu, X, ArrowRight, Scale, LayoutGrid, Briefcase, ShieldCheck, RefreshCw, UserMinus, Info, FileText, BookOpen, Book, HeartPulse, Banknote, HelpCircle, Shield, Cookie, Phone, Sparkles } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"; // Assuming utils exists, otherwise I'll mock className joining
 
@@ -14,7 +14,7 @@ function NavLink({ href, children, active }: { href: string; children: React.Rea
         <Link
             href={href}
             className={cn(
-                "relative text-sm font-medium transition-colors hover:text-white",
+                "relative text-sm font-medium transition-colors hover:text-white flex items-center",
                 active ? "text-white" : "text-blue-200/80"
             )}
         >
@@ -66,6 +66,10 @@ export default function Header() {
                     <NavLink href="/yrken" active={isActive("/yrken")}>Yrken</NavLink>
                     <NavLink href="/inkomstforsakring" active={isActive("/inkomstforsakring")}>Inkomstförsäkring</NavLink>
                     <NavLink href="/ga-ur-a-kassa" active={isActive("/ga-ur-a-kassa")}>Gå ur A-kassa</NavLink>
+                    <NavLink href="/verktyg/cv-byggare" active={isActive("/verktyg/cv-byggare")}>
+                        CV-byggare
+                        <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Ny</span>
+                    </NavLink>
 
                 </nav>
 
@@ -143,6 +147,14 @@ export default function Header() {
 
                         {/* Section 2: Main Navigation (Dark Background) */}
                         <div className="flex-1 px-6 pt-6 pb-2 space-y-2">
+                            <Link href="/verktyg/cv-byggare" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
+                                <div className="flex items-center gap-3 mb-1">
+                                    <Sparkles className="h-5 w-5 text-green-400 transition-transform group-hover:scale-110" />
+                                    <span className="text-lg font-bold text-white">CV-byggare <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-0.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Ny</span></span>
+                                </div>
+                                <p className="pl-8 text-sm text-blue-200/80 font-medium">Skapa CV och brev med AI</p>
+                            </Link>
+
                             <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <LayoutGrid className="h-5 w-5 text-blue-300 transition-transform group-hover:scale-110" />
