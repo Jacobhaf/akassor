@@ -14,7 +14,7 @@ function NavLink({ href, children, active }: { href: string; children: React.Rea
         <Link
             href={href}
             className={cn(
-                "relative text-sm font-medium transition-colors hover:text-white flex items-center",
+                "relative text-sm font-medium transition-colors hover:text-white flex items-center whitespace-nowrap",
                 active ? "text-white" : "text-blue-200/80"
             )}
         >
@@ -47,7 +47,7 @@ export default function Header() {
             <div className="mx-auto flex h-20 md:h-32 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 relative z-50">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center group" onClick={() => setIsMenuOpen(false)}>
-                        <div className="relative h-24 w-80 md:h-36 md:w-[35rem] transition-transform group-hover:scale-105">
+                        <div className="relative h-24 w-48 md:h-36 md:w-80 transition-transform group-hover:scale-105">
                             <Image
                                 src="/logo-valja-akassa-white.png"
                                 alt="Välja A-kassa Logo"
@@ -77,7 +77,7 @@ export default function Header() {
                 <div className="hidden md:flex items-center ml-8">
                     <Link
                         href="/jamfor"
-                        className="rounded-lg bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+                        className="rounded-lg bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors whitespace-nowrap"
                     >
                         Jämför a-kassor
                     </Link>
