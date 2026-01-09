@@ -93,16 +93,30 @@ export async function generateDocuments(profile: MasterProfile, settings: Genera
                             bullets: e.achievements
                         }))
                     },
-                    // ... more sections would be here
+                    {
+                        title: "Utbildning",
+                        type: "education",
+                        items: profile.education.map(e => ({
+                            title: e.school,
+                            subtitle: e.degree,
+                            date: `${e.startDate} - ${e.endDate || "Nu"}`,
+                            content: e.description
+                        }))
+                    },
+                    {
+                        title: "Kompetenser",
+                        type: "skills",
+                        items: profile.skills.hard.map(h => ({ title: h }))
+                    }
                 ]
             },
             coverLetter: {
                 recipient: "Rekryteringsansvarig",
                 subject: `Ansökan till tjänsten som ${settings.jobRole}`,
-                opening: "Hej,",
+                opening: "Hej!",
                 paragraphs: [
-                    `Jag såg annonsen för tjänsten som ${settings.jobRole} och blev genast intresserad.`,
-                    "Med min bakgrund inom branschen tror jag att jag kan bidra..."
+                    `Jag såg annonsen för tjänsten som ${settings.jobRole} och blev genast intresserad. Det här är ett mockat svar eftersom ingen API-nyckel hittades.`,
+                    "Med min bakgrund inom branschen tror jag att jag kan bidra till er framgång."
                 ],
                 closing: "Jag ser fram emot att höra från er.",
                 signOff: "Vänliga hälsningar,"
@@ -112,20 +126,69 @@ export async function generateDocuments(profile: MasterProfile, settings: Genera
 
     const openai = new OpenAI({ apiKey });
 
-    const systemPrompt = `You are a professional resume writer.
-  Generate a CV and Cover Letter based on the User Profile and Job Description.
-  Tone: ${settings.tone}.
-  Language: ${settings.language == 'sv' ? 'Swedish' : 'English'}.
+    const systemPrompt = `Du är en senior svensk karriärcoach och rekryterare.
+  Din uppgift är att skapa ett professionellt CV och ett personligt brev baserat på kandidatens profil och jobbannonsen.
+
+  HÅRDA KRAV:
+  - Hitta inte på fakta. Använd endast information som finns i profilen eller i jobbannonsen.
+  - Om relevant information saknas: skriv generellt men neutralt utan att påstå något specifikt som inte står i profilen.
+  - Inga påhittade siffror, företag, titlar, utbildningar, datum, system eller certifikat.
+  - Inga klyschor (“jag är en social lagspelare”) utan konkretisering.
   
-  Output a JSON object with 'cv' and 'coverLetter' keys.
+  SPRÅK & TON:
+  - Språk: Svenska (om inte jobbannonsen är strikt på engelska, då engelska).
+  - Ton: ${settings.tone} (t.ex. formell, varm, säljig).
+  - Längd på personligt brev: LÅNG (450-700 ord) om inte "short" valts.
   
-  CV Requirements:
-  - Tailor the summary and bullets to the job description.
-  - Use active verbs.
+  STRUKTUR & SCHEMA (Output JSON):
+  Du ska returnera ett JSON-objekt med två huvudnycklar: "cv" och "coverLetter", som följer denna struktur EXAKT:
   
-  Cover Letter Requirements:
-  - Professional structure.
-  - Connect user skills to job requirements.
+  {
+    "cv": {
+      "headline": "Kort rubrik (t.ex. 'Senior Utvecklare med fokus på React')",
+      "sections": [
+        {
+          "title": "Rubrik (t.ex. PROFIL, ARBETSLIVSERFARENHET)",
+          "type": "summary" | "experience" | "education" | "skills",
+          "items": [
+             { 
+               "title": "Jobbtitel / Skola / Kompetens",
+               "subtitle": "Företag / Examen / Nivå", 
+               "date": "ÅÅÅÅ-MM - ÅÅÅÅ-MM",
+               "content": "Beskrivning...",
+               "bullets": ["Merit 1", "Merit 2"]
+             }
+          ]
+        }
+      ]
+    },
+    "coverLetter": {
+      "recipient": "Rekryteringsansvarig (eller namnet om det finns i annonsen)",
+      "subject": "Ansökan till tjänsten som [Titel]",
+      "opening": "Hej [Namn] eller Hej,",
+      "paragraphs": [
+         "STYCKEN (Array av strängar):",
+         "1. Inledning: Varför jag söker och kort om rollen.",
+         "2. Varför jag (Relevans): Starka relevansblock kopplade till krav. Koppla min erfarenhet till det ni söker.",
+         "3. Prestationer: Konkreta exempel från min profil. Visa resultat.",
+         "4. Arbetssätt: Hur jag jobbar, samarbetar och kommunicerar.",
+         "5. Varför er: Koppling till er verksamhet/bransch.",
+         "6. Avslut: Call-to-action och tack."
+      ],
+      "closing": "Jag ser fram emot att höra från er.",
+      "signOff": "Vänliga hälsningar,"
+    }
+  }
+  
+  INSTRUKTIONER FÖR PERSONLIGT BREV:
+  - Matcha brevets innehåll mot annonsen: visa “bevis” (erfarenhet/prestation) när det finns.
+  - Om profilen har flera erfarenheter: välj de 2–3 mest relevanta.
+  - Använd en "senior rekryteringsproffsig" stil: tydliga stycken, lättläst, inga slanguttryck.
+  
+  INSTRUKTIONER FÖR CV:
+  - Skriv en stark "Summary" som röd tråd.
+  - Lyft fram relevanta "hard skills" i en separat sektion.
+  - Under arbetslivserfarenhet: Fokusera på prestationer (bullets) och använd aktiva verb.
   `;
 
     const completion = await openai.chat.completions.create({
@@ -135,7 +198,15 @@ export async function generateDocuments(profile: MasterProfile, settings: Genera
             { role: "system", content: systemPrompt },
             {
                 role: "user",
-                content: `Profile: ${JSON.stringify(profile)}\n\nJob Description: ${settings.jobDescription}\nJob Role: ${settings.jobRole}`
+                content: `
+        JOBBANNONS:
+        """${settings.jobDescription}"""
+        
+        KANDIDATENS PROFIL (MasterProfile):
+        ${JSON.stringify(profile)}
+        
+        SÖKT ROLL: ${settings.jobRole}
+        `
             }
         ]
     });
