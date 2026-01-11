@@ -298,7 +298,7 @@ export function CvAnalyzer() {
                                     </div>
                                 </div>
                                 <div className="text-sm text-slate-600 leading-relaxed">
-                                    Jag godkänner att mitt CV analyseras av AI. Jag förstår att filen skickas till OpenAI för analys men inte sparas.
+                                    Jag godkänner att mitt CV granskas av Välja A-kassas digitala CV-expert. Jag förstår att analysen sker automatiskt och att mitt underlag behandlas säkert och under sekretess.
                                 </div>
                             </label>
                         </div>

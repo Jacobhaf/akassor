@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { CvAnalyzer } from '@/components/cv-analysis/CvAnalyzer';
 
 export const metadata: Metadata = {
-    title: 'Gratis CV-granskning med AI (2026) – Få feedback på sekunder',
-    description: 'Ladda upp ditt CV för en omedelbar AI-analys. Vi granskar struktur, innehåll och språk helt gratis. Se ditt betyg och få konkreta tips för att lyckas på intervjun.',
-    keywords: ['gratis cv-granskning', 'cv analys ai', 'få feedback på cv', 'cv hjälp online', 'granska cv gratis'],
+    title: 'Expertbaserad CV-granskning – Få professionell feedback omedelbart',
+    description: 'Låt Välja A-kassas digitala CV-expert granska ditt CV. Vi analyserar struktur, innehåll och språk helt gratis enligt svensk branschstandard.',
+    keywords: ['gratis cv-granskning', 'cv analys expert', 'få feedback på cv', 'cv hjälp online', 'granska cv gratis'],
     openGraph: {
-        title: 'Hur bra är ditt CV? Testa vår gratis AI-granskning idag',
-        description: 'Få professionell feedback på ditt CV och personliga brev på sekunder. Helt gratis tjänst från Välja A-kassa.',
+        title: 'Hur bra är ditt CV? Testa Välja A-kassas expertgranskning',
+        description: 'Få professionell feedback på ditt CV och personliga brev på sekunder. En tjänst från Välja A-kassa.',
         type: 'website',
     }
 };
@@ -26,7 +26,7 @@ export default function AnalyzeCvPage() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                         </span>
-                        Nyhet: AI-driven CV-analys
+                        Nyhet: Välja A-kassas digitala CV-analys
                     </div>
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -34,7 +34,7 @@ export default function AnalyzeCvPage() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
-                        Låt vår avancerade AI granska ditt CV och personliga brev. <br className="hidden md:block" />
+                        Låt Välja A-kassas digitala CV-specialister granska ditt CV och personliga brev. <br className="hidden md:block" />
                         Du får betyg, konkreta förbättringsförslag och feedback på sekunder.
                     </p>
                 </div>
@@ -48,9 +48,9 @@ export default function AnalyzeCvPage() {
                 <div className="max-w-5xl mx-auto mt-24 grid md:grid-cols-3 gap-8">
                     {/* Features */}
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-3xl mb-6">🤖</div>
-                        <h3 className="font-bold text-xl text-slate-900 mb-3">Smart AI-analys</h3>
-                        <p className="text-slate-600 leading-relaxed">Vi använder avancerad AI-teknik för att skanna och utvärdera ditt CV precis som en professionell rekryterare gör.</p>
+                        <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-3xl mb-6">📉</div>
+                        <h3 className="font-bold text-xl text-slate-900 mb-3">Expertbaserad analys</h3>
+                        <p className="text-slate-600 leading-relaxed">Vi använder avancerad teknik tränad på tusentals framgångsrika CV:n för att utvärdera din ansökan enligt rådande branschstandard.</p>
                     </div>
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                         <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-3xl mb-6">🎯</div>
@@ -66,7 +66,7 @@ export default function AnalyzeCvPage() {
 
                 <div className="max-w-3xl mx-auto mt-16 text-center text-slate-500 text-sm border-t border-slate-200 pt-8">
                     <p>
-                        Observera: Denna tjänst drivs av artificiell intelligens och ger automatiserad feedback.
+                        Observera: Denna tjänst drivs av automatiserade analysverktyg och ger digital feedback.
                         Bedömningen är vägledande och utgör ingen garanti för anställning eller intervju.
                         Du ansvarar alltid själv för att informationen i ditt CV är korrekt och sanningsenlig.
                     </p>
