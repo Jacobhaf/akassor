@@ -21,6 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: `Checklista för arbetslös ${name} – så får du rätt ersättning`,
         description: `Komplett checklista för arbetslös ${name}. Följ våra 4 enkla steg för att maximera din ersättning och undvika problem med a-kassan. Läs guiden här.`,
+        openGraph: {
+            title: `Checklista: Arbetslös som ${name}? Gör så här.`,
+            description: `Vår guide för dig som arbetar som ${name} och blivit arbetslös. Maximera din a-kasseersättning.`,
+            type: 'article',
+            url: `https://www.valjaakassa.se/yrken/${params.slug}/checklista`,
+        }
     };
 }
 

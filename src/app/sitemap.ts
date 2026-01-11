@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/byta-a-kassa",
         "/vanliga-fragor",
         "/cookies",
+        "/hur-bra-ar-mitt-cv",
+        "/verktyg/cv-byggare",
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

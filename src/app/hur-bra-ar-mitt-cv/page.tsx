@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { CvAnalyzer } from '@/components/cv-analysis/CvAnalyzer';
 
 export const metadata: Metadata = {
-    title: 'Hur bra är mitt CV? – AI-baserad CV-granskning | valjaakassa.se',
-    description: 'Ladda upp ditt CV och personliga brev för en gratis AI-analys. Få omedelbar feedback på innehåll, struktur och språk. Förbättra dina chanser att få jobbet.',
-    keywords: ['granska cv', 'cv feedback', 'ai cv analys', 'cv hjälp', 'personligt brev feedback'],
+    title: 'Gratis CV-granskning med AI (2026) – Få feedback på sekunder',
+    description: 'Ladda upp ditt CV för en omedelbar AI-analys. Vi granskar struktur, innehåll och språk helt gratis. Se ditt betyg och få konkreta tips för att lyckas på intervjun.',
+    keywords: ['gratis cv-granskning', 'cv analys ai', 'få feedback på cv', 'cv hjälp online', 'granska cv gratis'],
     openGraph: {
-        title: 'Hur bra är mitt CV? – AI-baserad CV-granskning',
-        description: 'Få professionell feedback på ditt CV på sekunder. Helt gratis.',
+        title: 'Hur bra är ditt CV? Testa vår gratis AI-granskning idag',
+        description: 'Få professionell feedback på ditt CV och personliga brev på sekunder. Helt gratis tjänst från Välja A-kassa.',
         type: 'website',
     }
 };
