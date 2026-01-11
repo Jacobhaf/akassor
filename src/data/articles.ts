@@ -11,7 +11,7 @@ export interface Article {
   }[];
 }
 
-export const articles: Article[] = [
+const rawArticles: Article[] = [
   {
     slug: "bingohall-lon-okning",
     title: "Så mycket höjs lönen för anställda på bingohallar",
@@ -503,4 +503,135 @@ export const articles: Article[] = [
       </div>
     `
   },
+  {
+    slug: "arbetslos-utan-akassa",
+    title: "Arbetslös utan a-kassa – ersättning och stöd när a-kassan tar slut",
+    summary: "Arbetslös utan a-kassa? Läs vilken ersättning du kan få, vad som händer när a-kassan går ut och vilket ekonomiskt stöd som finns.",
+    image: "/artiklar/arbetslos-utan-akassa.png",
+    publishedAt: "2026-01-12",
+    faq: [
+      {
+        question: "Vad händer om man är arbetslös utan a-kassa?",
+        answer: "Om du är arbetslös utan att vara medlem i en a-kassa (eller inte uppfyller kraven) kan du inte få inkomstbaserad ersättning. Du kan däremot ha rätt till grundersättning från Alfa-kassan om du uppfyller arbetsvillkoret. I sista hand kan du behöva söka ekonomiskt bistånd hos kommunen."
+      },
+      {
+        question: "Finns det ersättning om man inte är med i a-kassan?",
+        answer: "Ja, du kan ha rätt till grundersättning. Den betalas oftast ut av Alfa-kassan och kräver att du har arbetat en viss tid innan arbetslösheten. Ersättningsnivån är dock betydligt lägre än den inkomstbaserade a-kassan."
+      },
+      {
+        question: "Vad händer när a-kassan går ut?",
+        answer: "När dina 300 (eller 450) ersättningsdagar är slut upphör a-kassan. Då kan du bli anvisad till jobb- och utvecklingsgarantin via Arbetsförmedlingen, där du kan få aktivitetsstöd från Försäkringskassan. Har du inget sådant skydd kan försörjningsstöd bli aktuellt."
+      },
+      {
+        question: "Kan man få ekonomiskt bistånd som arbetslös?",
+        answer: "Ja, om du helt saknar egna medel och inkomster kan du ansöka om ekonomiskt bistånd (socialbidrag) hos din kommun. Det är en behovsprövad insats som fungerar som ett yttersta skyddsnät och kräver att du står till arbetsmarknadens förfogande."
+      },
+      {
+        question: "Måste man vara inskriven på Arbetsförmedlingen?",
+        answer: "Ja, att vara inskriven på Arbetsförmedlingen är i princip alltid ett grundkrav för att få någon form av ersättning vid arbetslöshet, oavsett om det gäller a-kassa, aktivitetsstöd eller ekonomiskt bistånd."
+      },
+      {
+        question: "Kan man gå med i a-kassa när man redan är arbetslös?",
+        answer: "Ja, du kan bli medlem i en a-kassa när som helst, även som arbetslös. Dock krävs det normalt att du har varit medlem i minst 12 månader innan du kan få inkomstbaserad ersättning, så medlemskapet hjälper oftast för framtida trygghet snarare än akut."
+      }
+    ],
+    content: `
+      <p class="lead text-xl text-gray-600 mb-8">Att stå utan inkomst skapar snabbt oro. Många söker varje dag efter svar på vad som gäller när man är arbetslös utan a-kassa eller när dagarna med ersättning är slut. Här reder vi ut vilka alternativ som finns för din försörjning.</p>
+
+      <h2>Kan man vara arbetslös utan a-kassa?</h2>
+      <p>Ja, eftersom a-kassan är en frivillig försäkring i Sverige är det många som står utanför systemet. Det kan handla om att man glömt att gå med, inte arbetat tillräckligt länge för att kvalificera sig, eller att man nyss kommit ut på arbetsmarknaden. Att vara arbetslös utan a-kassa innebär att du inte har rätt till den inkomstbaserade ersättningen som kan ge upp till 80 procent av din lön via <a href="/akassa/aea" class="text-blue-600 hover:underline">Akademikernas a-kassa</a>, <a href="/akassa/unionen" class="text-blue-600 hover:underline">Unionens a-kassa</a> eller andra förbund.</p>
+
+      <h2>Ersättning när du är arbetslös utan a-kassa</h2>
+      <p>Även om du inte är medlem i en a-kassa kan du ha rätt till viss ersättning, men villkoren är annorlunda.</p>
+
+      <h3>Grundersättning via Alfa-kassan</h3>
+      <p>För dig som inte är medlem i någon kassa, eller inte varit medlem tillräckligt länge, finns grundersättningen. Den administreras av <a href="/akassa/alfa" class="text-blue-600 hover:underline">Alfa-kassan</a>.</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start"><span class="w-2 h-2 mt-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span><span><strong>Krav på arbetsvillkor:</strong> Du måste ha arbetat minst 6 månader det senaste året, eller minst 480 timmar under en sammanhängande period av 6 kalendermånader.</span></li>
+        <li class="flex items-start"><span class="w-2 h-2 mt-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span><span><strong>Inskrivning:</strong> Du måste vara inskriven på Arbetsförmedlingen från din första arbetslösa dag.</span></li>
+        <li class="flex items-start"><span class="w-2 h-2 mt-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span><span><strong>Ersättningsnivå:</strong> Grundersättningen är betydligt lägre än den inkomstbaserade ersättningen och baseras på hur mycket du arbetat tidigare, inte din lön.</span></li>
+      </ul>
+
+      <p>Läs mer om <a href="/artiklar/vad-ar-akassa" class="text-blue-600 hover:underline">skillnaden mellan grundförsäkring och inkomstbortfallsförsäkring här</a>.</p>
+
+      <h2>Om du inte har rätt till a-kassa</h2>
+      <p>Om du inte uppfyller arbetsvillkoret för grundersättning och saknar egna besparingar är det yttersta skyddsnätet <strong>ekonomiskt bistånd</strong> (tidigare kallat socialbidrag). Detta söker du hos socialtjänsten i din kommun.</p>
+
+      <h3>Viktigt att veta om försörjningsstöd:</h3>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li><strong>Behovsprövning:</strong> Socialtjänsten gör en noggrann utredning av din och din eventuella partners ekonomi. Har ni tillgångar (sparade pengar, bil, hus) krävs oftast att dessa används först.</li>
+        <li><strong>Krav på aktivitet:</strong> För att få bistånd måste du vara aktivt arbetssökande och delta i de aktiviteter som kommunen eller Arbetsförmedlingen anvisar.</li>
+        <li><strong>Yttersta gränsen:</strong> Biståndet ska täcka skäliga kostnader för livsuppehälle såsom hyra, el och mat. Nivån bestäms av riksnormen.</li>
+      </ul>
+
+      <p>Mer information om skillnaderna hittar du i vår guide om <a href="/jamfor" class="text-blue-600 hover:underline">a-kassa vs andra ersättningar</a>.</p>
+
+      <h2>Vad händer när a-kassan går ut?</h2>
+      <p>En vanlig fråga är vad som sker när ersättningsdagarna (normalt 300 dagar) tar slut. Om du fortfarande är arbetslös då upphör din rätt till a-kassa, men det betyder inte att du lämnas helt utan stöd.</p>
+
+      <h3>Jobb- och utvecklingsgarantin</h3>
+      <p>Du kan bli anvisad till <strong>jobb- och utvecklingsgarantin</strong> av Arbetsförmedlingen. Det är ett program med syfte att ge dig extra stöd att hitta jobb. När du deltar i programmet får du inte a-kassa, utan istället <strong>aktivitetsstöd</strong> som betalas ut av Försäkringskassan.</p>
+      
+      <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-6">
+         <h4 class="text-blue-900 font-bold mt-0 mb-2">Ersättningsnivå i garantin</h4>
+         <p class="text-blue-800 mb-0">Nivån på aktivitetsstödet baseras ofta på din tidigare a-kassa, men kan trappas ned över tid. Det är viktigt att du sköter din tidrapportering och deltar i programmet för att inte förlora ersättningen.</p>
+      </div>
+
+      <h2>Krav och ansvar som arbetslös</h2>
+      <p>Oavsett om du får a-kassa, grundersättning eller försörjningsstöd har du skyldigheter.</p>
+      <ul class="space-y-2 mb-6">
+         <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full mr-2"></span>Du ska vara aktivt arbetssökande.</li>
+         <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full mr-2"></span>Du ska delta i planerade möten och aktiviteter.</li>
+         <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full mr-2"></span>Du ska tacka ja till lämpliga jobb.</li>
+      </ul>
+      <p>Missköter du detta kan all ersättning dras in, vilket snabbt leder till en akut ekonomisk situation.</p>
+
+      <h2>Sammanfattning</h2>
+      <p>Skillnaden i trygghet mellan att ha en a-kassa och att stå utan är stor. Som medlem i en a-kassa är din lön försäkrad, medan du utan a-kassa är hänvisad till grundbelopp eller behovsprövat bistånd. Är du idag i arbete rekommenderar vi starkt att du ser över ditt skydd och <a href="/jamfor" class="text-blue-600 hover:underline">jämför a-kassor</a> för att hitta en som passar ditt yrke. Det är en liten kostnad för en stor trygghet.</p>
+
+      <hr class="border-gray-200 my-12" />
+
+      <h2 class="text-2xl font-bold mb-6">FAQ: Arbetslös utan a-kassa och ersättning</h2>
+
+      <div class="space-y-8">
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Vad händer om man är arbetslös utan a-kassa?</h3>
+           <p class="text-gray-700">Om du är arbetslös utan att vara medlem i en a-kassa (eller inte uppfyller kraven) kan du inte få inkomstbaserad ersättning. Du kan däremot ha rätt till grundersättning från Alfa-kassan om du uppfyller arbetsvillkoret. I sista hand kan du behöva söka ekonomiskt bistånd hos kommunen.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Finns det ersättning om man inte är med i a-kassan?</h3>
+           <p class="text-gray-700">Ja, du kan ha rätt till grundersättning. Den betalas oftast ut av Alfa-kassan och kräver att du har arbetat en viss tid innan arbetslösheten. Ersättningsnivån är dock betydligt lägre än den inkomstbaserade a-kassan.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Vad händer när a-kassan går ut?</h3>
+           <p class="text-gray-700">När dina 300 (eller 450) ersättningsdagar är slut upphör a-kassan. Då kan du bli anvisad till jobb- och utvecklingsgarantin via Arbetsförmedlingen, där du kan få aktivitetsstöd från Försäkringskassan. Har du inget sådant skydd kan försörjningsstöd bli aktuellt.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Kan man få ekonomiskt bistånd som arbetslös?</h3>
+           <p class="text-gray-700">Ja, om du helt saknar egna medel och inkomster kan du ansöka om ekonomiskt bistånd (socialbidrag) hos din kommun. Det är en behovsprövad insats som fungerar som ett yttersta skyddsnät och kräver att du står till arbetsmarknadens förfogande.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Måste man vara inskriven på Arbetsförmedlingen?</h3>
+           <p class="text-gray-700">Ja, att vara inskriven på Arbetsförmedlingen är i princip alltid ett grundkrav för de flesta ersättningar vid arbetslöshet, oavsett om det gäller a-kassa, aktivitetsstöd eller ekonomiskt bistånd.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Kan man gå med i a-kassa när man redan är arbetslös?</h3>
+           <p class="text-gray-700">Ja, du kan bli medlem i en a-kassa när som helst, även som arbetslös. Dock krävs det normalt att du har varit medlem i minst 12 månader innan du kan få inkomstbaserad ersättning, så medlemskapet hjälper oftast för framtida trygghet snarare än akut.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl mt-8">
+        <p class="text-sm text-gray-600 mb-0">Att stå utan a-kassa innebär stor osäkerhet. Det är därför viktigt att känna till sina rättigheter och vilka alternativ som finns. För framtida trygghet är medlemskap i en a-kassa den enskilt viktigaste åtgärden du kan vidta för din privatekonomi.</p>
+      </div>
+    `
+  },
 ];
+
+export const articles = rawArticles.sort((a, b) =>
+  new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+);
