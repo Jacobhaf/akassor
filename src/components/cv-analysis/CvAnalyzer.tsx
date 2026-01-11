@@ -98,18 +98,38 @@ export function CvAnalyzer() {
         setLoading(true);
         setError(null);
 
+        if (file.size === 0) {
+            setError("Filen verkar vara tom. Kontrollera att du valt rätt fil.");
+            return;
+        }
+
         const formData = new FormData();
         formData.append('cv', file);
-        if (coverLetterFile) formData.append('coverLetter', coverLetterFile);
+        if (coverLetterFile) {
+            if (coverLetterFile.size === 0) {
+                setError("Det personliga brevet verkar vara tomt.");
+                return;
+            }
+            formData.append('coverLetter', coverLetterFile);
+        }
 
         try {
-            console.log("Starting analysis for files:", { cv: file.name, cl: coverLetterFile?.name });
+            console.log("Starting analysis for files:", { cv: file.name, size: file.size });
             const res = await fetch('/api/cv/analyze', {
                 method: 'POST',
                 body: formData
             });
 
-            const data = await res.json();
+            // Read as text first to avoid 'Unexpected end of JSON input'
+            const responseText = await res.text();
+            let data;
+            try {
+                data = JSON.parse(responseText);
+            } catch (e) {
+                console.error("Failed to parse JSON. Raw response:", responseText);
+                throw new Error(`Servern svarade med ett oväntat format (${res.status}). Det beror troligen på en timeout på servern. Försök med en kortare fil.`);
+            }
+
             console.log("Received response data:", data);
 
             if (!res.ok) {

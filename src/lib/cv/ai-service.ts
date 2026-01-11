@@ -258,52 +258,31 @@ export async function analyzeCV(cvText: string, coverLetterText?: string): Promi
         };
     }
 
-
     const openai = new OpenAI({ apiKey });
-
-    const systemPrompt = `Du är en expert på CV-granskning och rekrytering i Sverige.
-    Din uppgift är att analysera ett CV (och eventuellt personligt brev) och ge konstruktiv, pedagogisk och konkret feedback.
-    
-    Analysera följande områden:
-    1. Helhetsbedömning (Tydlighet, första intryck, "7-sekundersregeln")
-    2. Innehåll (Relevans, prestationer vs uppgifter, saknas något viktigt?)
-    3. Struktur (Även om du bara ser text: bedöm disposition, rubriker, röd tråd)
-    4. Anpassning (Känns det generiskt eller skräddarsytt? Hur väl säljer det in kandidaten?)
-    5. Språk (Ton, klyschor, stavning, aktivt språk)
-    6. Personligt brev (Om det finns: matchning mot CV, tydlighet i motivation)
-
-    Ge ett betyg (1-10) för varje del.
-    Ge en "feedback"-text (ca 2-3 meningar) som är sammanfattande och konstruktiv.
-    Ge 2-4 "improvements" (strängar) som är konkreta åtgärder kandidaten kan göra direkt.
-    
-    Tonen ska vara:
-    - Hjälpsam och stöttande (inte hård eller dömande)
-    - Professionell men lättsam (passar "valjaakassa.se")
-    - Anpassad för svenska arbetsmarknaden
-    
-    Svara med ett JSON-objekt som strikt följer detta schema:
-    {
-      "overall": { "score": number, "feedback": string, "improvements": string[] },
-      "content": { "score": number, "feedback": string, "improvements": string[] },
-      "structure": { "score": number, "feedback": string, "improvements": string[] },
-      "adaptation": { "score": number, "feedback": string, "improvements": string[] },
-      "language": { "score": number, "feedback": string, "improvements": string[] },
-      "coverLetter": { "score": number, "feedback": string, "improvements": string[] } (ELLER undefined om inget brev finns)
-    }
-    `;
 
     const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         response_format: { type: "json_object" },
         messages: [
-            { role: "system", content: systemPrompt },
+            {
+                role: "system",
+                content: "Du är en expert på CV-granskning i Sverige. Analysera dokumenten och svara med JSON. Var kortfattad och konkret."
+            },
             {
                 role: "user",
                 content: `
-        CV TEXT:
-        """${cvText}"""
-        
-        ${coverLetterText ? `PERSONLIGT BREV TEXT:\n"""${coverLetterText}"""` : "Inget personligt brev bifogat."}
+        Analysera detta CV och eventuella brev. Svara strikt med JSON enligt schemat:
+        {
+          "overall": { "score": number, "feedback": string, "improvements": string[] },
+          "content": { "score": number, "feedback": string, "improvements": string[] },
+          "structure": { "score": number, "feedback": string, "improvements": string[] },
+          "adaptation": { "score": number, "feedback": string, "improvements": string[] },
+          "language": { "score": number, "feedback": string, "improvements": string[] },
+          "coverLetter": { "score": number, "feedback": string, "improvements": string[] } (valfri)
+        }
+
+        CV: """${cvText.substring(0, 6000)}"""
+        ${coverLetterText ? `BREV: """${coverLetterText.substring(0, 3000)}"""` : ""}
         `
             }
         ]
