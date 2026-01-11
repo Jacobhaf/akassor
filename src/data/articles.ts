@@ -628,6 +628,151 @@ const rawArticles: Article[] = [
       <div class="bg-gray-50 p-6 rounded-xl mt-8">
         <p class="text-sm text-gray-600 mb-0">Att stå utan a-kassa innebär stor osäkerhet. Det är därför viktigt att känna till sina rättigheter och vilka alternativ som finns. För framtida trygghet är medlemskap i en a-kassa den enskilt viktigaste åtgärden du kan vidta för din privatekonomi.</p>
       </div>
+  },
+  {
+    slug: "hur-skriver-man-ett-bra-cv",
+    title: "Hur skriver man ett bra CV? Komplett guide 2026",
+    summary: "Lär dig hur du skriver ett bra CV 2026. Struktur, exempel, vanliga misstag och FAQ – allt du behöver för att öka chansen till intervju.",
+    image: "/artiklar/skriva-cv-guide.png",
+    publishedAt: "2026-01-29",
+    faq: [
+      {
+        question: "Hur skriver man ett CV för Arbetsförmedlingen?",
+        answer: "När du skriver CV för Arbetsförmedlingen gäller samma grundprinciper som annars: tydlighet och relevans. Det är extra viktigt att dina kompetenser matchar de yrkeskoder och nyckelord som används i deras system för att du ska bli sökbar för rätt jobb."
+      },
+      {
+        question: "Kan ChatGPT skriva ett CV?",
+        answer: "AI-verktyg som ChatGPT kan vara till stor hjälp för att skapa struktur, föreslå formuleringar och rätta texten. Kom dock ihåg att du alltid måste faktagranska innehållet och sätta din personliga prägel på det. Ett 100% AI-genererat CV kan ibland kännas opersonligt."
+      },
+      {
+        question: "Vad ska man aldrig skriva i sitt CV?",
+        answer: "Undvik osanna uppgifter, irrelevanta privatlivsdetaljer (som politisk åsikt, religion eller personnummer) och klichéer som inte backas upp av bevis."
+      },
+      {
+        question: "Hur långt ska ett CV vara?",
+        answer: "En bra tumregel är 1–2 sidor. Om du har mycket lång erfarenhet kan det vara längre, men sträva alltid efter att hålla det relevant och koncist. Ingen rekryterare vill läsa en roman."
+      },
+      {
+        question: "Vad är 7-sekundersregeln i ett CV?",
+        answer: "Det refererar till studier som visar att rekryterare i snitt lägger cirka 7 sekunder på den första granskningen av ett CV. Därför är struktur, tydliga rubriker och en stark sammanfattning avgörande."
+      }
+    ],
+    content: `
+      < p class= "lead text-xl text-gray-600 mb-8" > Ett bra CV är din viktigaste nyckel till arbetsmarknaden.Men att sammanfatta hela sitt yrkesliv på några få sidor är ofta svårare än man tror.I denna guide går vi igenom exakt hur du bygger ett CV som tar dig till intervjun.</p>
+
+        < div class= "flex items-center gap-4 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-100" >
+          <span>Publicerad: 29 januari 2026</ span >
+  <span class="text-gray-300" >| </span>
+  < span class= "font-medium text-blue-600" > Guide </span>
+  </div>
+
+  < h2 > Vad är ett bra CV ? </h2>
+    < p > Förkortningen CV står för < em > Curriculum Vitae < /em>, vilket betyder "levnadslopp". Men missta det inte för en biografi. Ett bra CV är ett <strong>säljdokument</strong >.Syftet är inte att berätta allt du någonsin gjort, utan att visa varför du är rätt person för just det jobb du söker.</p>
+
+    < p > Ett modernt CV ska vara: </p>
+  < ul class= "space-y-2 mb-6" >
+  <li class="flex items-center" > <span class="w-2 h-2 bg-green-500 rounded-full mr-3" > </span>Tydligt och lättläst</li >
+  <li class="flex items-center" > <span class="w-2 h-2 bg-green-500 rounded-full mr-3" > </span>Relevant för tjänsten</li >
+  <li class="flex items-center" > <span class="w-2 h-2 bg-green-500 rounded-full mr-3" > </span>Max 1–2 sidor långt</li >
+  </ul>
+
+  < h2 > Grundläggande struktur för ett CV </h2>
+  < p > Även om designen kan variera, förväntar sig svenska arbetsgivare en viss struktur.Här är delarna du bör ha med: </p>
+
+  < h3 > 1. Kontaktuppgifter </h3>
+  < p > Placera detta högst upp.Inkludera namn, telefonnummer, privat e - postadress och gärna en länk till din LinkedIn - profil. < br > <strong>OBS: </strong> Du behöver <em>inte</em > skriva ditt fullständiga personnummer eller din exakta hemadress i de flesta fall.</p>
+
+  < h3 > 2. Sammanfattning(Profiltext) </h3>
+  < p > Inled med 3–5 rader som sammanfattar vem du är, vad du kan och vad du vill.Tänk på detta som din "hiss-pitch".</p>
+  < div class= "bg-gray-50 p-4 rounded-lg italic text-gray-600 my-4 border-l-4 border-blue-400" >
+  "Driven redovisningsekonom med 5 års erfarenhet av löpande bokföring och bokslut. Expert på Excel och Visma. Söker nu nya utmaningar inom controlling..."
+  </div>
+
+  < h3 > 3. Arbetslivserfarenhet </h3>
+  < p > Detta är CV: ts hjärta.Lista dina jobb i < strong > omvänd kronologisk ordning < /strong> (senaste jobbet först). För varje roll, ange:</p >
+  <ul>
+  <li>Titel och Företag </li>
+  < li > Tidsperiod(t.ex.jan 2020 – pågående) </li>
+  < li > 1–3 punkter om vad du < em > åstadkom < /em>, inte bara vad du gjorde.</li >
+  </ul>
+
+  < h3 > 4. Utbildning </h3>
+  < p > Även här gäller omvänd kronologisk ordning.Ange skola, utbildningens namn och examensår.Har du akademisk examen behöver du oftast inte ta med gymnasiet.</p>
+
+  < h3 > 5. Färdigheter & IT - kunskaper </h3>
+  < p > Lista konkreta kompetenser.Det kan vara språk(Svenska: Modersmål, Engelska: Flytande), programvara(Office - paketet, Photoshop) eller certifikat(Körkort B, Truckkort).</p>
+
+  < h2 > Hur skriver man ett bra CV ? 5 expert - tips </h2>
+  < p > Många stirrar sig blinda på layouten, men innehållet är kung.Här är vad proffsen tittar på: </p>
+
+  < h3 > Anpassa ALLTID efter jobbet </h3>
+  < p > Det absolut vanligaste misstaget är att skicka samma "standard-CV" till alla jobb.Läs annonsen noga.Vilka ord använder de ? Om de söker efter "kundfokus" och "flexibilitet", se till att dessa ord(eller exempel på dem) finns med i ditt CV.</p>
+
+  < h3 > Fokusera på resultat </h3>
+  < p > Istället för att bara skriva "Ansvarig för försäljning", skriv "Ökade försäljningen med 20% under första året".Siffror bygger förtroende.</p>
+
+  < h3 > Språket är viktigt </h3>
+  < p > Använd ett enkelt, aktivt och korrekt språk.Stavfel drar ner intrycket direkt.Be alltid någon annan korrekturläsa ditt CV innan du skickar det.</p>
+
+  < h2 > 10 enkla steg till ett bra CV </h2>
+  < ol class= "list-decimal pl-5 space-y-3 mb-8" >
+  <li>Börja med en stark sammanfattning.</li>
+  < li > Anpassa innehållet för varje unik ansökan.</li>
+  < li > Lista din erfarenhet i omvänd kronologisk ordning.</li>
+  < li > Fokusera på dina prestationer, inte bara arbetsuppgifter.</li>
+  < li > Rensa bort gamla eller irrelevanta extrajobb.</li>
+  < li > Använd ett aktivt språk(t.ex. "Ledde", "Skapade", "Utvecklade").</li>
+  < li > Håll det kort! Max 2 sidor.</li>
+  < li > Använd en ren och luftig layout med tydliga rubriker.</li>
+  < li > Lägg till ett professionellt foto om du vill(frivilligt i Sverige).</li>
+  < li > Korrekturläs, korrekturläs, korrekturläs.</li>
+  </ol>
+
+  < h2 > Hur ska ett CV se ut 2026 ? </h2>
+    < p > Trender kommer och går.För 2026 ser vi en tydlig återgång till det enkla och funktionella.Rekryterare använder ofta digitala verktyg(ATS) för att skanna CV: n, vilket gör att krångliga layouter med mycket grafik kan ställa till det.</p>
+
+  < div class= "bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-6" >
+  <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2" > 7 - sekundersregeln </h3>
+  < p class= "text-blue-800 mb-0" > Kom ihåg att en rekryterare i snitt lägger < strong > 7 sekunder < /strong> på den första titten. Är ditt CV svårläst åker det i papperskorgen. Tydlighet vinner över "snygg design".</p >
+  </div>
+
+  < p class= "text-gray-700 italic mb-8" > Behöver du mer hjälp ? Kika gärna på våra guider om < a href = "/artiklar/vad-ar-akassa" class= "text-blue-600 hover:underline" > a - kassa < /a> och inkomstförsäkring för att säkra din ekonomi medan du söker drömjobbet.</p >
+
+  <div class="bg-gray-50 p-6 rounded-xl mt-12 mb-12" >
+  <h3 class="text-xl font-bold mb-4" > Sammanfattning </h3>
+  < p > Ditt CV är ditt personliga marknadsföringsverktyg.Genom att vara tydlig, relevant och resultatinriktad ökar du dina chanser markant.Lycka till med jobbsökandet! </p>
+  </div>
+
+  < hr class= "border-gray-200 my-12" />
+
+  <h2 class="text-2xl font-bold mb-6" > FAQ: Vanliga frågor om att skriva CV </h2>
+
+  < div class= "space-y-8" >
+  <div>
+  <h3 class="text-lg font-bold text-gray-900 mb-2" > Hur skriver man ett CV för Arbetsförmedlingen ? </h3>
+    < p class= "text-gray-700" > När du skriver CV för Arbetsförmedlingen gäller samma grundprinciper som annars: tydlighet och relevans.Det är extra viktigt att dina kompetenser matchar de yrkeskoder och nyckelord som används i deras system för att du ska bli sökbar för rätt jobb.</p>
+    </div>
+
+    < div >
+  <h3 class="text-lg font-bold text-gray-900 mb-2" > Kan ChatGPT skriva ett CV ? </h3>
+    < p class= "text-gray-700" > AI - verktyg som ChatGPT kan vara till stor hjälp för att skapa struktur, föreslå formuleringar och rätta texten.Kom dock ihåg att du alltid måste faktagranska innehållet och sätta din personliga prägel på det.Ett 100 % AI - genererat CV kan ibland kännas opersonligt.</p>
+    </div>
+
+    < div >
+  <h3 class="text-lg font-bold text-gray-900 mb-2" > Vad ska man aldrig skriva i sitt CV ? </h3>
+    < p class= "text-gray-700" > Undvik osanna uppgifter, irrelevanta privatlivsdetaljer(som politisk åsikt, religion eller personnummer) och klichéer som inte backas upp av bevis.</p>
+    </div>
+
+    < div >
+  <h3 class="text-lg font-bold text-gray-900 mb-2" > Hur långt ska ett CV vara ? </h3>
+    < p class= "text-gray-700" > En bra tumregel är 1–2 sidor.Om du har mycket lång erfarenhet kan det vara längre, men sträva alltid efter att hålla det relevant och koncist.Ingen rekryterare vill läsa en roman.</p>
+    </div>
+
+    < div >
+  <h3 class="text-lg font-bold text-gray-900 mb-2" > Vad är 7 - sekundersregeln i ett CV ? </h3>
+    < p class= "text-gray-700" > Det refererar till studier som visar att rekryterare i snitt lägger cirka 7 sekunder på den första granskningen av ett CV.Därför är struktur, tydliga rubriker och en stark sammanfattning avgörande.</p>
+    </div>
+  </div>
     `
   },
 ];
