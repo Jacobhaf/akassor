@@ -11,6 +11,11 @@ export async function POST(req: NextRequest) {
         const cvFile = formData.get("cv") as File;
         const coverLetterFile = formData.get("coverLetter") as File | null;
 
+        console.log("SERVER_API: Received files", {
+            cv: cvFile ? { name: cvFile.name, size: cvFile.size, type: cvFile.type } : "MISSING",
+            cl: coverLetterFile ? { name: coverLetterFile.name, size: coverLetterFile.size, type: coverLetterFile.type } : "MISSING"
+        });
+
         if (!cvFile) {
             return NextResponse.json(
                 { error: "CV saknas" },

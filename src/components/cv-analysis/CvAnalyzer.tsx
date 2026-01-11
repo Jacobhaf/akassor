@@ -141,11 +141,7 @@ export function CvAnalyzer() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err: any) {
             console.error("Caught error in handleSubmit:", err);
-            // If the error message is unhelpful, try to give a better one
-            const errorMessage = err.message === "The string did not match the expected pattern."
-                ? "Kunde inte bearbeta filen eller svaret. Kontrollera att filerna inte är lösenordsskyddade."
-                : (err.message || "Ett oväntat fel uppstod. Försök igen.");
-            setError(errorMessage);
+            setError(err.message || "Ett oväntat fel uppstod. Försök igen.");
         } finally {
             setLoading(false);
         }
