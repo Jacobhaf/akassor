@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { parseFile } from "@/lib/cv/file-parser";
 import { analyzeCV } from "@/lib/cv/ai-service";
 
+export const maxDuration = 60; // Set timeout to 60 seconds (requires Vercel Pro/Hobby limits apply)
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
     try {
         const formData = await req.formData();

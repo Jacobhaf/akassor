@@ -3,6 +3,7 @@ import { MasterProfileSchema, GeneratedDocumentsSchema, MasterProfile, Generator
 import { z } from 'zod';
 
 const apiKey = process.env.OPENAI_API_KEY;
+if (!apiKey) console.warn("WARNING: OPENAI_API_KEY is not defined in environment variables!");
 
 // Fallback logic to allow UI testing without API key
 const MOCK_DELAY = 1500;
