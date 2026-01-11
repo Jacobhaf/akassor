@@ -40,7 +40,7 @@ export async function normalizeProfile(rawData: any): Promise<MasterProfile> {
     const openai = new OpenAI({ apiKey });
 
     const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo-preview", // Or gpt-3.5-turbo if cost is a concern, but 4 is better for JSON
+        model: "gpt-4o-mini", // Or gpt-3.5-turbo if cost is a concern, but 4 is better for JSON
         response_format: { type: "json_object" },
         messages: [
             {
@@ -192,7 +192,7 @@ export async function generateDocuments(profile: MasterProfile, settings: Genera
   `;
 
     const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo-preview",
+        model: "gpt-4o-mini",
         response_format: { type: "json_object" },
         messages: [
             { role: "system", content: systemPrompt },
@@ -292,7 +292,7 @@ export async function analyzeCV(cvText: string, coverLetterText?: string): Promi
     `;
 
     const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo-preview",
+        model: "gpt-4o-mini",
         response_format: { type: "json_object" },
         messages: [
             { role: "system", content: systemPrompt },

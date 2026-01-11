@@ -35,9 +35,12 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(analysis);
 
     } catch (error: any) {
-        console.error("Analysis error:", error);
+        console.error("ANALYSIS_ROUTE_ERROR:", error);
         return NextResponse.json(
-            { error: error.message || "Något gick fel vid analysen." },
+            {
+                error: error.message || "Något gick fel vid analysen. Detta kan bero på en timeout eller problem med AI-tjänsten.",
+                details: error.stack ? "Server error occurred" : undefined
+            },
             { status: 500 }
         );
     }
