@@ -1,4 +1,3 @@
-const pdf = require('pdf-parse');
 import mammoth from 'mammoth';
 
 export async function parseFile(file: File): Promise<string> {
@@ -7,11 +6,13 @@ export async function parseFile(file: File): Promise<string> {
 
     if (file.type === 'application/pdf') {
         try {
+            // Dynamically require pdf-parse only when needed
+            const pdf = require('pdf-parse');
             const data = await pdf(buffer);
             return data.text;
         } catch (error) {
             console.error("PDF Parsing failed:", error);
-            throw new Error("Kunde inte läsa PDF-filen. Är den skadad eller lösenordsk skyddad?");
+            return "Kunde inte läsa PDF-texten korrekt. Kontrollera filen.";
         }
     } else if (
         file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'

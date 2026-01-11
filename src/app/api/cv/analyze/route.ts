@@ -1,15 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { parseFile } from "@/lib/cv/file-parser";
-import { analyzeCV } from "@/lib/cv/ai-service";
 
 export const maxDuration = 60;
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-    return NextResponse.json({ status: "CV Analysis API is running" });
+    return NextResponse.json({
+        status: "CV Analysis API is running",
+        time: new Date().toISOString()
+    });
 }
 
 export async function POST(req: NextRequest) {
+    // Import inside the handler to prevent top-level module crashes
+    const { parseFile } = await import("@/lib/cv/file-parser");
+    const { analyzeCV } = await import("@/lib/cv/ai-service");
+
     try {
         const formData = await req.formData();
         const cvFile = formData.get("cv") as File;
