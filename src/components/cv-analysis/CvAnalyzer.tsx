@@ -103,22 +103,29 @@ export function CvAnalyzer() {
         if (coverLetterFile) formData.append('coverLetter', coverLetterFile);
 
         try {
+            console.log("Starting analysis for files:", { cv: file.name, cl: coverLetterFile?.name });
             const res = await fetch('/api/cv/analyze', {
                 method: 'POST',
                 body: formData
             });
 
             const data = await res.json();
+            console.log("Received response data:", data);
 
             if (!res.ok) {
+                console.error("API error response:", data);
                 throw new Error(data.error || 'Något gick fel vid analysen.');
             }
 
             setResult(data);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err: any) {
-            console.error(err);
-            setError(err.message || "Ett oväntat fel uppstod. Försök igen.");
+            console.error("Caught error in handleSubmit:", err);
+            // If the error message is unhelpful, try to give a better one
+            const errorMessage = err.message === "The string did not match the expected pattern."
+                ? "Kunde inte bearbeta filen eller svaret. Kontrollera att filerna inte är lösenordsskyddade."
+                : (err.message || "Ett oväntat fel uppstod. Försök igen.");
+            setError(errorMessage);
         } finally {
             setLoading(false);
         }

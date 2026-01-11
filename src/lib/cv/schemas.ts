@@ -7,8 +7,8 @@ export const PersonalInfoSchema = z.object({
     email: z.string().email("Ogiltig e-postadress"),
     phone: z.string().optional(),
     city: z.string().optional(),
-    linkedinUrl: z.string().url().optional().or(z.literal("")),
-    portfolioUrl: z.string().url().optional().or(z.literal("")),
+    linkedinUrl: z.string().optional().or(z.literal("")),
+    portfolioUrl: z.string().optional().or(z.literal("")),
 });
 
 export const ExperienceSchema = z.object({
@@ -106,9 +106,9 @@ export type GeneratedDocuments = z.infer<typeof GeneratedDocumentsSchema>;
 // --- Analysis Schemas ---
 
 export const AnalysisSectionSchema = z.object({
-    score: z.number().min(1).max(10),
+    score: z.coerce.number().min(0).max(10),
     feedback: z.string(),
-    improvements: z.array(z.string()),
+    improvements: z.array(z.string()).default([]),
 });
 
 export const CvAnalysisSchema = z.object({
