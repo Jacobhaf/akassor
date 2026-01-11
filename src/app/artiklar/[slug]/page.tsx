@@ -51,8 +51,27 @@ export default function ArticlePage({ params }: Props) {
         notFound();
     }
 
+    const jsonLd = article.faq ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": article.faq.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+            }
+        }))
+    } : null;
+
     return (
         <div className="bg-white px-6 py-32 lg:px-8">
+            {jsonLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            )}
             <div className="mx-auto max-w-4xl text-base leading-7 text-gray-700">
                 <div className="mb-8 text-center">
                     <Link href="/artiklar" className="text-blue-600 hover:text-blue-500 text-sm font-semibold inline-flex items-center gap-1 mb-8 transition-colors">

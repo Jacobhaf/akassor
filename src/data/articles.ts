@@ -5,6 +5,10 @@ export interface Article {
   content: string; // HTML content or markdown
   image: string;
   publishedAt: string;
+  faq?: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 export const articles: Article[] = [
@@ -397,5 +401,106 @@ export const articles: Article[] = [
         <li><strong>Facket:</strong> Gå med i facket (t.ex. <a href="/akassa/unionen" class="text-blue-600 hover:underline">Unionen</a>, Sveriges Ingenjörer). De har ofta karriärtjänster, CV-granskning och inkomstförsäkring som ingår för framtiden.</li>
       </ol>
     `
-  }
+  },
+  {
+    slug: "chat-noir-kollektivavtal",
+    title: "Chat Noir, strippklubb och kollektivavtal – därför är facket viktigt",
+    summary: "Strippklubben Chat Noir har fått kollektivavtal. Ett exempel på varför facket och kollektivavtal är viktiga för trygghet och arbetsvillkor.",
+    image: "/artiklar/chat-noir-kollektivavtal.png",
+    publishedAt: "2026-01-11",
+    faq: [
+      {
+        question: "Vad gör man som strippa?",
+        answer: "Som strippa arbetar man med underhållning, ofta genom scenframträdanden och dans där avklädning är en del av showen. Arbetsuppgifterna kan även innefatta publikinteraktion och servering. Det är grundläggande att allt arbete sker friviligt och utifrån överenskomna villkor."
+      },
+      {
+        question: "Vad tjänar man som strippa?",
+        answer: "Inkomsten varierar kraftigt beroende på arbetsgivare, arbetstider samt vilken ersättningsmodell som tillämpas, exempelvis en kombination av fast lön och provision eller enbart dricks. Alla inkomster är skattepliktiga och ska redovisas korrekt."
+      },
+      {
+        question: "Är det lagligt att jobba som strippa i Sverige?",
+        answer: "Ja, striptease är lagligt i Sverige. Verksamheten måste dock följa svensk lagstiftning, vilket innebär att den ska vara helt frivillig och inte får innefatta köp eller försäljning av sexuella tjänster."
+      },
+      {
+        question: "Har strippor rätt till kollektivavtal?",
+        answer: "Anställda har rätt till kollektivavtal om arbetsgivaren tecknat ett sådant med ett fackförbund. Detta reglerar minimilöner, ob-tillägg, försäkringar och pension. För egenföretagare gäller andra regler."
+      },
+      {
+        question: "Kan man vara med i facket som strippa?",
+        answer: "Ja, det går att vara med i facket. Om du är anställd kan du gå med i det förbund som organiserar din arbetsplats (ofta Hotell- och restaurangfacket). Som egenföretagare kan du ansluta dig till en organisation för företagare eller specifika intresseorganisationer."
+      },
+      {
+        question: "Har man rätt till a-kassa om man jobbar som strippa?",
+        answer: "Ja, principen är densamma som för andra yrken. För att få ersättning måste du vara medlem i en a-kassa, uppfylla arbetsvillkoret och ha haft en beskattad inkomst som ligger till grund för ersättningen."
+      }
+    ],
+    content: `
+      <p class="lead text-xl text-gray-600 mb-8">Efter flera års avslag har Hotell- och restaurangfacket (HRF) nu tecknat kollektivavtal med strippklubben Chat Noir i Göteborg. Beslutet markerar ett tydligt skifte i hur fackförbund ser på sitt ansvar: även verksamheter som kan uppfattas som kontroversiella omfattas av svensk arbetsrätt – så länge de är lagliga.</p>
+
+      <h2>Från nej till ja – vad har förändrats?</h2>
+      <p>Redan 2019 ansökte arbetsgivaren om kollektivavtal, men fick då avslag med hänvisning till att striptease inte låg inom HRF:s verksamhetsområde. Sedan dess har både arbetsgivare och anställda återigen vänt sig till facket. Efter en ny genomgång av arbetsplatsen, där HRF varit på plats och dokumenterat arbetsuppgifter och villkor, landade man i ett nytt beslut: kollektivavtal tecknas för de anställda som faktiskt omfattas av förbundets ansvarsområde.</p>
+
+      <p>Det innebär att personal inom exempelvis servering, bar och garderob nu omfattas av kollektivavtal – precis som på teatrar, restauranger och andra nöjesverksamheter. Däremot omfattas inte de som uppträder på scenen, eftersom de inte är anställda av bolaget.</p>
+
+      <h2>Varför är kollektivavtal viktigt?</h2>
+      <p>Ett kollektivavtal reglerar bland annat:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>löner och ersättningar</li>
+        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>arbetstider och ob-tillägg</li>
+        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>försäkringar och pension</li>
+        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>arbetsmiljö och inflytande</li>
+      </ul>
+      <p>När ett avtal finns på plats ökar också insynen i verksamheten och möjligheten för facket att påverka arbetsvillkoren. HRF betonar att deras roll är att ta ansvar för de anställdas trygghet – inte att värdera branschen i sig. Så länge verksamheten är laglig är det fackets uppgift att företräda sina medlemmar.</p>
+
+      <h2>Kollektivavtal kan möjliggöra nattarbete</h2>
+      <p>Beslutet får även praktiska konsekvenser. Enligt svensk lag krävs kollektivavtal eller särskilt undantag för nattarbete. För Chat Noir innebär avtalet att verksamheten nu kan ha nattpersonal på ett lagligt sätt, något som tidigare varit ett hinder.</p>
+
+      <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-6">
+        <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Ett bredare fackligt ansvar</h3>
+        <p class="text-blue-800 mb-0">Fallet visar tydligt att facket inte bara är till för ”traditionella” arbetsplatser. Kollektivavtal spelar en avgörande roll även i mindre vanliga eller ifrågasatta branscher – just för att säkerställa att anställda inte står utan skydd.</p>
+      </div>
+
+      <p class="text-gray-700 italic mb-12">För dig som arbetar inom hotell, restaurang, nöje eller service är detta en påminnelse om varför fackligt medlemskap och rätt a-kassa är viktiga delar av din trygghet på arbetsmarknaden.</p>
+
+      <hr class="border-gray-200 my-12" />
+
+      <h2 class="text-2xl font-bold mb-6">FAQ: Att arbeta som strippa i Sverige</h2>
+
+      <div class="space-y-8">
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Vad gör man som strippa?</h3>
+           <p class="text-gray-700">Som strippa arbetar man med underhållning, ofta genom scenframträdanden och dans där avklädning är en del av showen. Arbetsuppgifterna kan även innefatta publikinteraktion och servering. Det är grundläggande att allt arbete sker frivilligt och utifrån överenskomna villkor.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Vad tjänar man som strippa?</h3>
+           <p class="text-gray-700">Inkomsten varierar kraftigt beroende på arbetsgivare, arbetstider samt vilken ersättningsmodell som tillämpas, exempelvis en kombination av fast lön och provision eller enbart dricks. Alla inkomster är skattepliktiga och ska redovisas korrekt.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Är det lagligt att jobba som strippa i Sverige?</h3>
+           <p class="text-gray-700">Ja, striptease är lagligt i Sverige. Verksamheten måste dock följa svensk lagstiftning, vilket innebär att den ska vara helt frivillig och inte får innefatta köp eller försäljning av sexuella tjänster.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Har strippor rätt till kollektivavtal?</h3>
+           <p class="text-gray-700">Anställda har rätt till kollektivavtal om arbetsgivaren tecknat ett sådant med ett fackförbund. Detta reglerar minimilöner, ob-tillägg, försäkringar och pension. För egenföretagare gäller andra regler.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Kan man vara med i facket som strippa?</h3>
+           <p class="text-gray-700">Ja, det går att vara med i facket. Om du är anställd kan du gå med i det förbund som organiserar din arbetsplats (ofta Hotell- och restaurangfacket). Som egenföretagare kan du ansluta dig till en organisation för företagare eller specifika intresseorganisationer.</p>
+        </div>
+
+        <div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Har man rätt till a-kassa om man jobbar som strippa?</h3>
+           <p class="text-gray-700">Ja, principen är densamma som för andra yrken. För att få ersättning måste du vara medlem i en a-kassa, uppfylla arbetsvillkoret och ha haft en beskattad inkomst som ligger till grund för ersättningen.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl mt-8">
+        <p class="text-sm text-gray-600 mb-0">Att ha tydliga anställningsavtal och rätt försäkringsskydd är avgörande för tryggheten i arbetslivet, oavsett bransch. Genom fackligt medlemskap och a-kassa skapar man en stabilare grund för sin ekonomi och arbetsmiljö.</p>
+      </div>
+    `
+  },
 ];
