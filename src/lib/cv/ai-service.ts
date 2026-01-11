@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { MasterProfileSchema, GeneratedDocumentsSchema, MasterProfile, GeneratorSettings } from './schemas';
+import { MasterProfileSchema, GeneratedDocumentsSchema, MasterProfile, GeneratorSettings, CvAnalysisSchema, CvAnalysis } from './schemas';
 import { z } from 'zod';
 
 const apiKey = process.env.OPENAI_API_KEY;
@@ -216,4 +216,101 @@ export async function generateDocuments(profile: MasterProfile, settings: Genera
 
     const json = JSON.parse(content);
     return GeneratedDocumentsSchema.parse(json);
+}
+
+export async function analyzeCV(cvText: string, coverLetterText?: string): Promise<CvAnalysis> {
+    if (!apiKey) {
+        console.warn("No OpenAI API key found, using mock analysis.");
+        await new Promise(resolve => setTimeout(resolve, MOCK_DELAY));
+
+        return {
+            overall: {
+                score: 7,
+                feedback: "Ett stabilt CV med bra struktur, men det kan bli ännu vassare med tydligare resultatfokus.",
+                improvements: ["Lägg till en kort sammanfattning i början", "Lyft fram dina främsta prestationer tydligare"]
+            },
+            content: {
+                score: 6,
+                feedback: "Du har med det viktiga, men beskrivningarna av dina tidigare roller är lite kortfattade.",
+                improvements: ["Beskriv vad du uppnådde, inte bara vad du gjorde", "Använd fler aktiva verb (t.ex. 'ledde', 'skapade')"]
+            },
+            structure: {
+                score: 8,
+                feedback: "Tydlig och bra disposition. Lätt att läsa.",
+                improvements: ["Se till att kontaktuppgifterna syns tydligt högst upp"]
+            },
+            adaptation: {
+                score: 5,
+                feedback: "Det känns lite generiskt. Försök att anpassa det mer mot specifika roller du söker.",
+                improvements: ["Använd nyckelord från jobbannonser du är intresserad av"]
+            },
+            language: {
+                score: 9,
+                feedback: "Välskrivet och korrekt språk utan tydliga fel.",
+                improvements: ["Några meningar är lite långa, prova att korta ner dem för bättre flyt"]
+            },
+            coverLetter: coverLetterText ? {
+                score: 7,
+                feedback: "Ett bra brev som kompletterar CV:t väl.",
+                improvements: ["Koppla din erfarenhet tydligare till varför du vill ha just det här jobbet"]
+            } : undefined
+        };
+    }
+
+
+    const openai = new OpenAI({ apiKey });
+
+    const systemPrompt = `Du är en expert på CV-granskning och rekrytering i Sverige.
+    Din uppgift är att analysera ett CV (och eventuellt personligt brev) och ge konstruktiv, pedagogisk och konkret feedback.
+    
+    Analysera följande områden:
+    1. Helhetsbedömning (Tydlighet, första intryck, "7-sekundersregeln")
+    2. Innehåll (Relevans, prestationer vs uppgifter, saknas något viktigt?)
+    3. Struktur (Även om du bara ser text: bedöm disposition, rubriker, röd tråd)
+    4. Anpassning (Känns det generiskt eller skräddarsytt? Hur väl säljer det in kandidaten?)
+    5. Språk (Ton, klyschor, stavning, aktivt språk)
+    6. Personligt brev (Om det finns: matchning mot CV, tydlighet i motivation)
+
+    Ge ett betyg (1-10) för varje del.
+    Ge en "feedback"-text (ca 2-3 meningar) som är sammanfattande och konstruktiv.
+    Ge 2-4 "improvements" (strängar) som är konkreta åtgärder kandidaten kan göra direkt.
+    
+    Tonen ska vara:
+    - Hjälpsam och stöttande (inte hård eller dömande)
+    - Professionell men lättsam (passar "valjaakassa.se")
+    - Anpassad för svenska arbetsmarknaden
+    
+    Svara med ett JSON-objekt som strikt följer detta schema:
+    {
+      "overall": { "score": number, "feedback": string, "improvements": string[] },
+      "content": { "score": number, "feedback": string, "improvements": string[] },
+      "structure": { "score": number, "feedback": string, "improvements": string[] },
+      "adaptation": { "score": number, "feedback": string, "improvements": string[] },
+      "language": { "score": number, "feedback": string, "improvements": string[] },
+      "coverLetter": { "score": number, "feedback": string, "improvements": string[] } (ELLER undefined om inget brev finns)
+    }
+    `;
+
+    const completion = await openai.chat.completions.create({
+        model: "gpt-4-turbo-preview",
+        response_format: { type: "json_object" },
+        messages: [
+            { role: "system", content: systemPrompt },
+            {
+                role: "user",
+                content: `
+        CV TEXT:
+        """${cvText}"""
+        
+        ${coverLetterText ? `PERSONLIGT BREV TEXT:\n"""${coverLetterText}"""` : "Inget personligt brev bifogat."}
+        `
+            }
+        ]
+    });
+
+    const content = completion.choices[0].message.content;
+    if (!content) throw new Error("No content from AI");
+
+    const json = JSON.parse(content);
+    return CvAnalysisSchema.parse(json);
 }

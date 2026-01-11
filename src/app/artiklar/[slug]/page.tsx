@@ -54,7 +54,7 @@ export default function ArticlePage({ params }: Props) {
     const jsonLd = article.faq ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": article.faq.map(item => ({
+        "mainEntity": article.faq.map((item: { question: string; answer: string }) => ({
             "@type": "Question",
             "name": item.question,
             "acceptedAnswer": {

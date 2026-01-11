@@ -102,3 +102,22 @@ export const GeneratedDocumentsSchema = z.object({
 });
 
 export type GeneratedDocuments = z.infer<typeof GeneratedDocumentsSchema>;
+
+// --- Analysis Schemas ---
+
+export const AnalysisSectionSchema = z.object({
+    score: z.number().min(1).max(10),
+    feedback: z.string(),
+    improvements: z.array(z.string()),
+});
+
+export const CvAnalysisSchema = z.object({
+    overall: AnalysisSectionSchema,
+    content: AnalysisSectionSchema,
+    structure: AnalysisSectionSchema,
+    adaptation: AnalysisSectionSchema,
+    language: AnalysisSectionSchema,
+    coverLetter: AnalysisSectionSchema.optional(),
+});
+
+export type CvAnalysis = z.infer<typeof CvAnalysisSchema>;

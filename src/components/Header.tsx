@@ -68,7 +68,10 @@ export default function Header() {
                     <NavLink href="/ga-ur-a-kassa" active={isActive("/ga-ur-a-kassa")}>Gå ur A-kassa</NavLink>
                     <NavLink href="/verktyg/cv-byggare" active={isActive("/verktyg/cv-byggare")}>
                         CV-byggare
-                        <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Ny</span>
+                        <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-0.5 text-[10px] font-bold text-green-400 ring-1 ring-inset ring-green-400/20 uppercase tracking-wider">Ny</span>
+                    </NavLink>
+                    <NavLink href="/hur-bra-ar-mitt-cv" active={isActive("/hur-bra-ar-mitt-cv")}>
+                        CV-analys
                     </NavLink>
 
                 </nav>
@@ -150,9 +153,17 @@ export default function Header() {
                             <Link href="/verktyg/cv-byggare" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
                                 <div className="flex items-center gap-3 mb-1">
                                     <Sparkles className="h-5 w-5 text-green-400 transition-transform group-hover:scale-110" />
-                                    <span className="text-lg font-bold text-white">CV-byggare <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-0.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Ny</span></span>
+                                    <span className="text-lg font-bold text-white">CV-byggare <span className="ml-2 inline-flex items-center rounded-md bg-green-400/10 px-2 py-0.5 text-[10px] font-bold text-green-400 ring-1 ring-inset ring-green-400/20 uppercase tracking-wider">Ny</span></span>
                                 </div>
                                 <p className="pl-8 text-sm text-blue-200/80 font-medium">Skapa CV och brev med AI</p>
+                            </Link>
+
+                            <Link href="/hur-bra-ar-mitt-cv" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
+                                <div className="flex items-center gap-3 mb-1">
+                                    <ShieldCheck className="h-5 w-5 text-indigo-400 transition-transform group-hover:scale-110" />
+                                    <span className="text-lg font-bold text-white">CV-analys</span>
+                                </div>
+                                <p className="pl-8 text-sm text-blue-200/80 font-medium">Få feedback på ditt befintliga CV</p>
                             </Link>
 
                             <Link href="/akassor" onClick={() => setIsMenuOpen(false)} className="group py-4 border-b border-white/10 block">
