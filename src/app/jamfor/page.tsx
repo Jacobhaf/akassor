@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import AkassaComparison from "@/components/comparison/AkassaComparison";
+import { Search, ListChecks, DollarSign, ShieldCheck, HelpCircle, Info, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Jämför a-kassor 2026 – hitta bästa a-kassan | Välja A-kassa",
@@ -9,254 +11,167 @@ export const metadata: Metadata = {
 };
 
 export default function JamforPage() {
+    const faqs = [
+        {
+            q: "Vad ska jag jämföra mellan a-kassorna?",
+            a: "Det viktigaste att jämföra är medlemsavgift, handläggningstid och om a-kassan är specialiserad på din bransch. Eftersom alla följer samma lagar väljer du främst utefter pris och service."
+        },
+        {
+            q: "Är det stor skillnad på avgiften?",
+            a: "De flesta kassor kostar mellan 100 och 170 kr per månad. Det skiljer alltså några hundralappar per år mellan den billigaste och dyraste kassan."
+        },
+        {
+            q: "Måste jag välja den a-kassa som facket rekommenderar?",
+            a: "Nej, du har rätt att välja vilken a-kassa du vill så länge du uppfyller deras krav för medlemskap (oftast att du jobbar inom deras område)."
+        }
+    ];
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.a
+            }
+        }))
+    };
+
     return (
-        <main className="min-h-screen bg-gray-50 pb-20">
-            {/* Header Section */}
-            <div className="bg-[#0B1B3F] py-16 text-center text-white">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                    Jämför a-kassa – hitta den bästa a-kassan för ditt yrke
-                </h1>
-                <p className="mt-4 text-lg text-blue-100">
-                    Jämför priser, villkor och hitta den tryggaste lösningen för dig.
-                </p>
-            </div>
-
-            <div className="mx-auto max-w-5xl px-4 -mt-8">
-                {/* Comparison Tool Card */}
-                <div className="rounded-2xl bg-white p-6 shadow-xl sm:p-10 mb-16">
-                    <AkassaComparison />
+        <main className="bg-slate-50 min-h-screen">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            {/* Hero Section */}
+            <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20">
+                    <Image
+                        src="/images/content/jamfor_hero_real.png"
+                        alt="Jämför a-kassa"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                 </div>
-
-                {/* SEO Article Content */}
-                <div className="prose prose-lg prose-slate mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-sm">
-                    <div className="mb-10 rounded-xl overflow-hidden shadow-md">
-                        <Image
-                            src="/images/content/jamfor_hero_real.png"
-                            alt="Människor som jämför alternativ på laptop"
-                            width={1000}
-                            height={563} // 16:9 ratio
-                            className="w-full object-cover h-auto m-0"
-                            priority
-                        />
-                        <p className="text-center text-sm text-gray-500 mt-2 italic">
-                            Jämför a-kassa - Hitta den bästa A-kassan för dig
+                <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="max-w-3xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight uppercase">
+                            Jämför A-kassor 2026
+                        </h1>
+                        <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-medium">
+                            Vi hjälper dig att hitta den mest prisvärda och trygga lösningen för just ditt yrke. Jämför avgifter, villkor och handläggningstider på ett ställe.
                         </p>
                     </div>
+                </div>
+            </section>
 
-                    <section className="space-y-12">
-                        {/* 1. Så jämför du a-kassor */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                1. Så jämför du a-kassor – steg för steg
+            {/* Comparison Tool Section */}
+            <div className="max-w-7xl mx-auto px-4 -mt-10 relative z-30 sm:px-6 lg:px-8">
+                <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 border border-slate-100">
+                    <AkassaComparison />
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 relative z-20">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* Main Content */}
+                    <div className="lg:col-span-2 space-y-12">
+
+                        {/* Summary Block */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 prose prose-lg prose-blue max-w-none text-slate-600">
+                            <h2 className="text-slate-900">Så jämför du a-kassor rätt</h2>
+                            <p>
+                                När du ska jämföra a-kassa är det lätt att bara stirra sig blind på medlemsavgiften. Men eftersom a-kassan är din viktigaste försäkring vid arbetslöshet finns det fler faktorer som spelar roll för din totala trygghet.
+                            </p>
+                            <div className="not-prose grid md:grid-cols-3 gap-6 my-10">
+                                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <DollarSign className="w-8 h-8 text-green-600 mb-4" />
+                                    <h3 className="font-bold text-slate-900 mb-2">Avgift</h3>
+                                    <p className="text-xs text-slate-500">Vad kostar medlemskapet per månad? De flesta ligger mellan 100-170 kr.</p>
+                                </div>
+                                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <ListChecks className="w-8 h-8 text-blue-600 mb-4" />
+                                    <h3 className="font-bold text-slate-900 mb-2">Bransch</h3>
+                                    <p className="text-xs text-slate-500">Är kassan expert på ditt yrke? Det kan ge snabbare handläggning.</p>
+                                </div>
+                                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <ShieldCheck className="w-8 h-8 text-orange-600 mb-4" />
+                                    <h3 className="font-bold text-slate-900 mb-2">Trygghet</h3>
+                                    <p className="text-xs text-slate-500">Hur ser kopplingen till fackförbund och inkomstförsäkring ut?</p>
+                                </div>
+                            </div>
+                            <p>
+                                Vi rekommenderar att du först filtrerar fram de a-kassor som är relevanta för din yrkesgrupp. Använd sökfältet i jämförelseverktyget ovan för att se de kassor som matchar din profil.
+                            </p>
+                        </section>
+
+                        {/* Detailed Steps */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 space-y-8">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-4">Vad ska jag tänka på vid valet?</h2>
+                            <div>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">1. Medlemsavgift</h3>
+                                <p className="text-slate-600">Priset är oftast det som skiljer mest. Eftersom ersättningsnivåerna styrs av lag lönar det sig ofta att välja en prisvärd kassa, så länge de täcker ditt yrkesområde.</p>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">2. Handläggningstider</h3>
+                                <p className="text-slate-600">När du blir arbetslös vill du ha pengarna snabbt. Vissa kassor har kortare väntetider än andra, vilket kan vara avgörande för din ekonomi under de första månaderna.</p>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">3. Facklig koppling</h3>
+                                <p className="text-slate-600">Är du redan med i ett fackförbund? Då är det oftast smartast att välja den a-kassa som de samarbetar med, då det underlättar kommunikationen och utbetalning av inkomstförsäkring.</p>
+                            </div>
+                        </section>
+
+                        {/* FAQ Section */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <HelpCircle className="w-8 h-8 text-blue-600" />
+                                Vanliga frågor om jämförelsen
                             </h2>
+                            <div className="space-y-6">
+                                {faqs.map((f, i) => (
+                                    <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
+                                        <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
 
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">
-                                Steg 1: Välj a-kassor efter ditt yrke
-                            </h3>
-                            <p>
-                                Det första du ska göra är att filtrera fram de a-kassor som riktar sig till din yrkesgrupp.
-                                Skriv in din yrkestitel i tabellen längst upp på sidan – även liknande titlar fungerar – så får du automatiskt fram vilka a-kassor som accepterar just din typ av tjänst.
+                    {/* Sidebar */}
+                    <aside className="space-y-8">
+                        <div className="bg-[#0B1B3F] text-white rounded-3xl p-8 shadow-xl sticky top-24">
+                            <h3 className="text-xl font-bold mb-6">Redo att välja?</h3>
+                            <p className="text-sm text-blue-100 mb-8 leading-relaxed">
+                                Använd filtret ovan för att hitta de mest populära a-kassorna för din bransch. När du hittat rätt kan du klicka dig vidare för att göra din ansökan direkt.
                             </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">
-                                Steg 2: Kontrollera bransch och inriktning
-                            </h3>
-                            <p>
-                                När du har en lista över möjliga a-kassor är nästa steg att läsa på om vilken bransch de riktar sig till.
-                                Vissa a-kassor välkomnar breda yrkesgrupper som administratörer, medan andra främst vänder sig till offentlig sektor eller privat sektor.
-                            </p>
-                            <p>
-                                Se till att medlemsbeskrivningen stämmer överens med din arbetssituation.
-                            </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">
-                                Steg 3: Jämför medlemsavgift och villkor
-                            </h3>
-                            <p>
-                                När du valt ut de a-kassor som är relevanta för ditt yrke kan du jämföra:
-                            </p>
-                            <ul>
-                                <li>Medlemsavgift per månad</li>
-                                <li>Handläggningstid vid arbetslöshet</li>
-                                <li>Kundtjänstens tillgänglighet</li>
-                                <li>Eventuella kopplingar till fackförbund</li>
-                            </ul>
-                            <p>
-                                Eftersom alla a-kassor följer samma lagar och regler är pris och service ofta det som skiljer dem mest åt.
-                            </p>
-                        </article>
-
-                        {/* 2. Vad ska jag jämföra */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                2. Vad ska jag jämföra mellan a-kassorna?
-                            </h2>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Medlemsavgift</h3>
-                            <p>
-                                De flesta a-kassor kostar mellan 100 och 170 kr per månad. Välj inte bara den billigaste – värdera även service och tillgänglighet.
-                            </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Handläggningstid</h3>
-                            <p>
-                                Handläggningstiden påverkar hur snabbt du kan få ersättning när du blivit arbetslös. Om genomsnittstider finns publicerade är det mycket värdefull information.
-                            </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Kundservice och support</h3>
-                            <p>
-                                En lättillgänglig kundtjänst kan vara avgörande när du behöver hjälp med regler och ansökan. Titta gärna på omdömen och vilka kontaktvägar som erbjuds.
-                            </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Koppling till fackförbund</h3>
-                            <p>
-                                Du måste inte välja den a-kassa som ditt fackförbund rekommenderar, men det kan vara fördelaktigt. Vissa inkomstförsäkringar gäller endast om du är medlem i en specifik a-kassa.
-                            </p>
-                        </article>
-
-                        {/* 3. Vad kostar det */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                3. Vad kostar det att vara med i en a-kassa?
-                            </h2>
-                            <p>
-                                De flesta medlemmar betalar mellan 100 och 170 kronor i månaden.
-                                Avgiften är densamma oavsett om du arbetar eller är arbetslös, och alla medlemmar betalar samma belopp.
-                            </p>
-                            <p>
-                                Se medlemskapet som en försäkring: du betalar en låg summa för trygghet den dag något oväntat händer.
-                            </p>
-                        </article>
-
-                        {/* 4. Nya regler 2026 */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                4. Nya regler 2026 – så påverkar de dig
-                            </h2>
-                            <p>
-                                Den 1 oktober 2026 infördes nya regler för arbetslöshetsförsäkringen. Den största förändringen är att du nu kvalificerar dig med tidigare inkomst i stället för arbetad tid.
-                            </p>
-                            <p>För att få ersättning måste du:</p>
-                            <ul>
-                                <li>vara minst 20 år</li>
-                                <li>vara inskriven hos Arbetsförmedlingen</li>
-                                <li>aktivt söka jobb</li>
-                                <li>kunna ta passande arbete</li>
-                                <li>aktivitetsrapportera varje månad</li>
-                            </ul>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Övergångsregler</h3>
-                            <p>
-                                Har du påbörjat din ersättningsperiod före 30 september 2026 gäller de gamla reglerna för den perioden.
-                            </p>
-                        </article>
-
-                        {/* 5. Inkomstvillkoret */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                5. Inkomstvillkoret – så kvalificerar du dig
-                            </h2>
-                            <p>
-                                Du måste uppfylla ett inkomstvillkor under en 12-månadersperiod, den så kallade ramtiden.
-                            </p>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Huvudregeln</h3>
-                            <ul>
-                                <li>Minst 120 000 kr brutto totalt under ramtiden</li>
-                                <li>Minst 11 000 kr per månad i fyra av dessa månader</li>
-                            </ul>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Alternativregeln</h3>
-                            <ul>
-                                <li>Fyra sammanhängande månader med minst 11 000 kr i månadsinkomst</li>
-                                <li>Ger max 66 ersättningsdagar</li>
-                            </ul>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mt-6">Företagare</h3>
-                            <p>
-                                Egenföretagare följer samma regler, baserat på inkomster med egenavgifter.
-                            </p>
-                        </article>
-
-                        {/* 6. Medlemskapets längd */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                6. Medlemskapets längd styr ersättningsnivån
-                            </h2>
-                            <p>
-                                Hur länge du varit medlem i en a-kassa avgör hur mycket ersättning du kan få:
-                            </p>
-                            <ul>
-                                <li>12 månader eller mer: upp till 80 procent</li>
-                                <li>6–11 månader: upp till 60 procent</li>
-                                <li>0–5 månader: upp till 50 procent</li>
-                            </ul>
-                            <p>
-                                A-kassan ersätter högst 80 procent av en inkomst upp till 34 000 kr per månad.
-                                Har du högre lön behövs en inkomstförsäkring för full ersättning.
-                            </p>
-                        </article>
-
-                        {/* 7. Så trappas ersättningen ner */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                7. Så trappas ersättningen ner
-                            </h2>
-                            <p>Ersättningen minskar stegvis enligt följande:</p>
-                            <ul>
-                                <li>Dag 1–100: 80 procent</li>
-                                <li>Dag 101–200: 70 procent</li>
-                                <li>Dag 201–300: 65 procent</li>
-                            </ul>
-                        </article>
-
-                        {/* 8. Hur länge får man ersättning? */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                8. Hur länge får man ersättning?
-                            </h2>
-                            <p>
-                                Hur lång ersättningsperiod du får beror på hur många månader du tjänat minst 11 000 kr under ramtiden.
-                            </p>
-                            <ul>
-                                <li>Maximal ersättningsperiod: 300 dagar</li>
-                                <li>Alternativregeln: 66 dagar</li>
-                            </ul>
-                            <p>
-                                Som helt arbetslös får du ersättning för cirka 22 dagar per månad.
-                            </p>
-                        </article>
-
-                        {/* 9. Högsta möjliga ersättning */}
-                        <article>
-                            <h2 className="text-2xl font-bold text-gray-900">
-                                9. Högsta möjliga ersättning
-                            </h2>
-                            <p>
-                                De första 100 dagarna kan du få:
-                            </p>
-                            <ul>
-                                <li>upp till 27 200 kr brutto per månad (80 procent av 34 000)</li>
-                            </ul>
-                            <p>
-                                Därefter trappas ersättningen ner enligt reglerna ovan.
-                            </p>
-                        </article>
-
-                        {/* Sammanfattning */}
-                        <div className="bg-blue-50 p-6 rounded-xl not-prose border border-blue-100 mt-12">
-                            <h2 className="text-xl font-bold text-blue-900 mb-4">
-                                Sammanfattning – så jämför du a-kassor
-                            </h2>
-                            <ul className="list-disc pl-5 space-y-2 text-blue-800">
-                                <li>Skriv in ditt yrke i tabellen för att se vilka a-kassor du kan gå med i.</li>
-                                <li>Läs på om bransch och inriktning.</li>
-                                <li>Jämför pris, handläggningstid och kundservice.</li>
-                                <li>Ta hänsyn till fackförbundets inkomstförsäkring om du har en.</li>
-                                <li>Välj den a-kassa som ger bäst trygghet för din situation.</li>
-                            </ul>
+                            <div className="space-y-4">
+                                <Link href="/akassor" className="flex items-center justify-between p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all group">
+                                    <span className="text-sm font-medium">Se alla a-kassor</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <Link href="/yrken" className="flex items-center justify-between p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all group">
+                                    <span className="text-sm font-medium">Hitta via yrke</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
                         </div>
 
-                    </section>
+                        <div className="bg-blue-50 rounded-3xl p-8 border border-blue-100">
+                            <Info className="w-8 h-8 text-blue-600 mb-4" />
+                            <h3 className="text-lg font-bold text-blue-900 mb-3">Viktigt för 2026</h3>
+                            <p className="text-sm text-blue-800 leading-relaxed">
+                                Kom ihåg att nya regler gäller från oktober 2026. Jämför gärna hur de olika kassorna hanterar övergången och vilka digitala verktyg de erbjuder för att förenkla för dig som medlem.
+                            </p>
+                            <Link href="/akassa-regler" className="inline-block mt-4 text-sm font-bold text-blue-600 hover:underline">
+                                Läs om nya reglerna &rarr;
+                            </Link>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </main>

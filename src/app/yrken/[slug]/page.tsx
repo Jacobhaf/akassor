@@ -1,10 +1,9 @@
-
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { yrken, akassor } from "@/data/database";
-import { famousPeople } from "@/data/famousPeople";
 import Link from "next/link";
 import Image from "next/image";
+import { CheckCircle2, HelpCircle, Briefcase, RefreshCw, ArrowRight, ShieldCheck, Info } from "lucide-react";
 
 interface Props {
     params: {
@@ -22,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `A-kassa för ${yrke.name} 2026 – jämför`,
-        description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
+        title: `A-kassa för ${yrke.name} 2026 – vilken ska du välja?`,
+        description: `Se vilken a-kassa som passar ${yrke.name}. Jämför alternativ, läs tips och byt a-kassa utan glapp. Gratis oberoende guide för 2026.`,
         alternates: {
             canonical: `/yrken/${yrke.slug}`,
         },
         openGraph: {
-            title: `A-kassa för ${yrke.name} 2026 – jämför`,
-            description: `Jobbar du som ${yrke.name}? Här ser du vilken a-kassa som rekommenderas samt lön för ${yrke.name} 2026.`,
+            title: `A-kassa för ${yrke.name} 2026 – vilken ska du välja?`,
+            description: `Se vilken a-kassa som passar ${yrke.name}. Jämför alternativ, läs tips och byt a-kassa utan glapp. Gratis guide.`,
             url: `https://www.valjaakassa.se/yrken/${yrke.slug}`,
             images: [
                 {
@@ -59,253 +58,197 @@ export default function YrkePage({ params }: Props) {
     const akassa = akassor.find((a) => a.id === yrke.recommendedAkassaId);
 
     if (!akassa) {
-        // Fallback if no specific akassa is found (shouldn't happen with valid data)
         return notFound();
     }
 
+    // Related professions - same category or just next ones
+    const relatedYrken = yrken
+        .filter(y => y.slug !== yrke.slug)
+        .slice(0, 6);
+
+    const faqs = [
+        {
+            q: `Vilken a-kassa passar ${yrke.name}?`,
+            a: `Den a-kassa som oftast rekommenderas för ${yrke.name} är ${akassa.name}. Detta beror på att de har stor erfarenhet av branschen och organiserar många som arbetar inom liknande områden. Du kan dock välja en annan kassa om du uppfyller deras medlemsvillkor.`
+        },
+        {
+            q: "Can jag byta a-kassa om jag byter jobb?",
+            a: "Ja, det är absolut möjligt att byta a-kassa. Om du byter jobb till en helt annan bransch kan det vara klokt att se över om en annan kassa passar bättre. Kom ihåg att göra bytet utan glapp för att behålla din intjänade medlemstid."
+        },
+        {
+            q: "Behöver jag vara med i facket också?",
+            a: "Det är frivilligt att vara med i både facket och a-kassan. A-kassan ger dig den grundläggande ekonomiska tryggheten, medan facket kan erbjuda juridisk hjälp, lönerådgivning och ofta en kompletterande inkomstförsäkring som ger mer pengar om du tjänar över a-kassans tak."
+        },
+        {
+            q: "Vad gäller om jag jobbar deltid?",
+            a: "Som deltidsarbetande har du samma rätt till a-kassa som heltidsanställda, förutsatt att du uppfyller arbetsvillkor och medlemsvillkor. Ersättningen baseras då på din genomsnittliga arbetstid och inkomst före arbetslösheten."
+        },
+        {
+            q: "Vad gäller om jag är timanställd?",
+            a: "Även timanställda kan vara med i a-kassan. Din rätt till ersättning beräknas på hur mycket du har arbetat totalt under det senaste året. Var noga med att spara dina arbetsgivarintyg som visar exakt hur många timmar du jobbat."
+        }
+    ];
+
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
-                {/* Header */}
-                {/* Hero Header */}
-                <div className="relative bg-[#0B1B3F] text-white overflow-hidden">
-                    <div className="absolute inset-0 z-0 opacity-20">
-                        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                            <Image
-                                src="/assets/images/hero-yrken.png"
-                                alt="Profession Hero"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
-                    </div>
-                    <div className="relative z-10 px-8 py-12 sm:py-16">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                            {yrke.name} a-kassa – vilken a-kassa ska jag välja 2026?
-                        </h1>
-                        <p className="text-blue-100 text-lg sm:text-xl max-w-2xl leading-relaxed mb-8">
-                            Jobbar du som {yrke.name} och undrar vilken a-kassa du ska välja?
-                            Här går vi igenom vilken a-kassa som rekommenderas för {yrke.name}{" "}
-                            och varför, hur ersättningen fungerar och ungefär vad en {yrke.name}{" "}
-                            tjänar 2026.
-                        </p>
-                        <div className="mt-8">
-                            <Link
-                                href={`/yrken/${yrke.slug}/checklista`}
-                                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all transform hover:scale-105"
-                            >
-                                <span className="text-xl">📋</span> Se checklista för {yrke.name} →
-                            </Link>
-                        </div>
-                    </div>
+        <main className="min-h-screen bg-slate-50">
+            {/* Hero Section */}
+            <div className="relative isolate overflow-hidden bg-[#0B1B3F] py-20 sm:py-24">
+                <div className="absolute inset-0 -z-10 h-full w-full">
+                    <Image
+                        src="/assets/images/hero-yrken.png"
+                        alt="Hero background"
+                        fill
+                        className="object-cover object-center opacity-20"
+                        priority
+                    />
                 </div>
-
-                <div className="p-8 sm:p-12 space-y-12">
-                    {/* Recommendation Section */}
-                    <section className="bg-green-50 rounded-xl p-8 border border-green-100">
-                        <span className="inline-block px-3 py-1 bg-green-200 text-green-800 text-xs font-bold uppercase tracking-wide rounded-full mb-4">
-                            Rekommenderad a-kassa
-                        </span>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            För dig som arbetar som {yrke.name} rekommenderas oftast{" "}
-                            {akassa.name}
-                        </h2>
-                        <p className="text-gray-700 mb-6">
-                            Denna a-kassa är inriktad mot{" "}
-                            {akassa.primaryIndustries.join(", ")} vilket stämmer väl överens
-                            med arbetsmarknaden för {yrke.name}.
-                        </p>
-
-                        {akassa.relatedFack && (
-                            <div className="mb-6 rounded-lg bg-green-100 p-4 text-green-800">
-                                <h3 className="font-semibold mb-1">Fackförbund för {yrke.name}</h3>
-                                <p className="text-sm">
-                                    Många som är med i denna a-kassa är också med i fackförbundet <strong>{akassa.relatedFack}</strong>.
-                                    Att vara med i facket kan ge extra inkomstförsäkring utöver a-kassan.
-                                </p>
-                            </div>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Link
-                                href={`/akassa/${akassa.slug}`}
-                                className="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-800 transition-colors"
-                            >
-                                Läs mer om {akassa.name}
-                            </Link>
-                            <a
-                                href={akassa.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex justify-center items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-                            >
-                                Gå till {akassa.name}s hemsida
-                            </a>
-                        </div>
-                    </section>
-
-                    {/* Image Section */}
-                    <div className="flex flex-col items-center my-8">
-                        <div className="relative w-full max-w-md aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                            {(() => {
-                                // Simple logic to pick an image based on profession category keywords
-                                const name = yrke.name.toLowerCase();
-                                let imagePath = "/assets/images/professions/office_1.png"; // Default
-
-                                if (name.includes("läkare") || name.includes("sjuksköterska") || name.includes("vård") || name.includes("tand") || name.includes("medic")) {
-                                    imagePath = "/assets/images/professions/healthcare_1.png";
-                                } else if (name.includes("snickare") || name.includes("bygg") || name.includes("hantverk") || name.includes("elektriker") || name.includes("målar")) {
-                                    imagePath = "/assets/images/professions/construction_1.png";
-                                } else if (name.includes("chaufför") || name.includes("förare") || name.includes("transport") || name.includes("pilot")) {
-                                    imagePath = "/assets/images/professions/transport_1.png";
-                                } else if (name.includes("lärare") || name.includes("pedagog") || name.includes("skol") || name.includes("utbild")) {
-                                    imagePath = "/assets/images/professions/education_1.png";
-                                } else if (name.includes("säljare") || name.includes("butik") || name.includes("frisör") || name.includes("servering") || name.includes("kock")) {
-                                    imagePath = "/assets/images/professions/retail_1.png";
-                                } else if (name.includes("ingenjör") || name.includes("mekan") || name.includes("industri") || name.includes("montör")) {
-                                    imagePath = "/assets/images/professions/industrial_1.png";
-                                } else {
-                                    // Rotate between office images based on name length
-                                    const officeImages = ["office_1.png", "office_2.png", "office_3.png", "office_4.png"];
-                                    const index = name.length % officeImages.length;
-                                    imagePath = `/assets/images/professions/${officeImages[index]}`;
-                                }
-
-                                return (
-                                    <Image
-                                        src={imagePath}
-                                        alt={`Person som arbetar som ${yrke.name}`}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                );
-                            })()}
-                        </div>
-                        <p className="text-sm text-gray-500 mt-2 italic">
-                            {yrke.name} bästa A-kassan
-                        </p>
-                    </div>
-
-                    {/* Short Answer */}
-                    <section>
-                        <h2 className="text-xl font-bold text-gray-900 mb-3">
-                            Vilken a-kassa är bäst för {yrke.name}?
-                        </h2>
-                        <p className="text-gray-600 text-lg">
-                            Det korta svaret är att <strong>{akassa.name}</strong> i de flesta
-                            fall är det naturliga valet för {yrke.name}.
-                        </p>
-                    </section>
-
-                    {/* Salary Info (Simulated) */}
-                    <section className="prose prose-green max-w-none">
-                        <h2>Vad tjänar en {yrke.name} 2026?</h2>
-                        <p>
-                            Lönen för en {yrke.name} kan variera beroende på erfarenhet,
-                            arbetsgivare och var i landet du arbetar. Generellt sett ligger
-                            månadslönen ofta mellan <strong>25 000 och 45 000 kronor</strong>{" "}
-                            i månaden. Faktorer som påverkar din lön är bland annat om du
-                            arbetar inom privat eller offentlig sektor, samt om det finns
-                            kollektivavtal på arbetsplatsen.
-                        </p>
-
-                        <h2>Vad gör en {yrke.name}?</h2>
-                        <p>
-                            Som {yrke.name} har du en viktig roll. Arbetsuppgifterna varierar
-                            men innefattar ofta ansvar för specifika processer eller
-                            människor. Det är ett yrke som kräver både kunskap och engagemang.
-                        </p>
-                        <p>
-                            Vanliga arbetsgivare för en {yrke.name} kan vara kommuner, regioner
-                            eller privata företag inom sektorn.
-                        </p>
-
-                        <h2>Mer om yrket och a-kassa</h2>
-                        <p>
-                            Att vara medlem i en a-kassa som {yrke.name} är en billig
-                            försäkring för din inkomst. {akassa.name} har god insikt i din
-                            bransch och kan ge råd och stöd om du skulle bli arbetslös.
-                        </p>
-                        <p>
-                            För att gå med i a-kassan behöver du oftast bara fylla i en
-                            ansökan på deras hemsida. Det tar bara några minuter och ger dig
-                            en stor trygghet i arbetslivet.
-                        </p>
-
-                        {famousPeople[yrke.slug] && (
-                            <>
-                                <h3>Kända personer som arbetat som {yrke.name}</h3>
-                                <ul>
-                                    {famousPeople[yrke.slug].map((person, index) => (
-                                        <li key={index}>
-                                            <strong>{person.name}</strong> – {person.description}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        )}
-                    </section>
-
-                    {/* Related Resources */}
-                    <section className="bg-blue-50 rounded-xl p-6 border border-blue-100 my-8">
-                        <h2 className="text-xl font-bold text-gray-900 mb-4">Relaterade resurser</h2>
-                        <ul className="space-y-3">
-                            <li>
-                                <Link
-                                    href={`/yrken/${yrke.slug}/checklista`}
-                                    className="group flex items-center gap-3 text-blue-700 hover:text-blue-900 transition-colors"
-                                >
-                                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xl group-hover:bg-blue-200">
-                                        📋
-                                    </span>
-                                    <span className="font-medium underline decoration-blue-300 underline-offset-4 group-hover:decoration-blue-900">
-                                        Checklista: Så gör du om du blir arbetslös som {yrke.name}
-                                    </span>
-                                </Link>
-                            </li>
-                        </ul>
-                    </section>
-
-                    {/* FAQ */}
-                    <section className="border-t border-gray-100 pt-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                            Vanliga frågor för {yrke.name}
-                        </h2>
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    Måste en {yrke.name} vara med i a-kassa?
-                                </h3>
-                                <p className="text-gray-600">
-                                    Nej, det är inget lagkrav, men det rekommenderas starkt för
-                                    att skydda din inkomst.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    Vilken a-kassa ger bäst skydd för {yrke.name}?
-                                </h3>
-                                <p className="text-gray-600">
-                                    {akassa.name} rekommenderas eftersom de organiserar många
-                                    inom ditt yrkesområde. Ersättningsnivåerna är dock desamma i
-                                    alla a-kassor (baserat på din lön och taket i försäkringen).
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    Kan jag byta a-kassa om jag byter yrke från {yrke.name}?
-                                </h3>
-                                <p className="text-gray-600">
-                                    Ja, om du byter bransch bör du se över om du ska byta a-kassa
-                                    till en som bättre passar ditt nya yrke. Du får tillgodoräkna
-                                    dig din tidigare medlemstid.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 text-center">
+                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                        A-kassa för {yrke.name} 2026 – vilken ska du välja?
+                    </h1>
+                    <p className="mt-6 text-xl leading-8 text-blue-100 max-w-3xl mx-auto">
+                        Om du jobbar som {yrke.name} är det viktigt att vara med i en a-kassa som passar din bransch och din typ av anställning. Här visar vi vilken a-kassa som oftast är mest relevant för yrket, vilka alternativ som kan fungera och vad du ska tänka på om du byter. Målet är att du ska kunna välja tryggt och enkelt – utan att behöva läsa igenom massor av regler.
+                    </p>
                 </div>
             </div>
-        </div>
+
+            <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 -mt-10 relative z-20">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* Main Content */}
+                    <div className="lg:col-span-2 space-y-12">
+
+                        {/* Recommendation Box */}
+                        <section className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="p-2 bg-green-100 rounded-full">
+                                    <CheckCircle2 className="w-6 h-6 text-green-600" />
+                                </div>
+                                <h2 className="text-2xl font-bold text-slate-900">Rekommenderad a-kassa för {yrke.name}</h2>
+                            </div>
+
+                            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-8">
+                                <div className="text-3xl font-black text-blue-600 mb-2">{akassa.name}</div>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {akassa.primaryIndustries.slice(0, 3).map(ind => (
+                                        <span key={ind} className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
+                                            {ind}
+                                        </span>
+                                    ))}
+                                </div>
+                                <ul className="space-y-2 text-slate-700 font-medium">
+                                    <li className="flex items-center gap-2"><ArrowRight className="w-4 h-4 text-blue-500" /> Specialistkunskap inom din bransch</li>
+                                    <li className="flex items-center gap-2"><ArrowRight className="w-4 h-4 text-blue-500" /> Smidig digital ansökan</li>
+                                    <li className="flex items-center gap-2"><ArrowRight className="w-4 h-4 text-blue-500" /> Trygg hantering av din personinformation</li>
+                                </ul>
+                            </div>
+
+                            <div className="flex flex-wrap gap-4">
+                                <a
+                                    href={akassa.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg"
+                                >
+                                    Gå med i {akassa.name}
+                                </a>
+                                <Link
+                                    href={`/akassa/${akassa.slug}`}
+                                    className="bg-white text-slate-700 border border-slate-300 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all font-sans"
+                                >
+                                    Läs recension
+                                </Link>
+                            </div>
+                        </section>
+
+                        {/* Why this akassa */}
+                        <section className="prose prose-lg prose-blue max-w-none bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100 text-slate-600">
+                            <h2 className="text-slate-900">Varför passar {akassa.name} för {yrke.name}?</h2>
+                            <p>
+                                Att välja {akassa.name} när man arbetar som {yrke.name} är ett val som ger trygghet eftersom kassan har djup förståelse för de specifika villkor som råder inom din sektor. Vanliga arbetsgivare för en {yrke.name} kan vara allt från kommuner och regioner till privata företag, och oavsett var du är anställd behöver din a-kassa kunna hantera dina inkomstuppgifter korrekt.
+                            </p>
+                            <p>
+                                Kopplingen mellan yrket {yrke.name} och {akassa.name} bygger på att kassan organiserar en stor del av yrkeskåren, vilket innebär att deras handläggare vet precis vilka intyg och underlag som krävs vid en eventuell arbetslöshet. Detta kan korta ner väntetiderna och säkerställa att du får rätt ersättning från första dagen. Oavsett om du har en fast anställning, jobbar på timmar eller har ett vikariat, så är en branschinriktad kassa ofta det tryggaste valet.
+                            </p>
+
+                            <h2 className="text-slate-900">Vad kostar a-kassa för {yrke.name}?</h2>
+                            <p>
+                                Medlemsavgiften för att vara med i {akassa.name} varierar, men ligger generellt sett på en nivå som motsvarar en mycket billig försäkring för din lön. Det är viktigt att komma ihåg att kostnaden inte bör vara den enda faktorn när du väljer. Att a-kassan har rätt kompetens för att bedöma din rätt till ersättning som {yrke.name} är minst lika viktigt för din långsiktiga trygghet.
+                            </p>
+                            <p>
+                                En del väljer en a-kassa enbart baserat på priset, men för en {yrke.name} kan det löna sig att välja en kassa som har kollektivavtalskännedom och bra samarbete med de fackförbund som finns inom din bransch. På så sätt får du en helhet i ditt försäkringsskydd som täcker både den lagstadgade delen och eventuella tilläggsförsäkringar.
+                            </p>
+
+                            <h2 className="text-slate-900">Om du vill byta a-kassa</h2>
+                            <p>
+                                Du kan byta a-kassa när som helst under året. Många väljer att byta om de får ett nytt jobb som {yrke.name} men tidigare har tillhört en kassa för en helt annan bransch. Det viktigaste vid ett byte är att du aldrig får ha ett glapp mellan medlemskapen. Ansök alltid om medlemskap i den nya kassan innan du säger upp ditt gamla.
+                            </p>
+                            <p>
+                                Att undvika glapp är avgörande eftersom din rätt till inkomstbaserad ersättning bygger på att du har varit medlem i en a-kassa under de senaste 12 månaderna utan avbrott. Om du byter smidigt flyttas din medlemstid med dig till den nya kassan, och du behåller ditt intjänade skydd. Vi rekommenderar att du kontaktar den nya a-kassan för att få hjälp med att sköta övergången så säkert som möjligt.
+                            </p>
+                        </section>
+
+                        {/* FAQ */}
+                        <section className="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <HelpCircle className="w-8 h-8 text-blue-600" />
+                                Vanliga frågor om a-kassa för {yrke.name}
+                            </h2>
+                            <div className="space-y-6">
+                                {faqs.map((faq, i) => (
+                                    <div key={i} className="border-b border-slate-100 pb-6 last:border-0">
+                                        <h3 className="font-bold text-lg text-slate-900 mb-2">{faq.q}</h3>
+                                        <p className="text-slate-600 leading-relaxed">{faq.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+
+                    {/* Sidebar */}
+                    <aside className="space-y-8">
+                        {/* Summary Info */}
+                        <div className="bg-slate-900 text-white rounded-3xl p-8 sticky top-24">
+                            <ShieldCheck className="w-10 h-10 text-green-400 mb-6" />
+                            <h3 className="text-xl font-bold mb-4">Snabbfakta: {yrke.name}</h3>
+                            <div className="space-y-4 text-sm text-slate-300">
+                                <div className="border-b border-white/10 pb-2">
+                                    <span className="block text-slate-500 uppercase text-[10px] font-bold tracking-widest">Primär a-kassa</span>
+                                    {akassa.name}
+                                </div>
+                                <div className="border-b border-white/10 pb-2">
+                                    <span className="block text-slate-500 uppercase text-[10px] font-bold tracking-widest">Typ av anställning</span>
+                                    Fast, vikariat, timmar
+                                </div>
+                                <div>
+                                    <span className="block text-slate-500 uppercase text-[10px] font-bold tracking-widest">Status 2026</span>
+                                    Uppdaterad och aktiv
+                                </div>
+                            </div>
+
+                            <div className="mt-8 pt-8 border-t border-white/10">
+                                <h4 className="font-bold text-sm mb-4">Relaterade yrken</h4>
+                                <div className="flex flex-col gap-2">
+                                    {relatedYrken.map(y => (
+                                        <Link key={y.slug} href={`/yrken/${y.slug}`} className="text-sm text-blue-400 hover:text-white transition-colors">
+                                            {y.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="mt-8 pt-8 border-t border-white/10">
+                                <h4 className="font-bold text-sm mb-4">Relaterade guider</h4>
+                                <div className="flex flex-col gap-2">
+                                    <Link href="/byta-a-kassa" className="text-sm text-slate-400 hover:text-white">Byta a-kassa</Link>
+                                    <Link href="/inkomstforsakring" className="text-sm text-slate-400 hover:text-white">Inkomstförsäkring</Link>
+                                    <Link href="/akassa-regler" className="text-sm text-slate-400 hover:text-white">A-kassa regler</Link>
+                                    <Link href="/aktivitetsstod" className="text-sm text-slate-400 hover:text-white">Ersättning & karens</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
     );
 }

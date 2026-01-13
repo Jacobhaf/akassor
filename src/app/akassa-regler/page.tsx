@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ShieldCheck, Calendar, Briefcase, Info, HelpCircle, ArrowRight, Gavel, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'A-kassa Regler 2026 – Ersättning, Villkor & Karensdagar',
@@ -8,232 +10,207 @@ export const metadata: Metadata = {
 };
 
 export default function AkassaReglerPage() {
-    const faqSchema = [
+    const faqs = [
         {
-            '@type': 'Question',
-            name: 'Vad krävs för att få a-kassa?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'För att få ersättning måste du vara arbetslös, inskriven på Arbetsförmedlingen, aktivt söka jobb samt uppfylla medlems- och arbetsvillkoret.',
-            },
+            q: 'Vad krävs för att få a-kassa?',
+            a: 'För att få ersättning måste du vara arbetslös, inskriven på Arbetsförmedlingen, aktivt söka jobb samt uppfylla medlems- och arbetsvillkoret.'
         },
         {
-            '@type': 'Question',
-            name: 'Vad är skillnaden på medlemsvillkor och arbetsvillkor?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Medlemsvillkoret handlar om hur länge du varit med i kassan (oftast 12 månader), medan arbetsvillkoret handlar om hur mycket du jobbat innan du blev arbetslös.',
-            },
+            q: 'Vad är skillnaden på medlemsvillkor och arbetsvillkor?',
+            a: 'Medlemsvillkoret handlar om hur länge du varit med i kassan (oftast 12 månader), medan arbetsvillkoret handlar om hur mycket du jobbat innan du blev arbetslös.'
         },
         {
-            '@type': 'Question',
-            name: 'Hur många karensdagar har a-kassan?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Vanligtvis har a-kassan 6 karensdagar. Det är dagar du är arbetslös men inte får betalt för, vilket fungerar som en självrisk.',
-            },
-        },
+            q: 'Hur många karensdagar har a-kassan?',
+            a: 'Vanligtvis har a-kassan 6 karensdagar. Det är dagar du är arbetslös men inte får betalt för, vilket fungerar som en självrisk.'
+        }
     ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.a
+            }
+        }))
+    };
+
     return (
-        <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
-            {/* Schema Markup */}
+        <main className="bg-slate-50 min-h-screen">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'FAQPage',
-                        mainEntity: faqSchema,
-                    }),
-                }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-
             {/* Hero Section */}
-            <div className="mb-12 text-center">
-                <h1 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
-                    A-kassa regler och villkor
-                </h1>
-                <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
-                    För att få ersättning från a-kassan måste vissa regler och villkor vara
-                    uppfyllda. Här förklarar vi hur det fungerar, vilka krav som gäller och
-                    vad som påverkar din ersättning.
-                </p>
-            </div>
-
-            <div className="grid gap-12 lg:grid-cols-12">
-                {/* Main Content Column */}
-                <div className="lg:col-span-8">
-                    <article className="prose prose-lg prose-blue max-w-none rounded-2xl bg-white p-8 shadow-sm">
-
-                        {/* Intro Box */}
-                        <div className="not-prose mb-8 rounded-xl bg-blue-50 p-6 text-blue-900">
-                            <h3 className="mb-2 text-lg font-bold">Vad krävs för att få a-kassa?</h3>
-                            <ul className="list-disc pl-5 space-y-1">
-                                <li>Vara arbetslös och aktivt söka arbete</li>
-                                <li>Vara anmäld hos Arbetsförmedlingen</li>
-                                <li>Uppfylla medlemsvillkor och arbetsvillkor</li>
-                                <li>Skicka in tidrapporter (kassakort) i tid</li>
-                            </ul>
-                        </div>
-
-                        <h2 className="text-[#003B5C]">Medlemsvillkor</h2>
-                        <p>
-                            För att få den inkomstbaserade ersättningen (som baseras på din lön)
-                            måste du normalt ha varit medlem i en a-kassa i minst{' '}
-                            <strong>tolv månader</strong>. Detta kallas för medlemsvillkoret.
+            <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20">
+                    <Image
+                        src="/assets/images/hero-akassor.png"
+                        alt="Regler och villkor för a-kassa"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="max-w-3xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight uppercase">
+                            A-kassa: Regler & Villkor 2026
+                        </h1>
+                        <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-medium">
+                            Att förstå a-kassans regelverk kan vara utmanande. Vi bryter ner de viktigaste kraven, från arbetsvillkor till karensdagar, så att du vet exakt vad som gäller.
                         </p>
-                        <p>
-                            Om du inte har varit medlem tillräckligt länge, men ändå uppfyller
-                            arbetsvillkoret, kan du ha rätt till en lägre ersättning som kallas
-                            för <strong>grundbelopp</strong>.
-                        </p>
-
-                        <h2 className="text-[#003B5C]">Arbetsvillkoret</h2>
-                        <p>
-                            <Link href="/ordlista" className="font-medium text-blue-700 hover:underline">
-                                Arbetsvillkoret
-                            </Link>{' '}
-                            är själva kärnan i a-kassans regler. Det innebär att du måste ha
-                            arbetat i en viss omfattning innan du blev arbetslös.
-                        </p>
-                        <p>Generellt krävs att du under de senaste 12 månaderna har arbetat:</p>
-                        <ul>
-                            <li>Minst 6 månader med minst 80 timmar/månad, eller</li>
-                            <li>
-                                Minst 480 timmar totalt under 6 sammanhängande månader, med minst
-                                50 timmar varje månad.
-                            </li>
-                        </ul>
-
-                        <h2 className="text-[#003B5C]">Ramtid</h2>
-                        <p>
-                            A-kassan tittar bakåt i tiden för att se om du uppfyller
-                            arbetsvillkoret. Denna period kallas för{' '}
-                            <Link href="/ordlista" className="font-medium text-blue-700 hover:underline">
-                                ramtid
-                            </Link>
-                            , och är normalt de senaste 12 månaderna.
-                        </p>
-                        <p>
-                            Om du har varit sjuk, föräldraledig eller studerat på heltid kan den
-                            tiden räknas som &quot;överhoppningsbar tid&quot;, vilket gör att
-                            a-kassan kan titta längre tillbaka i tiden för att hitta ditt
-                            arbete.
-                        </p>
-
-                        <h2 className="text-[#003B5C]">Karensdagar</h2>
-                        <p>
-                            Innan du börjar få ersättning utbetald har a-kassan{' '}
-                            <strong>karensdagar</strong>. Det är oftast 6 dagar i början av
-                            arbetslösheten då du inte får någon ersättning. Karensdagarna
-                            fungerar som en slags självrisk.
-                        </p>
-
-                        <h2 className="text-[#003B5C]">Ersättningsnivå och ersättningsdagar</h2>
-                        <p>
-                            Du får normalt ersättning i <strong>300 dagar</strong>. Om du har
-                            barn under 18 år kan du få ersättning i ytterligare 150 dagar (totalt
-                            450 dagar).
-                        </p>
-                        <p>Din ersättning baseras på:</p>
-                        <ul>
-                            <li>Din tidigare genomsnittliga inkomst</li>
-                            <li>Din genomsnittliga arbetstid</li>
-                            <li>Om du har en extra <Link href="/inkomstforsakring" className="font-medium text-blue-700 hover:underline">inkomstförsäkring</Link></li>
-                        </ul>
-
-                        <h2 className="text-[#003B5C]">Vanliga frågor om reglerna</h2>
-
-                        <div className="space-y-4 not-prose">
-                            {faqSchema.map((faq, i) => (
-                                <div key={i} className="rounded-lg border border-gray-100 bg-gray-50 p-4">
-                                    <h4 className="font-semibold text-gray-900">{faq.name}</h4>
-                                    <p className="mt-1 text-gray-700">{faq.acceptedAnswer.text}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                        <h3 className="mt-8 text-[#003B5C]">Vad händer om du säger upp dig själv?</h3>
-                        <p>
-                            Om du säger upp dig själv utan giltigt skäl (som exempelvis hälsoskäl
-                            eller mobbning) kan du bli avstängd från ersättning i oftast 45
-                            ersättningsdagar. Det innebär att du får vänta längre innan du får
-                            pengar.
-                        </p>
-
-                    </article>
-
-                    {/* Bottom CTA in Content */}
-                    <div className="mt-8 rounded-xl bg-[#003B5C] p-8 text-center text-white shadow-lg">
-                        <h3 className="mb-4 text-2xl font-bold">Dags att välja a-kassa?</h3>
-                        <p className="mb-6 text-blue-100">
-                            Nu när du har koll på reglerna kan du enkelt jämföra och hitta den bästa a-kassan för ditt yrke.
-                        </p>
-                        <Link
-                            href="/jamfor"
-                            className="inline-block rounded-lg bg-white px-8 py-3 font-bold text-[#003B5C] transition-transform hover:scale-105"
-                        >
-                            Jämför a-kassor nu
-                        </Link>
                     </div>
                 </div>
+            </section>
 
-                {/* Sidebar */}
-                <div className="lg:col-span-4 space-y-8">
+            <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 -mt-10 relative z-20">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* Main Content */}
+                    <div className="lg:col-span-2 space-y-12">
 
-                    {/* Sticky Sidebar Container */}
-                    <div className="sticky top-24 space-y-6">
-
-                        {/* Related Concepts Card */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
-                            <h3 className="mb-4 text-lg font-bold text-gray-900 border-b pb-2">
-                                Viktiga begrepp
-                            </h3>
-                            <nav className="flex flex-col space-y-3">
-                                <Link
-                                    href="/ordlista"
-                                    className="group flex items-center justify-between text-gray-600 hover:text-[#003B5C]"
-                                >
-                                    <span>Ramtid</span>
-                                    <span className="text-gray-300 group-hover:text-blue-500">→</span>
-                                </Link>
-                                <Link
-                                    href="/ordlista"
-                                    className="group flex items-center justify-between text-gray-600 hover:text-[#003B5C]"
-                                >
-                                    <span>Arbetsvillkor</span>
-                                    <span className="text-gray-300 group-hover:text-blue-500">→</span>
-                                </Link>
-                                <Link
-                                    href="/inkomstforsakring"
-                                    className="group flex items-center justify-between text-gray-600 hover:text-[#003B5C]"
-                                >
-                                    <span>Inkomstförsäkring</span>
-                                    <span className="text-gray-300 group-hover:text-blue-500">→</span>
-                                </Link>
-                            </nav>
-                        </div>
-
-                        {/* Compare CTA */}
-                        <div className="rounded-xl bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm ring-1 ring-blue-100">
-                            <h3 className="mb-2 text-lg font-bold text-[#003B5C]">
-                                Vilken a-kassa passar dig?
-                            </h3>
-                            <p className="mb-4 text-sm text-gray-600">
-                                Vi hjälper dig hitta rätt a-kassa baserat på ditt yrke.
+                        {/* Summary Block */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 prose prose-lg prose-blue max-w-none text-slate-600">
+                            <h2 className="text-slate-900">De tre grundpelarna i a-kasseförsäkringen</h2>
+                            <p>
+                                För att ha rätt till ersättning från en a-kassa i Sverige finns det tre grundläggande krav som du måste uppfylla. Dessa är utformade för att säkerställa att försäkringen går till personer som faktiskt står till arbetsmarknadens förfogande.
                             </p>
-                            <Link
-                                href="/akassor"
-                                className="block w-full rounded-lg bg-[#003B5C] py-2.5 text-center text-sm font-semibold text-white shadow-md hover:bg-[#002840]"
-                            >
-                                Hitta din a-kassa
-                            </Link>
+                            <ol>
+                                <li><strong>Medlemsvillkoret:</strong> Du ska ha varit medlem i en a-kassa i minst 12 månader för att få inkomstbaserad ersättning.</li>
+                                <li><strong>Arbetsvillkoret:</strong> Du ska ha arbetat i en viss omfattning under det senaste året.</li>
+                                <li><strong>Allmänna villkor:</strong> Du ska vara arbetsför, inskriven på Arbetsförmedlingen och aktivt söka jobb.</li>
+                            </ol>
+                        </section>
+
+                        {/* Detailed Rules */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-10 flex items-center gap-3">
+                                <Gavel className="w-8 h-8 text-blue-600" />
+                                Arbetsvillkoret i detalj
+                            </h2>
+                            <p className="text-slate-600 mb-8 leading-relaxed">
+                                Arbetsvillkoret är ofta den del som upplevs som mest komplex. För att uppfylla det under 2026 krävs normalt att du under de senaste 12 månaderna (ramtiden) har:
+                            </p>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                    <h3 className="font-bold text-slate-900 mb-2">Huvudregeln</h3>
+                                    <p className="text-sm text-slate-600">Arbetat minst 60 timmar per månad i minst sex sammanhängande månader.</p>
+                                </div>
+                                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                    <h3 className="font-bold text-slate-900 mb-2">Alternativregeln</h3>
+                                    <p className="text-sm text-slate-600">Arbetat minst 420 timmar under en sammanhängande period av sex månader (minst 40h varje månad).</p>
+                                </div>
+                            </div>
+                            <div className="mt-10 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                                <h4 className="font-bold text-blue-900 flex items-center gap-2 mb-2">
+                                    <Info className="w-5 h-5" /> Överhoppningsbar tid
+                                </h4>
+                                <p className="text-sm text-blue-800">
+                                    Om du varit sjuk, föräldraledig eller studerat kan denna tid "hoppas över" när ramtiden beräknas, vilket gör att a-kassan kan titta längre tillbaka än 12 månader.
+                                </p>
+                            </div>
+                        </section>
+
+                        {/* Karens & Ersättning */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-8">Karensdagar och utbetalning</h2>
+                            <div className="space-y-6 text-slate-600 leading-relaxed">
+                                <p>
+                                    När du blir arbetslös börjar din ersättningsperiod med <strong>6 karensdagar</strong>. Dessa dagar fungerar som en självrisk och under dessa får du ingen ersättning. Karensdagarna dras av från din första utbetalning.
+                                </p>
+                                <p>
+                                    En ersättningsperiod är totalt <strong>300 dagar</strong>. Om du har barn under 18 år förlängs perioden automatiskt till 450 dagar. Du får ersättning för max 5 dagar per vecka.
+                                </p>
+                            </div>
+                            <div className="mt-10 grid md:grid-cols-3 gap-6 text-center">
+                                <div className="p-4">
+                                    <div className="text-3xl font-bold text-blue-600 mb-1">80%</div>
+                                    <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Av lönen (dag 1-100)</div>
+                                </div>
+                                <div className="p-4 border-x border-slate-100">
+                                    <div className="text-3xl font-bold text-blue-600 mb-1">70%</div>
+                                    <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Av lönen (dag 101-300)</div>
+                                </div>
+                                <div className="p-4">
+                                    <div className="text-3xl font-bold text-blue-600 mb-1">1 200 kr</div>
+                                    <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Maxbelopp per dag</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* FAQ Section */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <HelpCircle className="w-8 h-8 text-blue-600" />
+                                Vanliga frågor om reglerna
+                            </h2>
+                            <div className="space-y-6">
+                                {faqs.map((f, i) => (
+                                    <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
+                                        <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+
+                    {/* Sidebar */}
+                    <aside className="space-y-8">
+                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 sticky top-24">
+                            <h3 className="text-lg font-bold mb-6 text-slate-900">Viktiga dokument</h3>
+                            <div className="space-y-6">
+                                <div className="flex gap-4">
+                                    <FileText className="w-6 h-6 text-blue-500 shrink-0" />
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-800">Arbetsgivarintyg</p>
+                                        <p className="text-xs text-slate-500 mt-1">Det viktigaste dokumentet för att styrka ditt arbetsvillkor.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <Calendar className="w-6 h-6 text-orange-500 shrink-0" />
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-800">Tidrapporter</p>
+                                        <p className="text-xs text-slate-500 mt-1">Måste skickas in löpande för att utbetalning ska ske.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-10 pt-10 border-t border-slate-100">
+                                <h4 className="text-sm font-bold mb-4">Relaterat:</h4>
+                                <div className="space-y-3">
+                                    <Link href="/ordlista" className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600">
+                                        <ArrowRight className="w-3 h-3" /> Ordlista & begrepp
+                                    </Link>
+                                    <Link href="/inkomstforsakring" className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600">
+                                        <ArrowRight className="w-3 h-3" /> Inkomstförsäkring guide
+                                    </Link>
+                                    <Link href="/byta-a-kassa" className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600">
+                                        <ArrowRight className="w-3 h-3" /> Så byter du a-kassa
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="mt-10 pt-8 border-t border-slate-100">
+                                <Link href="/akassor" className="block w-full text-center bg-[#0B1B3F] text-white font-bold py-3 px-6 rounded-xl hover:bg-slate-800 transition-all shadow-md uppercase text-sm tracking-wider">
+                                    Se alla a-kassor
+                                </Link>
+                            </div>
                         </div>
 
-                    </div>
+                        <div className="bg-blue-600 text-white rounded-3xl p-8 shadow-xl">
+                            <ShieldCheck className="w-8 h-8 mb-4 text-blue-200" />
+                            <h3 className="text-lg font-bold mb-3">Rättssäkerhet</h3>
+                            <p className="text-sm text-blue-100 leading-relaxed">
+                                A-kassans beslut kan alltid överklagas. Om du anser att ett beslut är felaktigt har du rätt att begära omprövning och i sista hand vända dig till Förvaltningsrätten.
+                            </p>
+                        </div>
+                    </aside>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

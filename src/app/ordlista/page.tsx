@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Book, Search, ArrowRight, HelpCircle, Info, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'A-kassa Ordlista & Begrepp – Förklaringar A-Ö',
+    title: 'A-kassa Ordlista & Begrepp 2026 – Allt från A till Ö',
     description:
         'Osäker på orden? Läs vår a-kassa ordlista för att förstå begrepp som arbetsvillkor, ramtid, karensdagar och inkomstförsäkring. Enkel guide till a-kassans språk.',
 };
@@ -13,11 +15,6 @@ export default function AkassaGlossaryPage() {
             term: 'A-kassa',
             definition:
                 'A-kassa är en förkortning av arbetslöshetskassa. Det är en organisation som betalar ut ersättning till medlemmar som blir arbetslösa, förutsatt att de uppfyller specifika villkor.',
-        },
-        {
-            term: 'Arbetslös',
-            definition:
-                'Att vara arbetslös innebär att du saknar arbete men kan och vill arbeta. För att få ersättning från a-kassa måste du vara inskriven på Arbetsförmedlingen och aktivt söka jobb.',
         },
         {
             term: 'Arbetsvillkor',
@@ -87,237 +84,155 @@ export default function AkassaGlossaryPage() {
         },
     ];
 
-    const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-            {
-                '@type': 'Question',
-                name: 'Vad är a kassa',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'A kassa är en försäkring som ger ersättning om du blir arbetslös och uppfyller medlems och arbetsvillkor.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'Vad betyder arbetsvillkoret i a kassan',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Arbetsvillkoret är kravet på hur mycket du måste ha arbetat under en viss period för att ha rätt till ersättning.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'Vad är karensdagar',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Karensdagar är de första dagarna av arbetslösheten då ingen ersättning betalas ut från a kassan.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'Vad är ramtid',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Ramtid är den period bakåt i tiden som a kassan granskar för att se om du uppfyller arbetsvillkoret.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'Vad är skillnaden mellan grundbelopp och inkomstrelaterad ersättning',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Grundbeloppet är en fast ersättning för den som inte varit medlem tillräckligt länge medan inkomstrelaterad ersättning baseras på tidigare lön.',
-                },
-            },
-            {
-                '@type': 'Question',
-                name: 'Vad är inkomstförsäkring',
-                acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Inkomstförsäkring är ett tillägg som ger ersättning över a kassans tak och ingår ofta via fackförbund.',
-                },
-            },
-        ],
+    const faqs = [
+        {
+            q: "Vad är skillnaden på a-kassa och fackförbund?",
+            a: "A-kassan är en ekonomisk försäkring vid arbetslöshet. Fackförbundet är en organisation som arbetar med dina rättigheter på arbetsplatsen, löneförhandlingar och kan erbjuda inkomstförsäkring som tillägg."
+        },
+        {
+            q: "Behöver jag förstå alla dessa begrepp?",
+            a: "Det underlättar när du ska kommunicera med a-kassan eller läsa ditt beslut om ersättning. De viktigaste att ha koll på är Arbetsvillkor och Karensdagar."
+        }
+    ];
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.a
+            }
+        }))
     };
 
     return (
-        <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
-            {/* Schema Markup */}
+        <main className="bg-slate-50 min-h-screen">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            {/* Hero Section */}
+            <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20">
+                    <Image
+                        src="/assets/images/hero-yrken.png"
+                        alt="Ordlista och begrepp"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="max-w-3xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight uppercase">
+                            A-kassa: Ordlista & Begrepp
+                        </h1>
+                        <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-medium">
+                            Från Arbetsvillkor till Överhoppningsbar tid. Vi förklarar de svåra orden inom arbetslöshetsförsäkringen så att du kan känna dig trygg i din kommunikation med a-kassan.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-            {/* Hero / Header */}
-            <div className="mb-12 text-center">
-                <h1 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    A-kassa ordlista – Förklaring av viktiga begrepp
-                </h1>
-                <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                    Att förstå reglerna kring a-kassa kan vara svårt. Det finns många begrepp som arbetsvillkor, ramtid, och karensdagar som påverkar din ersättning. Här förklarar vi vanliga ord och uttryck inom a-kassa enkelt och tydligt.
-                </p>
-            </div>
-
-            {/* Main Content */}
-            <div className="grid gap-12 lg:grid-cols-3">
-                {/* Glossary Section */}
-                <div className="lg:col-span-2">
-                    <div className="space-y-8">
-                        {terms.map((item, index) => (
-                            <div
-                                key={index}
-                                className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-                            >
-                                <h2 className="mb-2 text-xl font-semibold text-[#003B5C]">
-                                    {item.term}
-                                </h2>
-                                <p className="text-gray-700 leading-relaxed">
-                                    {item.definition}
-                                </p>
-                                {item.link && (
-                                    <div className="mt-3">
-                                        <Link
-                                            href={item.link.url}
-                                            className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 hover:underline"
-                                        >
-                                            {item.link.text}
-                                            <svg
-                                                className="ml-1 h-4 w-4"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M9 5l7 7-7 7"
-                                                />
-                                            </svg>
-                                        </Link>
+            <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 -mt-10 relative z-20">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* Main Content */}
+                    <div className="lg:col-span-2 space-y-8">
+                        {/* Summary Block */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <div className="grid gap-6">
+                                {terms.map((item, index) => (
+                                    <div key={index} id={item.term.toLowerCase().replace(/\s+/g, '-')} className="p-6 rounded-2xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md group">
+                                        <h2 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                            <Book className="w-5 h-5 text-blue-600" />
+                                            {item.term}
+                                        </h2>
+                                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                                            {item.definition}
+                                        </p>
+                                        {item.link && (
+                                            <div className="mt-4">
+                                                <Link href={item.link.url} className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 hover:underline">
+                                                    {item.link.text} <ChevronRight className="w-4 h-4" />
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
-                                )}
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </section>
 
-                {/* Sidebar / CTA Section */}
-                <div className="lg:col-span-1">
-                    <div className="sticky top-24 space-y-8">
-                        {/* Quick Links */}
-                        <div className="rounded-xl bg-gray-50 p-6 shadow-sm">
-                            <h3 className="mb-4 text-lg font-bold text-gray-900">
-                                Hitta rätt direkt
-                            </h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link
-                                        href="/akassor"
-                                        className="flex items-center text-gray-700 hover:text-[#005B8C]"
-                                    >
-                                        <span className="mr-2 text-blue-500">→</span>
-                                        Jämför a-kassor
+                        {/* FAQ Section */}
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <HelpCircle className="w-8 h-8 text-blue-600" />
+                                Vanliga frågor om a-kasseord
+                            </h2>
+                            <div className="space-y-6">
+                                {faqs.map((f, i) => (
+                                    <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
+                                        <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+
+                    {/* Sidebar */}
+                    <aside className="space-y-8">
+                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 sticky top-24">
+                            <div className="relative mb-8">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                                <input
+                                    type="text"
+                                    placeholder="Sök begrepp..."
+                                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm"
+                                />
+                            </div>
+
+                            <h3 className="text-lg font-bold mb-6 text-slate-900">Viktigaste begreppen</h3>
+                            <div className="space-y-4">
+                                {['Arbetsvillkor', 'Medlemsvillkor', 'Ramtid', 'Karensdagar'].map(term => (
+                                    <Link key={term} href={`#${term.toLowerCase()}`} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-all group">
+                                        <span className="text-sm font-medium text-slate-700 group-hover:text-blue-700">{term}</span>
+                                        <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-blue-500" />
                                     </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/akassor"
-                                        className="flex items-center text-gray-700 hover:text-[#005B8C]"
-                                    >
-                                        <span className="mr-2 text-blue-500">→</span>
-                                        Välja a-kassa
+                                ))}
+                            </div>
+
+                            <div className="mt-10 pt-8 border-t border-slate-100">
+                                <h4 className="text-sm font-bold mb-4">Läs även:</h4>
+                                <div className="space-y-3">
+                                    <Link href="/akassa-regler" className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600">
+                                        <ChevronRight className="w-3 h-3" /> Alla regler & villkor
                                     </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/inkomstforsakring"
-                                        className="flex items-center text-gray-700 hover:text-[#005B8C]"
-                                    >
-                                        <span className="mr-2 text-blue-500">→</span>
-                                        Inkomstförsäkring
+                                    <Link href="/byta-a-kassa" className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600">
+                                        <ChevronRight className="w-3 h-3" /> Så byter du kassa
                                     </Link>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+
+                            <div className="mt-10 pt-8 border-t border-slate-100">
+                                <Link href="/jamfor" className="block w-full text-center bg-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:bg-blue-500 transition-all shadow-md">
+                                    Jämför a-kassor
+                                </Link>
+                            </div>
                         </div>
 
-                        {/* CTA Card */}
-                        <div className="rounded-xl bg-[#003B5C] p-6 text-white shadow-lg">
-                            <h3 className="mb-3 text-xl font-bold">
-                                Jämför a-kassa enkelt
-                            </h3>
-                            <p className="mb-6 text-blue-100">
-                                Osäker på vilken a-kassa du ska välja? Använd vår guide för att hitta rätt.
+                        <div className="bg-blue-50 rounded-3xl p-8 border border-blue-100">
+                            <Info className="w-8 h-8 text-blue-600 mb-4" />
+                            <h3 className="text-lg font-bold text-blue-900 mb-3">Saknar du ett ord?</h3>
+                            <p className="text-sm text-blue-800 leading-relaxed">
+                                Vi arbetar ständigt med att göra a-kassans språk mer begripligt. Om det är något ord du funderar över som saknas här är du välkommen att kontakta oss.
                             </p>
-                            <Link
-                                href="/akassor"
-                                className="block w-full rounded-lg bg-white px-4 py-3 text-center font-semibold text-[#003B5C] transition-colors hover:bg-blue-50"
-                            >
-                                Hitta din a-kassa
-                            </Link>
                         </div>
-
-                        {/* Profession Links */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
-                            <h3 className="mb-4 text-lg font-bold text-gray-900">
-                                A-kassa för yrken
-                            </h3>
-                            <ul className="space-y-3 text-sm">
-                                <li>
-                                    <Link
-                                        href="/akassa-underskoterska"
-                                        className="text-gray-600 hover:text-[#005B8C] hover:underline"
-                                    >
-                                        Undersköterska
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/akassa-larare"
-                                        className="text-gray-600 hover:text-[#005B8C] hover:underline"
-                                    >
-                                        Lärare
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/akassa-egenforetagare"
-                                        className="text-gray-600 hover:text-[#005B8C] hover:underline"
-                                    >
-                                        Egenföretagare
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
-
-            {/* Bottom Content / Call to Action */}
-            <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-50 to-white p-8 text-center ring-1 ring-gray-100">
-                <h2 className="mb-4 text-2xl font-bold text-gray-900">
-                    Redo att välja a-kassa?
-                </h2>
-                <p className="mb-8 mx-auto max-w-2xl text-gray-600">
-                    Nu när du har koll på begreppen är det lättare att fatta rätt beslut. Jämför Sveriges a-kassor och se vilken som passar just ditt yrke och din situation bäst.
-                </p>
-                <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                    <Link
-                        href="/jamfor"
-                        className="rounded-lg bg-[#003B5C] px-8 py-3 font-semibold text-white shadow-lg transition-all hover:bg-[#002840] hover:shadow-xl"
-                    >
-                        Jämför a-kassor
-                    </Link>
-                    <Link
-                        href="/akassa-regler"
-                        className="rounded-lg bg-white px-8 py-3 font-semibold text-[#003B5C] shadow-md ring-1 ring-gray-200 transition-all hover:bg-gray-50"
-                    >
-                        Läs om a-kassans regler
-                    </Link>
-                </div>
-            </div>
-        </div>
+        </main>
     );
 }
