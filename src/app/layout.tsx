@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 
-// 👉 Vercel Analytics import
+// 👉 Google Analytics & Vercel Analytics imports
+import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -44,6 +45,21 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="sv" className="scroll-smooth">
+            <head>
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-X0RQ33563X"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-X0RQ33563X');
+                    `}
+                </Script>
+            </head>
             <body className={inter.className}>
                 <CookieConsent />
                 <div className="flex min-h-screen flex-col">
