@@ -20,6 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/byta-a-kassa",
         "/vanliga-fragor",
         "/cookies",
+        "/akassa-regler",
+        "/ordlista",
+        "/friskvardsbidrag",
         "/hur-bra-ar-mitt-cv",
         "/verktyg/cv-byggare",
     ].map((route) => ({
