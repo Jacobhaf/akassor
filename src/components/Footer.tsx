@@ -57,6 +57,16 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/akassa-egenforetagare" className="text-blue-200/70 hover:text-white transition-colors text-sm">
+                                    A-kassa som företagare
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ga-ur-a-kassa" className="text-blue-200/70 hover:text-white transition-colors text-sm">
+                                    Gå ur a-kassa
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/jamfor" className="text-blue-200/70 hover:text-white transition-colors text-sm font-semibold">
                                     Jämför a-kassa
                                 </Link>

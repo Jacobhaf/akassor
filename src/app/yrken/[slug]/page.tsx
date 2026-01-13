@@ -239,6 +239,7 @@ export default function YrkePage({ params }: Props) {
                             <div className="mt-8 pt-8 border-t border-white/10">
                                 <h4 className="font-bold text-sm mb-4">Relaterade guider</h4>
                                 <div className="flex flex-col gap-2">
+                                    <Link href={`/yrken/${yrke.slug}/checklista`} className="text-sm text-blue-400 font-bold hover:text-white underline decoration-blue-400/30 underline-offset-4">Checklista för {yrke.name}</Link>
                                     <Link href="/byta-a-kassa" className="text-sm text-slate-400 hover:text-white">Byta a-kassa</Link>
                                     <Link href="/inkomstforsakring" className="text-sm text-slate-400 hover:text-white">Inkomstförsäkring</Link>
                                     <Link href="/akassa-regler" className="text-sm text-slate-400 hover:text-white">A-kassa regler</Link>

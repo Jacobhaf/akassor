@@ -228,6 +228,9 @@ export default function AkassaPage({ params }: Props) {
                                 <Link href="/byta-a-kassa" className="flex items-center gap-2 text-blue-600 font-bold text-sm hover:underline">
                                     <RefreshCw className="w-4 h-4" /> Så byter du till {akassa.name}
                                 </Link>
+                                <Link href={`/akassa/${akassa.slug}/ga-ur-a-kassa`} className="flex items-center gap-2 text-slate-500 font-medium text-sm hover:text-red-600 transition-colors mt-4">
+                                    <ArrowRight className="w-4 h-4" /> Gå ur {akassa.name}
+                                </Link>
                             </div>
                         </div>
                     </aside>
