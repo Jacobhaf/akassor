@@ -2,7 +2,7 @@ import Image from "next/image";
 import { yrken, akassor } from "@/data/database";
 import Search from "@/components/Search";
 import YrkenList from "@/components/YrkenList";
-import { Briefcase, Info, CheckCircle, HelpCircle } from "lucide-react";
+import { Briefcase, Info, CheckCircle, HelpCircle, ShieldCheck, Search as SearchIcon } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function YrkenPage() {
             a: "A-kassor är ofta specialiserade på vissa branscher eller utbildningsnivåer. Genom att välja en kassa som förstår ditt yrke får du ofta bättre service och snabbare handläggning eftersom de känner till dina anställningsvillkor."
         },
         {
-            q: "Kan jag välja en annan a-kassa än den rekommenderade?",
+            q: "Can jag välja en annan a-kassa än den rekommenderade?",
             a: "Ja, det finns ofta flera alternativ. Vissa a-kassor är dock begränsade till specifika yrkesgrupper, medan andra (som Alfa-kassan) är öppna för alla."
         },
         {
@@ -88,25 +88,39 @@ export default function YrkenPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Content Section */}
                     <div className="lg:col-span-2 space-y-12">
-                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 prose prose-lg prose-blue max-w-none text-slate-600">
-                            <h2 className="text-slate-900">Varför är yrkesvalet viktigt för din a-kassa?</h2>
-                            <p>
-                                I Sverige är a-kassesystemet delvis uppbyggt kring branscher och yrkesgrupper. Även om det finns a-kassor som är öppna för alla, har de flesta en stark koppling till ett specifikt område, som till exempel läraryrket, vården eller byggbranschen.
-                            </p>
-                            <p>
-                                När du väljer en a-kassa som är inriktad på just ditt yrke får du flera fördelar. Handläggarna förstår dina anställningsformer, vare sig du är timanställd, konsult eller fast anställd. De har också koll på de kollektivavtal som ofta styr dina villkor, vilket kan vara avgörande vid en eventuell arbetslöshet.
-                            </p>
+                        <section className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 max-w-none text-slate-600">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6 tracking-tight">Varför är yrkesvalet viktigt för din a-kassa?</h2>
+                            <div className="space-y-6 text-lg leading-relaxed">
+                                <p>
+                                    I Sverige är a-kassesystemet delvis uppbyggt kring branscher och yrkesgrupper. Även om det finns a-kassor som är öppna för alla, har de flesta en stark koppling till ett specifikt område, som till exempel läraryrket, vården eller byggbranschen.
+                                </p>
+                                <p>
+                                    När du väljer en a-kassa som är inriktad på just ditt yrke får du flera fördelar. Handläggarna förstår dina anställningsformer, vare sig du är timanställd, konsult eller fast anställd. De har också koll på de kollektivavtal som ofta styr dina villkor, vilket kan vara avgörande vid en eventuell arbetslöshet.
+                                </p>
+                            </div>
 
-                            <h2 className="text-slate-900">Så hittar du rätt</h2>
-                            <p>
-                                Vi har kategoriserat över 100 olika yrken för att göra det enkelt för dig. Du kan antingen söka direkt efter din yrkestitel i sökfältet ovan eller bläddra i listan nedan. Varje yrkessida innehåller detaljerad information om:
-                            </p>
-                            <ul className="list-disc pl-5">
-                                <li>Rekommenderad a-kassa för yrket</li>
-                                <li>Huvudsakliga arbetsområden och branschkopplingar</li>
-                                <li>Tips för dig som vill byta eller gå med för första gången</li>
-                                <li>Länkar till relevanta inkomstförsäkringar</li>
-                            </ul>
+                            <div className="mt-12 pt-10 border-t border-slate-100">
+                                <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                    <SearchIcon className="w-6 h-6 text-blue-600" />
+                                    Så hittar du rätt
+                                </h2>
+                                <p className="text-lg mb-8">
+                                    Vi har kategoriserat över 100 olika yrken för att göra det enkelt för dig. Du kan antingen söka direkt efter din yrkestitel i sökfältet ovan eller bläddra i listan nedan. Varje yrkessida innehåller detaljerad information om:
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {[
+                                        { title: "Rekommenderad a-kassa för yrket", Icon: ShieldCheck },
+                                        { title: "Huvudsakliga arbetsområden", Icon: Briefcase },
+                                        { title: "Tips för byte eller inträde", Icon: Info },
+                                        { title: "Relevanta inkomstförsäkringar", Icon: ShieldCheck }
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                            <item.Icon className="w-5 h-5 text-blue-600 shrink-0" />
+                                            <span className="text-sm font-semibold text-slate-700">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </section>
 
                         <section>
