@@ -171,7 +171,7 @@ const rawArticles: Article[] = [
     slug: "chat-noir-kollektivavtal",
     title: "Historiskt kollektivavtal för Chat Noir i Göteborg",
     summary: "Efter flera års avslag har Hotell- och restaurangfacket nu tecknat kollektivavtal med strippklubben Chat Noir. Ett viktigt steg för arbetsrätten.",
-    image: "/artiklar/chat-noir.jpg",
+    image: "/artiklar/chat-noir-kollektivavtal.png",
     publishedAt: "2025-12-20",
     content: `
       <p class="lead text-xl text-gray-600 mb-8">HRF har nu tecknat kollektivavtal med Chat Noir. Det innebär att personal inom servering och bar nu omfattas av samma trygghet som i resten av branschen.</p>
@@ -181,7 +181,7 @@ const rawArticles: Article[] = [
     slug: "arbetslos-utan-akassa",
     title: "Arbetslös utan a-kassa? Här är alternativen och stödet som finns",
     summary: "Står du utanför a-kassan och har blivit av med jobbet? Vi förklarar vad Alfa-kassan är och hur du kan söka ekonomiskt bistånd.",
-    image: "/artiklar/stod-guide.png",
+    image: "/artiklar/arbetslos-utan-akassa.png",
     publishedAt: "2024-01-25",
     content: `
       <h2>Alternativen när a-kassan saknas</h2>
