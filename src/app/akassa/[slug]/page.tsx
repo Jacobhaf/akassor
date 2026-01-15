@@ -163,7 +163,7 @@ export default function AkassaPage({ params }: Props) {
                                 ))}
                             </div>
                             <div className="mt-12">
-                                <a href={akassa.website} target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all shadow-2xl">
+                                <a href={akassa.website} target="_blank" rel="noopener noreferrer nofollow" className="inline-block bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all shadow-2xl">
                                     Ansök direkt här <ExternalLink className="inline ml-2 w-5 h-5" />
                                 </a>
                             </div>

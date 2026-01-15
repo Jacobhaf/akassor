@@ -82,7 +82,7 @@ export default function ChecklistPage({ params }: Props) {
                         <a
                             href="https://arbetsformedlingen.se/for-arbetssokande/inskrivning"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer nofollow"
                             className="mt-4 inline-flex items-center rounded-lg bg-green-600 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-green-700"
                         >
                             Skriv in dig som arbetssökande hos Arbetsförmedlingen

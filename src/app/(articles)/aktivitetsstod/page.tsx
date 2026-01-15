@@ -108,7 +108,7 @@ export default function AktivitetsstodPage() {
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Vem betalar ut aktivitetsstöd?</h2>
                     <p>
-                        Aktivitetsstöd betalas ut av <strong>Försäkringskassan</strong>, men för att ha rätt till det måste du vara inskriven på och anvisad till ett program via <Link href="https://arbetsformedlingen.se" className="text-blue-600 hover:underline" target="_blank" rel="nofollow">Arbetsförmedlingen</Link>. Du måste också rapportera dina aktiviteter till Arbetsförmedlingen varje månad.
+                        Aktivitetsstöd betalas ut av <strong>Försäkringskassan</strong>, men för att ha rätt till det måste du vara inskriven på och anvisad till ett program via <Link href="https://arbetsformedlingen.se" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer nofollow">Arbetsförmedlingen</Link>. Du måste också rapportera dina aktiviteter till Arbetsförmedlingen varje månad.
                     </p>
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">När betalas aktivitetsstöd ut?</h2>

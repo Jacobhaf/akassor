@@ -146,7 +146,7 @@ export default function YrkePage({ params }: Props) {
                                 <a
                                     href={akassa.website}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="noopener noreferrer nofollow"
                                     className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg"
                                 >
                                     Gå med i {akassa.name}

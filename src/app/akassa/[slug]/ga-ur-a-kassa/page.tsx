@@ -115,7 +115,7 @@ export default function LeaveAkassaPage({ params }: Props) {
                         <a
                             href={akassa.website}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer nofollow"
                             className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
                         >
                             Till {akassa.name}s hemsida för att avsluta →

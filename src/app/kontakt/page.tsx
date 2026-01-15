@@ -63,7 +63,7 @@ export default function KontaktPage() {
 
                         <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">E-post</h3>
                         <p>
-                            Du når oss enklast via e-post: <a href="mailto:info@valjaakassa.se" className="text-blue-600 hover:underline">info@valjaakassa.se</a>
+                            Du når oss enklast via e-post: <a href="mailto:info@valjaakassa.se" rel="nofollow" className="text-blue-600 hover:underline">info@valjaakassa.se</a>
                         </p>
 
                         <div className="mt-8 rounded-lg bg-blue-50 p-4 text-sm text-blue-800">

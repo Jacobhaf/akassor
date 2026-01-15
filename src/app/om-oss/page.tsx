@@ -153,7 +153,7 @@ export default function OmOssPage() {
                                     </svg>
                                 </dt>
                                 <dd>
-                                    <a href="mailto:info@valjaakassa.se" className="hover:text-slate-900">info@valjaakassa.se</a>
+                                    <a href="mailto:info@valjaakassa.se" rel="nofollow" className="hover:text-slate-900">info@valjaakassa.se</a>
                                 </dd>
                             </div>
                             <div className="flex gap-x-4">
