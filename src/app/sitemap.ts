@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/akassa-regler",
         "/ordlista",
         "/friskvardsbidrag",
+        "/aktivitetsstod",
         "/akassa-egenforetagare",
         "/hur-bra-ar-mitt-cv",
         "/verktyg/cv-byggare",
