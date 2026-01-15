@@ -159,11 +159,13 @@ export default function AkassaReglerPage() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="w-full md:w-1/3 aspect-[4/3] relative rounded-2xl overflow-hidden shadow-md bg-slate-100">
+                                <div className="w-full md:w-1/3 aspect-[3/2] relative rounded-2xl overflow-hidden shadow-md bg-slate-100">
                                     <Image
                                         src="/assets/images/aktivitetsstod-akassa-regler-2026.jpg"
                                         alt="Regler för aktivitetsstöd och a-kassa från 1 oktober 2025"
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        quality={95}
                                         className="object-cover"
                                     />
                                 </div>
