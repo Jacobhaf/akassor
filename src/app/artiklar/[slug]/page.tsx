@@ -13,16 +13,20 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const article = articles.find((a) => a.slug === params.slug);
     if (!article) return { title: "Artikel hittades inte" };
+
+    const title = article.metaTitle || `${article.title} | Välja A-kassa`;
+    const description = article.metaDescription || article.summary;
+
     return {
-        title: `${article.title} | Välja A-kassa`,
-        description: article.summary,
+        title: title,
+        description: description,
         keywords: [article.title, "a-kassa", "arbetslöshetsförsäkring", "ersättning", article.slug.replace(/-/g, " ")],
         alternates: {
             canonical: `https://www.valjaakassa.se/artiklar/${article.slug}`,
         },
         openGraph: {
-            title: `${article.title} | Välja A-kassa`,
-            description: article.summary,
+            title: title,
+            description: description,
             type: "article",
             publishedTime: article.publishedAt,
             url: `https://www.valjaakassa.se/artiklar/${article.slug}`,
