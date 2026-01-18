@@ -33,15 +33,15 @@ const rawArticles: Article[] = [
       },
       {
         question: "Kan jag få a-kassa efter studier?",
-        answer: "Ja, du kan få a-kassa om du blir arbetslös efter studierna, men du behöver uppfylla villkoren som a-kassan ställer – exempelvis att du haft inkomster och arbetat tillräckligt under en viss period innan du blev arbetslös. A-kassan tittar vanligtvis na en ramtid bakåt i tiden för att bedöma om du uppfyller villkoren."
+        answer: "Ja, du kan få a-kassa om du blir arbetslös efter studierna, men du behöver uppfylla villkoren som a-kassan ställer – exempelvis att du haft inkomster och arbetat tillräckligt under en viss period innan du blev arbetslös. A-kassan tittar vanligtvis på en ramtid bakåt i tiden för att bedöma om du uppfyller villkoren."
       },
       {
         question: "Vad menas med ramtid och överhoppningsbar tid?",
-        answer: "Ramtid är den period som a-kassan normalt räknar bakåt för att se om du har arbetat och haft tillräckliga inkomster. Studier na heltid kan i many fall räknas som överhoppningsbar tid, vilket innebär att a-kassan kan hoppa över studitetiden och istället räkna na inkomster från månaderna före studierna."
+        answer: "Ramtid är den period som a-kassan normalt räknar bakåt för att se om du har arbetat och haft tillräckliga inkomster. Studier på heltid kan i många fall räknas som överhoppningsbar tid, vilket innebär att a-kassan kan hoppa över studietiden och istället räkna på inkomster från månaderna före studierna."
       },
       {
         question: "Vilken a-kassa ska jag välja som student?",
-        answer: "Som student är det oftast bäst att välja den a-kassa som passar branschen eller yrket du utbildar dig till. Om du läser en bred utbildning eller är osäker na vilket yrke du kommer jobba inom kan du jämföra flera alternativ eller välja en fristående a-kassa."
+        answer: "Som student är det oftast bäst att välja den a-kassa som passar branschen eller yrket du utbildar dig till. Om du läser en bred utbildning eller är osäker på vilket yrke du kommer jobba inom kan du jämföra flera alternativ eller välja en fristående a-kassa."
       },
       {
         question: "Kan man få a-kassa samtidigt som man studerar?",
@@ -49,7 +49,7 @@ const rawArticles: Article[] = [
       },
       {
         question: "Kan jag få a-kassa om jag får CSN?",
-        answer: "Om du får studiestöd från CSN räknas du vanligtvis som studerande och då kan du normalt inte få a-kassa samtidigt. Det beror na att du inte anses stå helt till arbetsmarknadens förfogande när du studerar med studiestöd."
+        answer: "Om du får studiestöd från CSN räknas du vanligtvis som studerande och då kan du normalt inte få a-kassa samtidigt. Det beror på att du inte anses stå helt till arbetsmarknadens förfogande när du studerar med studiestöd."
       },
       {
         question: "Kan man pausa a-kassan för att studera?",
@@ -74,14 +74,14 @@ const rawArticles: Article[] = [
             <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">2</span>
             Behåll medlemskapet
           </h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-0">Gå aldrig ur under studietiden. Ett glapp na bara en dag kan nollställa din intjänade tid och kosta dig rätten till full ersättning.</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Gå aldrig ur under studietiden. Ett glapp på bara en dag kan nollställa din intjänade tid och kosta dig rätten till full ersättning.</p>
         </div>
         <div class="space-y-3">
           <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
             <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">3</span>
             Studier är överhoppningsbara
           </h3>
-          <p class="text-slate-600 text-sm leading-relaxed mb-0">Fullföljda studier kan hoppas över i ramtiden. Det betyder att a-kassan kan titta na vad du gjorde innan du började plugga för att ge ersättning.</p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Fullföljda studier kan hoppas över i ramtiden. Det betyder att a-kassan kan titta på vad du gjorde innan du började plugga för att ge ersättning.</p>
         </div>
         <div class="space-y-3">
           <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
@@ -93,9 +93,9 @@ const rawArticles: Article[] = [
       </div>
 
       <h2 class="text-3xl font-bold text-slate-900 mb-6">Kan man gå med i a-kassan som student?</h2>
-      <p>Många studenter lever i tron att a-kassan bara är till för dem som har fasta jobb och en lång karriär bakom sig. Sanningen är dock att de svenska a-kassorna är utformade för att ge trygghet åt alla som är verksamma na arbetsmarknaden – även na deltid eller under studieperioder. Frågan "kan jag bli medlem?" besvaras oftast med ett ja, så länge du har någon form av arbetsanknytning.</p>
+      <p>Många studenter lever i tron att a-kassan bara är till för dem som har fasta jobb och en lång karriär bakom sig. Sanningen är dock att de svenska a-kassorna är utformade för att ge trygghet åt alla som är verksamma på arbetsmarknaden – även på deltid eller under studieperioder. Frågan "kan jag bli medlem?" besvaras oftast med ett ja, så länge du har någon form av arbetsanknytning.</p>
       
-      <p>För att bli medlem i en a-kassa krävs det normalt att du har arbetat, eller arbetar just nu. Om du har ett extrajobb na kvällar eller helger, ett sommarjobb i bagaget eller nyligen har avslutat en anställning har du den grund som krävs för att kunna <strong>gå med i a-kassa under studier</strong>. Arbetskravet för medlemskap är ofta mycket lägre än vad many tror.</p>
+      <p>För att bli medlem i en a-kassa krävs det normalt att du har arbetat, eller arbetar just nu. Om du har ett extrajobb på kvällar eller helger, ett sommarjobb i bagaget eller nyligen har avslutat en anställning har du den grund som krävs för att kunna <strong>gå med i a-kassa under studier</strong>. Arbetskravet för medlemskap är ofta mycket lägre än vad många tror.</p>
 
       <div class="bg-blue-50 border-l-4 border-blue-600 p-8 my-12 rounded-r-2xl shadow-sm">
         <p class="text-blue-900 font-bold mb-4 text-xl">💡 Pro-tip för studenter:</p>
@@ -103,15 +103,15 @@ const rawArticles: Article[] = [
       </div>
 
       <h2 class="text-3xl font-bold text-slate-900 mb-6">Varför är det smart att gå med så tidigt som möjligt?</h2>
-      <p>Tid är den viktigaste faktorn när det gäller arbetslöshetsförsäkringen. I det svenska systemet finns det nämligen något som heter <em>medlemsvillkor</em>. För att du ska ha rätt till ersättning som baseras na din tidigare inkomst (upp till 80 % av din lön) måste du ha varit medlem i en a-kassa i minst 12 sammanhängande månader innan du blir arbetslös.</p>
+      <p>Tid är den viktigaste faktorn när det gäller arbetslöshetsförsäkringen. I det svenska systemet finns det nämligen något som heter <em>medlemsvillkor</em>. För att du ska ha rätt till ersättning som baseras på din tidigare inkomst (upp till 80 % av din lön) måste du ha varit medlem i en a-kassa i minst 12 sammanhängande månader innan du blir arbetslös.</p>
 
-      <p>Här ser vi den största fördelen med att välja en <strong>a-kassa för studenter</strong> i god tid. Om du går med redan under första eller andra året na din utbildning, har du garanterat passerat 12-månadersgränsen när du tar din examen.</p>
+      <p>Här ser vi den största fördelen med att välja en <strong>a-kassa för studenter</strong> i god tid. Om du går med redan under första eller andra året på din utbildning, har du garanterat passerat 12-månadersgränsen när du tar din examen.</p>
 
       <div class="flex flex-col md:flex-row gap-8 my-16 not-prose">
         <div class="flex-1 bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
           <h4 class="font-bold text-blue-600 mb-4 uppercase tracking-wider text-xs">Scenario A: Gått med tidigt</h4>
           <p class="text-2xl font-bold text-slate-900 mb-4">80% ersättning</p>
-          <p class="text-sm text-slate-500 leading-relaxed">Du har varit medlem >12 månader. Du får ersättning baserat na din lön innan studierna eller ditt extrajobb.</p>
+          <p class="text-sm text-slate-500 leading-relaxed">Du har varit medlem >12 månader. Du får ersättning baserat på din lön innan studierna eller ditt extrajobb.</p>
         </div>
         <div class="flex-1 bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
           <h4 class="font-bold text-slate-400 mb-4 uppercase tracking-wider text-xs">Scenario B: Glömt gå med</h4>
@@ -124,9 +124,9 @@ const rawArticles: Article[] = [
       </div>
 
       <h2 class="text-3xl font-bold text-slate-900 mb-6">Studier är överhoppningsbara</h2>
-      <p>När examensdagen passerat och studierna är avslutade börjar din nya tillvaro som arbetssökande. Det är i detta skede som din <strong>a-kassa efter studier</strong> blir din ekonomiska livlina. För att faktiskt få ut pengar räcker det dock inte bara med att ha varit medlem; du måste också uppfylla ett <em>inkomstvillkor</em> eller <em>arbetsvillkor</em>.</p>
+      <p>När examensdagen passerat och studierna är avslutade börjar din nya tillvaro som arbetssökande. Det är i detta scened som din <strong>a-kassa efter studier</strong> blir din ekonomiska livlina. För att faktiskt få ut pengar räcker det dock inte bara med att ha varit medlem; du måste också uppfylla ett <em>inkomstvillkor</em> eller <em>arbetsvillkor</em>.</p>
 
-      <p>Detta villkor innebär att du ska ha arbetat i viss omfattning under de senaste 12 månaderna innan du blev arbetslös. Men tack vare reglerna om <em>överhoppningsbar tid</em>, kan a-kassan "hoppa över" tiden du har studerat när de räknar na din arbetstid.</p>
+      <p>Detta villkor innebär att du ska ha arbetat i viss omfattning under de senaste 12 månaderna innan du blev arbetslös. Men tack vare reglerna om <em>överhoppningsbar tid</em>, kan a-kassan "hoppa över" tiden du har studerat när de räknar på din arbetstid.</p>
 
       <div class="bg-slate-900 rounded-3xl p-10 my-16 text-white text-center shadow-xl">
         <h3 class="text-white text-3xl mb-6">Bygg din framtida trygghet idag</h3>

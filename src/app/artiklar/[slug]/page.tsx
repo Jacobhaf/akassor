@@ -116,16 +116,24 @@ export default function ArticlePage({ params }: Props) {
                                 </p>
                             </header>
 
-                            {/* Image Section - More flexible aspect ratio */}
-                            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-3xl overflow-hidden mb-16 shadow-2xl ring-1 ring-gray-900/10">
+                            {/* Image Section - Shows full content for non-landscape images */}
+                            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] rounded-3xl overflow-hidden mb-16 shadow-2xl ring-1 ring-gray-900/10 bg-slate-50">
+                                {/* Blurred background for portrait images in landscape containers */}
+                                <Image
+                                    src={article.image}
+                                    alt=""
+                                    fill
+                                    className="object-cover blur-3xl opacity-20 scale-110"
+                                    aria-hidden="true"
+                                />
                                 <Image
                                     src={article.image}
                                     alt={article.title}
                                     fill
-                                    className="object-cover"
+                                    className="object-contain relative z-10"
                                     priority
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent z-20"></div>
                             </div>
 
                             <div className="prose prose-blue prose-lg max-w-none prose-headings:text-slate-900 prose-headings:font-bold prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-img:rounded-3xl">
