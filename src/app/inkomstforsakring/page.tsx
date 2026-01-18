@@ -165,51 +165,58 @@ export default function InkomstforsakringPage() {
 
                     {/* Sidebar */}
                     <aside className="space-y-8">
-                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 sticky top-24">
-                            <h3 className="text-lg font-bold mb-6 text-slate-900">Är det värt det?</h3>
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="p-2 bg-blue-50 rounded-lg shrink-0">
-                                        <TrendingUp className="w-6 h-6 text-blue-600" />
+                        <div className="sticky top-24 space-y-8">
+                            <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                                <h3 className="text-lg font-bold mb-6 text-slate-900">Är det värt det?</h3>
+                                <div className="space-y-6">
+                                    <div className="flex gap-4">
+                                        <div className="p-2 bg-blue-50 rounded-lg shrink-0">
+                                            <TrendingUp className="w-6 h-6 text-blue-600" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-bold text-slate-800">För dig med hög lön</p>
+                                            <p className="text-xs text-slate-500 mt-1">Tjänar du över 34 000 kr? Då ger a-kassan bara en bråkdel av din lön utan tillägg.</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="text-sm font-bold text-slate-800">För dig med hög lön</p>
-                                        <p className="text-xs text-slate-500 mt-1">Tjänar du över 34 000 kr? Då ger a-kassan bara en bråkdel av din lön utan tillägg.</p>
+                                    <div className="flex gap-4">
+                                        <div className="p-2 bg-green-50 rounded-lg shrink-0">
+                                            <ShieldAlert className="w-6 h-6 text-green-600" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-bold text-slate-800">Trygghet för familjen</p>
+                                            <p className="text-xs text-slate-500 mt-1">Säkra din förmåga att betala bolån och fasta avgifter även vid omställning.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="p-2 bg-purple-50 rounded-lg shrink-0">
+                                            <Clock className="w-6 h-6 text-purple-600" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-bold text-slate-800">Längre ersättning</p>
+                                            <p className="text-xs text-slate-500 mt-1">Få 80% lön under en längre tid än vad a-kassan ensam erbjuder.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="flex gap-4">
-                                    <div className="p-2 bg-green-50 rounded-lg shrink-0">
-                                        <ShieldAlert className="w-6 h-6 text-green-600" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-bold text-slate-800">Trygghet för familjen</p>
-                                        <p className="text-xs text-slate-500 mt-1">Säkra din förmåga att betala bolån och fasta avgifter även vid omställning.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="p-2 bg-purple-50 rounded-lg shrink-0">
-                                        <Clock className="w-6 h-6 text-purple-600" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-bold text-slate-800">Längre ersättning</p>
-                                        <p className="text-xs text-slate-500 mt-1">Få 80% lön under en längre tid än vad a-kassan ensam erbjuder.</p>
-                                    </div>
+
+                                <div className="mt-10 pt-8 border-t border-slate-100">
+                                    <Link href="/jamfor" className="block w-full text-center bg-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:bg-blue-500 transition-all shadow-md">
+                                        Jämför a-kassor nu
+                                    </Link>
                                 </div>
                             </div>
 
-                            <div className="mt-10 pt-8 border-t border-slate-100">
-                                <Link href="/jamfor" className="block w-full text-center bg-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:bg-blue-500 transition-all shadow-md">
-                                    Jämför a-kassor nu
-                                </Link>
+                            <div className="bg-amber-50 rounded-3xl p-8 border border-amber-100 shadow-sm transition-transform hover:scale-[1.02]">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Info className="w-6 h-6 text-amber-600 shrink-0" />
+                                    <h3 className="text-lg font-bold text-amber-900 mb-0 leading-tight">Privat inkomstförsäkring</h3>
+                                </div>
+                                <p className="text-sm text-amber-800 leading-relaxed mb-4">
+                                    Som egenföretagare kan du också ha inkomstförsäkring. Det finns specifika lösningar via exempelvis <strong>Unionen Egenföretagare</strong> eller <strong>SmåA</strong> som är anpassade för dina behov.
+                                </p>
+                                <p className="text-xs text-amber-700/70 italic">
+                                    Fungerar på samma sätt som för anställda men med anpassade villkor för företagare.
+                                </p>
                             </div>
-                        </div>
-
-                        <div className="bg-amber-50 rounded-3xl p-8 border border-amber-100">
-                            <Info className="w-8 h-8 text-amber-600 mb-4" />
-                            <h3 className="text-lg font-bold text-amber-900 mb-3">Tips för egenföretagare</h3>
-                            <p className="text-sm text-amber-800 leading-relaxed">
-                                Som egenföretagare kan du också ha inkomstförsäkring. Det finns specifika lösningar via exempelvis Unionen Egenföretagare eller SmåA som är anpassade för dina behov.
-                            </p>
                         </div>
                     </aside>
                 </div>
