@@ -33,15 +33,15 @@ const rawArticles: Article[] = [
       },
       {
         question: "Kan jag få a-kassa efter studier?",
-        answer: "Ja, du kan få a-kassa om du blir arbetslös efter studierna, men du behöver uppfylla villkoren som a-kassan ställer – exempelvis att du haft inkomster och arbetat tillräckligt under en viss period innan du blev arbetslös. A-kassan tittar vanligtvis på en ramtid bakåt i tiden för att bedöma om du uppfyller villkoren."
+        answer: "Ja, du kan få a-kassa om du blir arbetslös efter studierna, men du behöver uppfylla villkoren som a-kassan ställer – exempelvis att du haft inkomster och arbetat tillräckligt under en viss period innan du blev arbetslös. A-kassan tittar vanligtvis na en ramtid bakåt i tiden för att bedöma om du uppfyller villkoren."
       },
       {
         question: "Vad menas med ramtid och överhoppningsbar tid?",
-        answer: "Ramtid är den period som a-kassan normalt räknar bakåt för att se om du har arbetat och haft tillräckliga inkomster. Studier på heltid kan i många fall räknas som överhoppningsbar tid, vilket innebär att a-kassan kan hoppa över studietiden och istället räkna på inkomster från månaderna före studierna."
+        answer: "Ramtid är den period som a-kassan normalt räknar bakåt för att se om du har arbetat och haft tillräckliga inkomster. Studier na heltid kan i many fall räknas som överhoppningsbar tid, vilket innebär att a-kassan kan hoppa över studitetiden och istället räkna na inkomster från månaderna före studierna."
       },
       {
         question: "Vilken a-kassa ska jag välja som student?",
-        answer: "Som student är det oftast bäst att välja den a-kassa som passar branschen eller yrket du utbildar dig till. Om du läser en bred utbildning eller är osäker på vilket yrke du kommer jobba inom kan du jämföra flera alternativ eller välja en fristående a-kassa."
+        answer: "Som student är det oftast bäst att välja den a-kassa som passar branschen eller yrket du utbildar dig till. Om du läser en bred utbildning eller är osäker na vilket yrke du kommer jobba inom kan du jämföra flera alternativ eller välja en fristående a-kassa."
       },
       {
         question: "Kan man få a-kassa samtidigt som man studerar?",
@@ -49,7 +49,7 @@ const rawArticles: Article[] = [
       },
       {
         question: "Kan jag få a-kassa om jag får CSN?",
-        answer: "Om du får studiestöd från CSN räknas du vanligtvis som studerande och då kan du normalt inte få a-kassa samtidigt. Det beror på att du inte anses stå helt till arbetsmarknadens förfogande när du studerar med studiestöd."
+        answer: "Om du får studiestöd från CSN räknas du vanligtvis som studerande och då kan du normalt inte få a-kassa samtidigt. Det beror na att du inte anses stå helt till arbetsmarknadens förfogande när du studerar med studiestöd."
       },
       {
         question: "Kan man pausa a-kassan för att studera?",
@@ -57,93 +57,83 @@ const rawArticles: Article[] = [
       }
     ],
     content: `
-      <p class="lead text-xl text-gray-600 mb-8">Att navigera i reglerna kring a-kassa som student kan vara utmanande, men det är ett av de mest strategiska besluten du kan fatta för din framtida ekonomiska trygghet. Denna artikel förklarar hur medlemskap under studietiden fungerar, när du kan få ersättning och hur du planerar för livet efter examen. Vi guidar dig genom allt från överhoppningsbar tid till valet av rätt a-kassa.</p>
+      <p class="text-xl leading-relaxed text-slate-600 mb-12 italic border-l-4 border-blue-500 pl-6">
+        Att navigera i reglerna kring a-kassa som student kan vara utmanande, men det är ett av de mest strategiska besluten du kan fatta för din framtida ekonomiska trygghet. Denna artikel förklarar hur medlemskap under studietiden fungerar, när du kan få ersättning och hur du planerar för livet efter examen.
+      </p>
 
-      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 mb-12">
-        <h3 class="text-xl font-bold text-slate-900 mb-4 mt-0">Snabb sammanfattning: A-kassa som student</h3>
-        <ul class="list-disc pl-5 space-y-2 mb-0">
-          <li><strong>Gå med tidigt:</strong> Du bör ansöka om medlemskap så fort du börjar jobba extra för att börja räkna medlemstid.</li>
-          <li><strong>Efter examen:</strong> Medlemskap under studierna gör det enklare att få inkomstbaserad ersättning direkt efter studier.</li>
-          <li><strong>Ersättning under studier:</strong> Det är oftast inte möjligt att få a-kassa samtidigt som man studerar på heltid.</li>
-          <li><strong>CSN:</strong> Studiestöd och a-kassa går normalt inte att kombinera då du inte anses stå till arbetsmarknadens förfogande.</li>
-          <li><strong>Fortsätt vara medlem:</strong> Gå aldrig ur a-kassan under studietiden; ett avbrott nollställer din intjänade medlemstid.</li>
-        </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16 bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm not-prose">
+        <div class="space-y-3">
+          <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">1</span>
+            Gå med tidigt
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Ansök om medlemskap så fort du börjar jobba extra. Varje månad som medlem räknas mot de 12 månader som krävs för inkomstbaserad ersättning.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">2</span>
+            Behåll medlemskapet
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Gå aldrig ur under studietiden. Ett glapp na bara en dag kan nollställa din intjänade tid och kosta dig rätten till full ersättning.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">3</span>
+            Studier är överhoppningsbara
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Fullföljda studier kan hoppas över i ramtiden. Det betyder att a-kassan kan titta na vad du gjorde innan du började plugga för att ge ersättning.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-lg font-bold text-slate-900 mb-0 flex items-center gap-2">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs">4</span>
+            Varning för CSN
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-0">Du kan normalt inte få både CSN och a-kassa samtidigt. Som heltidsstudent anses du inte stå till arbetsmarknadens förfogande.</p>
+        </div>
       </div>
 
-      <h2>Kan man gå med i a-kassan som student?</h2>
-      <p>Många studenter lever i tron att a-kassan bara är till för dem som har fasta jobb och en lång karriär bakom sig. Sanningen är dock att de svenska a-kassorna är utformade för att ge trygghet åt alla som är verksamma på arbetsmarknaden – även på deltid eller under studieperioder. Frågan "kan jag bli medlem?" besvaras oftast med ett ja, så länge du har någon form av arbetsanknytning.</p>
+      <h2 class="text-3xl font-bold text-slate-900 mb-6">Kan man gå med i a-kassan som student?</h2>
+      <p>Många studenter lever i tron att a-kassan bara är till för dem som har fasta jobb och en lång karriär bakom sig. Sanningen är dock att de svenska a-kassorna är utformade för att ge trygghet åt alla som är verksamma na arbetsmarknaden – även na deltid eller under studieperioder. Frågan "kan jag bli medlem?" besvaras oftast med ett ja, så länge du har någon form av arbetsanknytning.</p>
       
-      <p>För att bli medlem i en a-kassa krävs det normalt att du har arbetat, eller arbetar just nu. Om du har ett extrajobb på kvällar eller helger, ett sommarjobb i bagaget eller nyligen har avslutat en anställning har du den grund som krävs för att kunna <strong>gå med i a-kassa under studier</strong>. Arbetskravet för medlemskap är ofta mycket lägre än vad många tror; det räcker i många fall med att du arbetar minst en timme per månad i den bransch a-kassan täcker.</p>
+      <p>För att bli medlem i en a-kassa krävs det normalt att du har arbetat, eller arbetar just nu. Om du har ett extrajobb na kvällar eller helger, ett sommarjobb i bagaget eller nyligen har avslutat en anställning har du den grund som krävs för att kunna <strong>gå med i a-kassa under studier</strong>. Arbetskravet för medlemskap är ofta mycket lägre än vad many tror.</p>
 
-      <p>Det är dock viktigt att förstå skillnaden mellan de olika typerna av a-kassor. Vissa är nischade mot specifika yrkesgrupper, medan andra är breda och välkomnar alla. Om man aldrig någonsin har jobbat en enda timme i hela sitt liv kan det vara svårt att bli medlem i de mer nischade a-kassorna initialt. I sådana fall kan Alfa-kassan vara ett alternativ då de inte kräver medlemskap i ett fackförbund eller specifik branschtillhörighet på samma sätt.</p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-8 my-12 rounded-r-2xl shadow-sm">
+        <p class="text-blue-900 font-bold mb-4 text-xl">💡 Pro-tip för studenter:</p>
+        <p class="text-blue-800 text-lg leading-relaxed m-0">Även om du bara jobbar några timmar i månaden, så börjar klockan ticka för ditt medlemsvillkor från den dag du går med. Detta är avgörande för vad som händer den dagen din utbildning är slut.</p>
+      </div>
 
-      <p>Kom även ihåg att medlemskapet är en investering. Även om du bara jobbar några timmar i månaden, så börjar klockan ticka för ditt medlemsvillkor från den dag du går med. Detta är avgörande för vad som händer den dagen din utbildning är slut och du kliver ut i den verkliga arbetsmarknaden.</p>
-
-      <h2>Varför är det smart att gå med så tidigt som möjligt?</h2>
+      <h2 class="text-3xl font-bold text-slate-900 mb-6">Varför är det smart att gå med så tidigt som möjligt?</h2>
       <p>Tid är den viktigaste faktorn när det gäller arbetslöshetsförsäkringen. I det svenska systemet finns det nämligen något som heter <em>medlemsvillkor</em>. För att du ska ha rätt till ersättning som baseras na din tidigare inkomst (upp till 80 % av din lön) måste du ha varit medlem i en a-kassa i minst 12 sammanhängande månader innan du blir arbetslös.</p>
 
-      <p>Här ser vi den största fördelen med att välja en <strong>a-kassa för studenter</strong> i god tid. Om du går med redan under första eller andra året på din utbildning, har du garanterat passerat 12-månadersgränsen när du tar din examen. Skulle det visa sig att arbetsmarknaden är tuff och det tar några månader att få det där första drömjobbet, kan du då få en betydligt högre ersättning än om du inte varit medlem.</p>
+      <p>Här ser vi den största fördelen med att välja en <strong>a-kassa för studenter</strong> i god tid. Om du går med redan under första eller andra året na din utbildning, har du garanterat passerat 12-månadersgränsen när du tar din examen.</p>
 
-      <p>Om du däremot väntar med att gå med tills du har fått ditt examensbevis i handen och märker att jobbsökandet drar ut på tiden, då är det för sent för att få den inkomstbaserade ersättningen direkt. Du kommer då att hamna på den så kallade grundersättningen, vilken är väsentligt lägre och sällan räcker för att täcka normala levnadskostnader utanför studentbudgeten.</p>
-
-      <p>Det handlar alltså om enkel logik: genom att betala en liten summa varje månad under studietiden försäkrar du din framtida lön. Ett längre medlemskap ger dig den trygghet som krävs för att du ska kunna söka rätt jobb efter examen i lugn och ro, istället för att tvingas ta första bästa jobb bara för att ekonomin kärvar.</p>
-
-      <h2>Det här gäller om du vill få a-kassa efter studier</h2>
-      <p>När examensdagen passerat och studierna är avslutade börjar din nya tillvaro som arbetssökande. Det är i detta skede som din <strong>a-kassa efter studier</strong> blir din ekonomiska livlina. För att faktiskt få ut pengar räcker det dock inte bara med att ha varit medlem; du måste också uppfylla ett <em>inkomstvillkor</em> eller <em>arbetsvillkor</em>.</p>
-
-      <p>Detta villkor innebär att du ska ha arbetat i viss omfattning under de senaste 12 månaderna innan du blev arbetslös. För en student som har suttit i föreläsningssalar i tre eller fem år låter detta som ett oöverstigligt hinder. Men här kommer reglerna om <em>överhoppningsbar tid</em> in i bilden, vilket är en av de viktigaste reglerna att känna till för akademiker och yrkesstuderande.</p>
-
-      <p>Överhoppningsbar tid innebär att a-kassan kan "hoppa över" tiden du har studerat när de räknar på din arbetstid. De tittar istället på vad du gjorde innan du började plugga. Här är de viktigaste punkterna att ha koll på:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
-        <li><strong>Ramtid:</strong> Den period (normalt de senaste 12 månaderna) som a-kassan granskar för att se om du arbetat tillräckligt mycket.</li>
-        <li><strong>Studier som undantag:</strong> Om du har studerat på heltid och utbildningen gett rätt till studiestöd (CSN), kan hela studieperioden hoppas över i ramtiden. Detta gäller oftast för studier upp till fem år.</li>
-        <li><strong>Arbete innan studier:</strong> Om du hade ett jobb innan du började plugga kan den inkomsten ligga till grund för din ersättning efter examen, förutsatt att du varit medlem i a-kassan hela tiden.</li>
-        <li><strong>Extrajobbets betydelse:</strong> Allt arbete du utför under studietiden kan också räknas med. Om du har jobbat extra kan det antingen hjälpa dig att uppfylla arbetsvillkoret eller i vissa fall bidra till att höja din genomsnittliga inkomst som ersättningen beräknas på.</li>
-      </ul>
-
-      <p>Genom att utnyttja reglerna om överhoppningsbar tid kan du alltså få en ersättning som baseras på din lön innan studierna, trots att du inte har arbetat heltid på flera år. Detta är en enorm fördel som gör att du inte behöver börja på noll ekonomiskt bara för att du har valt att utbilda dig.</p>
-
-      <h2>Vilken a-kassa ska man välja som student?</h2>
-      <p>Valet av a-kassa är ofta det första steget mot ett professionellt medlemskap. När du funderar på <strong>vilken a-kassa ska jag välja som student</strong> bör du titta på din framtida yrkesroll. Sverige har en lång tradition av branschspecifika a-kassor som har djup kunskap om precis de villkor som gäller inom sina respektive områden.</p>
-
-      <p>Fördelen med att välja en a-kassa kopplad till ditt studieämne är att de förstår din bakgrund. De vet vilka examina som leder till vilka jobb och hur arbetsmarknaden ser ut för just dig. Om du studerar till sjuksköterska är det naturligt att titta på en a-kassa för vårdpersonal, och om du siktar på en karriär inom teknik eller ekonomi finns det kassor som specialiserat sig på akademiker och ingenjörer.</p>
-
-      <p>Det finns dock situationer där en mer generell eller fristående a-kassa är ett bättre val. Det kan gälla om:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
-        <li>Du läser en mycket bred utbildning och inte vet vilken bransch du kommer hamna i.</li>
-        <li>Du planerar att arbeta som frilansare eller egenföretagare efter examen.</li>
-        <li>Du prioriterar en enkel medlemskapsprocess utan koppling till fackliga organisationer.</li>
-      </ul>
-
-      <p>Många studenter väljer Akademikernas a-kassa (AEA) på grund av dess bredd mot alla med högskolepoäng, men det finns många andra alternativ. Många a-kassor har dessutom mycket fördelaktiga studenterbjudanden, ibland så låga som 0 kronor under en begränsad tid, för att locka framtidens arbetskraft. Det viktigaste är att du faktiskt tar beslutet och går med.</p>
-
-      <p>Använd sökfunktionen nedan för att se vilka a-kassor som passar ditt yrke.</p>
-
-      <h2>Kan man få a-kassa samtidigt som man studerar?</h2>
-      <p>Frågan <strong>kan man få a-kassa som student</strong> är en av de mest sökta, men också en av de mest missförstådda. Det generella svaret är ett tydligt nej. Syftet med a-kassan är att ersätta inkomstbortfall vid ofrivillig arbetslöshet för personer som är redo att ta ett jobb direkt. Som heltidsstudent anses du inte stå till arbetsmarknadens förfogande eftersom dina studier tar upp din tid.</p>
-
-      <p>Det finns dock sällsynta undantag där man kan kombinera studier med ersättning. Dessa undantag är strikt reglerade och kräver nästan alltid att studierna inte hindrar dig från att söka och ta jobb. Här är de vanligaste scenarierna:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
-        <li><strong>Deltidsstudier med låg omfattning:</strong> Om du studerar på högst 50 % och kan visa att studierna inte hindrar dig från att ta ett heltidsjobb, kan a-kassan i vissa fall ge sitt godkännande.</li>
-        <li><strong>Arbetsmarknadsutbildningar:</strong> Vissa utbildningar som anvisas av Arbetsförmedlingen för att du lättare ska få jobb kan ibland kombineras med aktivitetsstöd eller a-kassa.</li>
-        <li><strong>Tidigare etablerat mönster:</strong> Om du har arbetat heltid under en längre tid samtidigt som du studerat på fritiden, kan du i vissa fall få fortsätta med detta under en begränsad period om du blir av med jobbet.</li>
-      </ul>
-
-      <p>Det är dock förenat med stora risker att försöka kombinera studier och a-kassa utan ett skriftligt godkännande från din kassa. Kontrollerna är noggranna och följderna av felaktiga utbetalningar kan bli kännbara.</p>
-
-      <div class="bg-red-50 border-l-4 border-red-500 p-6 my-8">
-        <p class="text-red-900 font-bold m-0 text-lg">Viktig varning: CSN och a-kassa</p>
-        <p class="text-red-800 m-0 mt-2">Det är absolut förbjudet att uppbära full ersättning från a-kassan samtidigt som du får studiestöd (bidrag eller lån) från CSN för heltidsstudier. Detta ses som ett allvarligt regelbrott. Om du studerar med CSN räknas du per definition som studerande och inte som arbetssökande.</p>
+      <div class="flex flex-col md:flex-row gap-8 my-16 not-prose">
+        <div class="flex-1 bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <h4 class="font-bold text-blue-600 mb-4 uppercase tracking-wider text-xs">Scenario A: Gått med tidigt</h4>
+          <p class="text-2xl font-bold text-slate-900 mb-4">80% ersättning</p>
+          <p class="text-sm text-slate-500 leading-relaxed">Du har varit medlem >12 månader. Du får ersättning baserat na din lön innan studierna eller ditt extrajobb.</p>
+        </div>
+        <div class="flex-1 bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <h4 class="font-bold text-slate-400 mb-4 uppercase tracking-wider text-xs">Scenario B: Glömt gå med</h4>
+          <p class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+            Grundersättning
+            <span class="text-sm font-normal text-red-500 underline">Lågt belopp</span>
+          </p>
+          <p class="text-sm text-slate-500 leading-relaxed">Du får endast grundbeloppet från Alfa-kassan (ca 11 220 kr/mån) eftersom du saknar medlemstid.</p>
+        </div>
       </div>
 
-      <h2>Kan man pausa a-kassan för att studera?</h2>
-      <p>Livet följer inte alltid en rak linje, och ibland dyker en utbildningsmöjlighet upp mitt i en period av arbetslöshet. Om du redan får ersättning från a-kassan och väljer att börja studera, kommer din ersättning att pausas. Det betyder inte att du förlorar dina resterande dagar i ersättningsperioden, de ligger kvar och kan användas senare om du skulle bli arbetslös igen efter studierna.</p>
+      <h2 class="text-3xl font-bold text-slate-900 mb-6">Studier är överhoppningsbara</h2>
+      <p>När examensdagen passerat och studierna är avslutade börjar din nya tillvaro som arbetssökande. Det är i detta skede som din <strong>a-kassa efter studier</strong> blir din ekonomiska livlina. För att faktiskt få ut pengar räcker det dock inte bara med att ha varit medlem; du måste också uppfylla ett <em>inkomstvillkor</em> eller <em>arbetsvillkor</em>.</p>
 
-      <p>Det absolut mest kritiska felet många studenter gör är att de väljer att gå ur a-kassan under studieperioden för att spara några hundralappar per år. Detta är ett misstag som kan kosta tiotusentals kronor i slutändan. Om du lämnar kassan och får ett glapp i ditt medlemskap, nollställs din intjänade medlemstid. Du måste då börja om från dag ett när du går med igen, och du får vänta ett helt år innan du återigen har rätt till inkomstbaserad ersättning.</p>
+      <p>Detta villkor innebär att du ska ha arbetat i viss omfattning under de senaste 12 månaderna innan du blev arbetslös. Men tack vare reglerna om <em>överhoppningsbar tid</em>, kan a-kassan "hoppa över" tiden du har studerat när de räknar na din arbetstid.</p>
 
-      <p>Att pausa utbetalningen av ersättning är helt normalt, men pausa aldrig ditt medlemskap. Genom att fortsätta betala medlemsavgiften behåller du din plats i systemet, din rätt till inkomstbasrad ersättning och du säkrar att din tid innan studierna kan användas genom reglerna om överhoppningsbar tid. A-kassan för studenter är din brygga mellan utbildning och ett tryggt yrkesliv.</p>
-
-      <p>Sammanfattningsvis: Se a-kassan som en del av din studieplanering. Gå med så fort du kan, välj en kassa som passar din framtida bransch, och stanna kvar som medlem genom hela utbildningen. Det ger dig den bästa möjliga starten på din karriär efter examen.</p>
+      <div class="bg-slate-900 rounded-3xl p-10 my-16 text-white text-center shadow-xl">
+        <h3 class="text-white text-3xl mb-6">Bygg din framtida trygghet idag</h3>
+        <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">Se a-kassan som en del av din studieplanering. Gå med så fort du kan, välj en kassa som passar din framtida bransch, och stanna kvar som medlem genom hela utbildningen.</p>
+        <div class="bg-white/10 h-px w-24 mx-auto mb-10"></div>
+        <p class="text-blue-400 font-bold uppercase tracking-[0.2em] text-sm">Välja A-kassa Redaktionen</p>
+      </div>
     `
   },
   {
