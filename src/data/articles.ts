@@ -45,7 +45,7 @@ const rawArticles: Article[] = [
       }
     ],
     content: `
-      <p class="text-xl leading-relaxed text-slate-600 mb-12 italic border-l-4 border-blue-500 pl-6">
+      <p class="text-lg leading-relaxed text-slate-700 mb-8">
         Att arbetsgivare genomför bakgrundskontroller har gått från att vara relativt ovanligt till att bli en etablerad del av många rekryteringsprocesser. I takt med att felrekryteringar blivit dyrare och säkerhetskraven högre vill företag fatta mer välgrundade beslut redan innan ett anställningsavtal skrivs på.
       </p>
 
@@ -53,26 +53,17 @@ const rawArticles: Article[] = [
 
       <p>I den här guiden går vi igenom vad en bakgrundskontroll innebär, vad arbetsgivare får kontrollera, vilka rättigheter du har och hur du kan ligga steget före i rekryteringen.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Vad är en bakgrundskontroll?</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Vad är en bakgrundskontroll?</h2>
       <p>En bakgrundskontroll är en strukturerad verifiering av uppgifter om en arbetssökande. Målet är att säkerställa att kandidaten är den personen den utger sig för att vara och att det inte finns riskfaktorer kopplade till rollen.</p>
 
       <p>Kontrollerna kan vara enkla eller omfattande beroende på tjänst, ansvarsnivå och bransch.</p>
 
-      <div class="bg-blue-50 border-l-4 border-blue-600 p-8 my-12 rounded-r-2xl shadow-sm">
-        <h3 class="text-blue-900 font-bold mb-4 text-xl">Vanligtvis handlar det om att bekräfta tre saker:</h3>
-        <ul class="space-y-3 text-blue-800">
-          <li class="flex items-start gap-3">
-            <span class="text-blue-600 font-bold">✓</span>
-            <span>Att din arbetshistorik stämmer</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-600 font-bold">✓</span>
-            <span>Att dina meriter är korrekta</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-600 font-bold">✓</span>
-            <span>Att det inte finns ekonomiska eller juridiska omständigheter som kan påverka din lämplighet</span>
-          </li>
+      <div class="border-l-2 border-slate-300 pl-6 my-8">
+        <p class="font-medium text-slate-900 mb-3">Vanligtvis handlar det om att bekräfta tre saker:</p>
+        <ul class="space-y-2 text-slate-700">
+          <li>• Att din arbetshistorik stämmer</li>
+          <li>• Att dina meriter är korrekta</li>
+          <li>• Att det inte finns ekonomiska eller juridiska omständigheter som kan påverka din lämplighet</li>
         </ul>
       </div>
 
@@ -82,67 +73,59 @@ const rawArticles: Article[] = [
 
       <p>Den som vill veta vilka uppgifter som kan bli synliga för en arbetsgivare kan med fördel själv beställa en kontroll via <a href="https://belastningsregistret.se" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Belastningsregistret.se</a>, där relevanta uppgifter sammanställs digitalt inför exempelvis en rekryteringsprocess.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Varför gör arbetsgivare bakgrundskontroller?</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Varför gör arbetsgivare bakgrundskontroller?</h2>
       <p>Det finns flera tydliga skäl till att bakgrundskontroller blivit standard i många organisationer.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
-            <span class="text-2xl">1️⃣</span> Minskad risk för felrekrytering
-          </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="border border-slate-200 rounded-lg p-5">
+          <h3 class="font-semibold text-slate-900 mb-2">Minskad risk för felrekrytering</h3>
           <p class="text-slate-600 text-sm">Att anställa fel person kan leda till produktionsbortfall, konflikter och i värsta fall säkerhetsproblem.</p>
         </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
-            <span class="text-2xl">2️⃣</span> Skydd av känslig information
-          </h3>
+        <div class="border border-slate-200 rounded-lg p-5">
+          <h3 class="font-semibold text-slate-900 mb-2">Skydd av känslig information</h3>
           <p class="text-slate-600 text-sm">Roller inom ekonomi, IT, HR och ledning innebär ofta tillgång till affärskritisk data.</p>
         </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
-            <span class="text-2xl">3️⃣</span> Lagkrav i vissa yrken
-          </h3>
+        <div class="border border-slate-200 rounded-lg p-5">
+          <h3 class="font-semibold text-slate-900 mb-2">Lagkrav i vissa yrken</h3>
           <p class="text-slate-600 text-sm">Vissa verksamheter måste enligt lag kontrollera belastningsregister, särskilt när arbetet involverar barn eller utsatta grupper.</p>
         </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
-            <span class="text-2xl">4️⃣</span> Ökat fokus på säkerhet
-          </h3>
+        <div class="border border-slate-200 rounded-lg p-5">
+          <h3 class="font-semibold text-slate-900 mb-2">Ökat fokus på säkerhet</h3>
           <p class="text-slate-600 text-sm">Hotbilden mot företag har förändrats. Interna risker tas i dag på större allvar.</p>
         </div>
       </div>
 
       <p>Det betyder dock inte att arbetsgivare fritt kan kontrollera vad som helst — varje kontroll måste vara relevant och proportionerlig.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Vad kontrolleras i en bakgrundskontroll?</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Vad kontrolleras i en bakgrundskontroll?</h2>
       <p>Exakt innehåll varierar, men några områden är betydligt vanligare än andra.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Arbetslivserfarenhet</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Arbetslivserfarenhet</h3>
       <p>Arbetsgivaren kan verifiera tidigare anställningar, titlar och tidsperioder. I vissa fall kontaktas även referenser.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Utbildning och meriter</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Utbildning och meriter</h3>
       <p>Examensbevis och certifieringar kontrolleras för att säkerställa att kompetensen matchar rollen.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Ekonomisk information</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Ekonomisk information</h3>
       <p>Främst aktuellt vid ekonomiskt ansvar. Kreditupplysningar kan visa betalningsanmärkningar eller stora skulder.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Offentliga register</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Offentliga register</h3>
       <p>Folkbokföring, bolagsengagemang och ibland rättsliga processer kan förekomma.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Brottsrelaterad information</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Brottsrelaterad information</h3>
       <p>Detta kräver nästan alltid samtycke och är ofta strikt reglerat.</p>
 
-      <div class="bg-slate-900 rounded-3xl p-10 my-16 text-white shadow-xl">
-        <p class="text-slate-300 text-lg mb-0">En viktig princip är att kontrollen ska vara <strong class="text-white">relevant för tjänsten</strong>. En omfattande ekonomisk kontroll för ett extrajobb är exempelvis svår att motivera.</p>
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
+        <p class="text-slate-700 mb-0">En viktig princip är att kontrollen ska vara <strong class="text-slate-900">relevant för tjänsten</strong>. En omfattande ekonomisk kontroll för ett extrajobb är exempelvis svår att motivera.</p>
       </div>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Får arbetsgivare göra bakgrundskontroller utan att berätta det?</h2>
-      <p class="text-2xl font-bold text-slate-900 mb-6">Kort sagt — nej.</p>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Får arbetsgivare göra bakgrundskontroller utan att berätta det?</h2>
+      <p class="text-xl font-semibold text-slate-900 mb-4">Kort sagt — nej.</p>
 
       <p>Transparens är en central del av dataskyddslagstiftningen.</p>
 
       <p>Du ska normalt:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
+      <ul class="list-disc list-inside ml-4 space-y-1 mb-6 text-slate-700">
         <li>Informeras om kontrollen</li>
         <li>Förstå syftet</li>
         <li>Veta vilka uppgifter som behandlas</li>
@@ -150,11 +133,11 @@ const rawArticles: Article[] = [
 
       <p>I många fall krävs dessutom ett aktivt samtycke.</p>
 
-      <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Berättigat intresse – vad betyder det?</h3>
+      <h3 class="text-lg font-semibold text-slate-900 mb-3 mt-8">Berättigat intresse – vad betyder det?</h3>
       <p>I vissa situationer kan arbetsgivaren luta sig mot den juridiska grunden "berättigat intresse". Det innebär att behovet av kontroll väger tyngre än integritetsintrånget.</p>
 
       <p>Men även då gäller tydliga krav:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
+      <ul class="list-disc list-inside ml-4 space-y-1 mb-6 text-slate-700">
         <li>Kontrollen måste vara nödvändig</li>
         <li>Den ska vara proportionerlig</li>
         <li>Din integritet ska respekteras</li>
@@ -162,112 +145,100 @@ const rawArticles: Article[] = [
 
       <p>Det är alltså inte en genväg för obegränsad granskning. Du har dessutom alltid rätt att avbryta din ansökan om du inte vill bli kontrollerad.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Belastningsregister och bakgrundskontroll – inte samma sak</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Belastningsregister och bakgrundskontroll – inte samma sak</h2>
       <p>Många tror att dessa begrepp betyder samma sak, men skillnaden är stor.</p>
 
-      <div class="grid md:grid-cols-2 gap-8 my-12 not-prose">
-        <div class="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-2xl p-8">
-          <h3 class="text-blue-900 font-bold text-xl mb-4">Belastningsregister</h3>
-          <ul class="space-y-3 text-slate-700">
-            <li class="flex items-start gap-2"><span class="text-blue-600">•</span> Hanteras av Polisen</li>
-            <li class="flex items-start gap-2"><span class="text-blue-600">•</span> Visar fällande domar</li>
-            <li class="flex items-start gap-2"><span class="text-blue-600">•</span> Är oftast avsett för personligt bruk</li>
-            <li class="flex items-start gap-2"><span class="text-blue-600">•</span> Få arbetsgivare får kräva det</li>
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="border border-slate-200 rounded-lg p-6">
+          <h3 class="font-semibold text-slate-900 mb-4">Belastningsregister</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li>• Hanteras av Polisen</li>
+            <li>• Visar fällande domar</li>
+            <li>• Är oftast avsett för personligt bruk</li>
+            <li>• Få arbetsgivare får kräva det</li>
           </ul>
         </div>
-        <div class="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-8">
-          <h3 class="text-slate-900 font-bold text-xl mb-4">Bakgrundskontroll</h3>
-          <ul class="space-y-3 text-slate-700">
-            <li class="flex items-start gap-2"><span class="text-slate-600">•</span> Ger en bred helhetsbild</li>
-            <li class="flex items-start gap-2"><span class="text-slate-600">•</span> Verifierar meriter</li>
-            <li class="flex items-start gap-2"><span class="text-slate-600">•</span> Kan inkludera ekonomi</li>
-            <li class="flex items-start gap-2"><span class="text-slate-600">•</span> Bekräftar uppgifter i CV</li>
+        <div class="border border-slate-200 rounded-lg p-6">
+          <h3 class="font-semibold text-slate-900 mb-4">Bakgrundskontroll</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li>• Ger en bred helhetsbild</li>
+            <li>• Verifierar meriter</li>
+            <li>• Kan inkludera ekonomi</li>
+            <li>• Bekräftar uppgifter i CV</li>
           </ul>
         </div>
       </div>
 
       <p>Det betyder att en kandidat utan brottshistorik fortfarande kan falla på felaktiga meriter — och tvärtom. Rekryterare tittar nästan alltid på helheten.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Så går en digital bakgrundskontroll till</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Så går en digital bakgrundskontroll till</h2>
       <p>Teknikutvecklingen har gjort processen både snabb och tillförlitlig. Vanligtvis sker följande:</p>
 
-      <div class="space-y-6 my-12">
+      <div class="space-y-4 my-8">
         <div class="flex gap-4 items-start">
-          <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+          <div class="flex-shrink-0 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-semibold">1</div>
           <div>
-            <h3 class="font-bold text-slate-900 mb-2">Samtycke</h3>
-            <p class="text-slate-600">Du godkänner kontrollen digitalt.</p>
+            <h3 class="font-semibold text-slate-900 mb-1">Samtycke</h3>
+            <p class="text-slate-600 text-sm">Du godkänner kontrollen digitalt.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
-          <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
+          <div class="flex-shrink-0 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-semibold">2</div>
           <div>
-            <h3 class="font-bold text-slate-900 mb-2">Datainsamling</h3>
-            <p class="text-slate-600">Information hämtas från relevanta databaser och register.</p>
+            <h3 class="font-semibold text-slate-900 mb-1">Datainsamling</h3>
+            <p class="text-slate-600 text-sm">Information hämtas från relevanta databaser och register.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
-          <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
+          <div class="flex-shrink-0 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-semibold">3</div>
           <div>
-            <h3 class="font-bold text-slate-900 mb-2">Verifiering</h3>
-            <p class="text-slate-600">Uppgifter jämförs och granskas.</p>
+            <h3 class="font-semibold text-slate-900 mb-1">Verifiering</h3>
+            <p class="text-slate-600 text-sm">Uppgifter jämförs och granskas.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
-          <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">4</div>
+          <div class="flex-shrink-0 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-semibold">4</div>
           <div>
-            <h3 class="font-bold text-slate-900 mb-2">Rapport</h3>
-            <p class="text-slate-600">Arbetsgivaren får en strukturerad sammanställning.</p>
+            <h3 class="font-semibold text-slate-900 mb-1">Rapport</h3>
+            <p class="text-slate-600 text-sm">Arbetsgivaren får en strukturerad sammanställning.</p>
           </div>
         </div>
       </div>
 
       <p>Seriösa aktörer arbetar med höga säkerhetsstandarder och följer GDPR. Du har ofta rätt att begära insyn i resultatet.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Bör du göra en bakgrundskontroll på dig själv?</h2>
-      <p class="text-2xl font-bold text-blue-600 mb-6">Det korta svaret: ja — särskilt om du söker konkurrensutsatta tjänster.</p>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Bör du göra en bakgrundskontroll på dig själv?</h2>
+      <p class="text-lg font-semibold text-slate-900 mb-6">Det korta svaret: ja — särskilt om du söker konkurrensutsatta tjänster.</p>
 
-      <div class="bg-green-50 border-l-4 border-green-600 p-8 my-12 rounded-r-2xl">
-        <h3 class="text-green-900 font-bold mb-4 text-xl">Fördelarna är flera:</h3>
-        <ul class="space-y-4 text-green-800">
-          <li class="flex items-start gap-3">
-            <span class="text-green-600 font-bold text-xl">✓</span>
-            <div>
-              <strong>Du undviker överraskningar</strong><br/>
-              <span class="text-sm">Felaktiga uppgifter förekommer oftare än man tror.</span>
-            </div>
+      <div class="border-l-2 border-slate-300 pl-6 my-8">
+        <p class="font-medium text-slate-900 mb-4">Fördelarna är flera:</p>
+        <ul class="space-y-3 text-slate-700">
+          <li>
+            <strong class="text-slate-900">Du undviker överraskningar</strong><br/>
+            <span class="text-sm">Felaktiga uppgifter förekommer oftare än man tror.</span>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-green-600 font-bold text-xl">✓</span>
-            <div>
-              <strong>Du kan rätta misstag</strong><br/>
-              <span class="text-sm">Till exempel fel folkbokföringsadress eller gamla skulduppgifter.</span>
-            </div>
+          <li>
+            <strong class="text-slate-900">Du kan rätta misstag</strong><br/>
+            <span class="text-sm">Till exempel fel folkbokföringsadress eller gamla skulduppgifter.</span>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-green-600 font-bold text-xl">✓</span>
-            <div>
-              <strong>Du signalerar professionalism</strong><br/>
-              <span class="text-sm">Förberedda kandidater uppfattas ofta som mer seriösa.</span>
-            </div>
+          <li>
+            <strong class="text-slate-900">Du signalerar professionalism</strong><br/>
+            <span class="text-sm">Förberedda kandidater uppfattas ofta som mer seriösa.</span>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-green-600 font-bold text-xl">✓</span>
-            <div>
-              <strong>Du minskar stress</strong><br/>
-              <span class="text-sm">Att veta vad arbetsgivaren ser skapar trygghet.</span>
-            </div>
+          <li>
+            <strong class="text-slate-900">Du minskar stress</strong><br/>
+            <span class="text-sm">Att veta vad arbetsgivaren ser skapar trygghet.</span>
           </li>
         </ul>
       </div>
 
       <p>Arbetsmarknaden blir allt mer transparent — och kandidater som anpassar sig till det har ett tydligt försprång.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Påverkar bakgrundskontrollen dina jobbchanser?</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Påverkar bakgrundskontrollen dina jobbchanser?</h2>
       <p>Ja, men inte automatiskt negativt. Faktum är att många kandidater stärks av processen.</p>
 
       <p>Det som ofta väger tungt är:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
+      <ul class="list-disc list-inside ml-4 space-y-1 mb-6 text-slate-700">
         <li>Konsistens i din historik</li>
         <li>Stabil ekonomi (när relevant)</li>
         <li>Tydliga meriter</li>
@@ -276,24 +247,24 @@ const rawArticles: Article[] = [
 
       <p>Rekryterare förstår att människor inte är perfekta. Det som däremot kan skapa oro är motsägelser eller försök att dölja information.</p>
 
-      <p class="text-xl font-bold text-blue-600 mt-8">Transparens bygger förtroende.</p>
+      <p class="text-lg font-medium text-slate-900 mt-6">Transparens bygger förtroende.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Hur länge sparas uppgifterna?</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Hur länge sparas uppgifterna?</h2>
       <p>Enligt dataskyddsregler ska personuppgifter inte lagras längre än nödvändigt.</p>
 
       <p>I praktiken innebär det ofta:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
+      <ul class="list-disc list-inside ml-4 space-y-1 mb-6 text-slate-700">
         <li>Under rekryteringsprocessen</li>
         <li>Kort därefter vid avslutad process</li>
       </ul>
 
       <p>Organisationer måste kunna motivera lagringen och radera uppgifter när behovet upphör.</p>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-6 mt-12">Framtiden: bakgrundskontroller blir allt vanligare</h2>
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Framtiden: bakgrundskontroller blir allt vanligare</h2>
       <p>Mycket tyder på att bakgrundskontroller kommer fortsätta öka — inte minska.</p>
 
       <p>Drivkrafterna är tydliga:</p>
-      <ul class="list-disc list-inside ml-4 space-y-2 mb-6">
+      <ul class="list-disc list-inside ml-4 space-y-1 mb-6 text-slate-700">
         <li>Digital tillgång till data</li>
         <li>Högre säkerhetskrav</li>
         <li>Mer komplex arbetsmarknad</li>
@@ -302,31 +273,30 @@ const rawArticles: Article[] = [
 
       <p>Samtidigt blir kandidater mer medvetna och proaktiva. Rekrytering är inte längre en envägskontroll — utan en process där båda parter söker trygghet.</p>
 
-      <div class="bg-slate-900 rounded-3xl p-10 my-16 text-white text-center shadow-xl">
-        <h3 class="text-white text-3xl mb-6">Sammanfattning – det viktigaste att ta med sig</h3>
-        <p class="text-slate-300 text-lg mb-10 max-w-3xl mx-auto">Bakgrundskontroller är i dag en naturlig del av arbetsmarknaden. För arbetsgivare handlar det om riskminimering. För dig som kandidat handlar det om att vara förberedd.</p>
-        <div class="grid md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto">
-          <div class="bg-white/10 rounded-xl p-6">
-            <p class="text-blue-400 font-bold mb-2">✓ Kontroller måste vara relevanta</p>
+      <div class="bg-slate-900 rounded-lg p-8 my-12 text-white">
+        <h3 class="text-white text-2xl font-semibold mb-4">Sammanfattning</h3>
+        <p class="text-slate-300 mb-6">Bakgrundskontroller är i dag en naturlig del av arbetsmarknaden. För arbetsgivare handlar det om riskminimering. För dig som kandidat handlar det om att vara förberedd.</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white/10 rounded-lg p-4">
+            <p class="font-semibold mb-1">Kontroller måste vara relevanta</p>
             <p class="text-slate-300 text-sm">Arbetsgivaren får inte kontrollera vad som helst</p>
           </div>
-          <div class="bg-white/10 rounded-xl p-6">
-            <p class="text-blue-400 font-bold mb-2">✓ Du ska informeras</p>
+          <div class="bg-white/10 rounded-lg p-4">
+            <p class="font-semibold mb-1">Du ska informeras</p>
             <p class="text-slate-300 text-sm">Transparens är en grundläggande rättighet</p>
           </div>
-          <div class="bg-white/10 rounded-xl p-6">
-            <p class="text-blue-400 font-bold mb-2">✓ Samtycke krävs ofta</p>
+          <div class="bg-white/10 rounded-lg p-4">
+            <p class="font-semibold mb-1">Samtycke krävs ofta</p>
             <p class="text-slate-300 text-sm">Särskilt för känsliga uppgifter</p>
           </div>
-          <div class="bg-white/10 rounded-xl p-6">
-            <p class="text-blue-400 font-bold mb-2">✓ Du har rättigheter</p>
+          <div class="bg-white/10 rounded-lg p-4">
+            <p class="font-semibold mb-1">Du har rättigheter</p>
             <p class="text-slate-300 text-sm">Rätt till insyn och rättelse</p>
           </div>
         </div>
-        <p class="text-blue-400 font-bold uppercase tracking-[0.2em] text-sm mt-10">Välja A-kassa Redaktionen</p>
       </div>
 
-      <p class="text-xl leading-relaxed text-slate-600 italic">Den som förstår hur processen fungerar har betydligt bättre förutsättningar att lyckas i sin nästa rekrytering.</p>
+      <p class="text-lg text-slate-700 italic">Den som förstår hur processen fungerar har betydligt bättre förutsättningar att lyckas i sin nästa rekrytering.</p>
     `
   },
   {
