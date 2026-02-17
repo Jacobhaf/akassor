@@ -60,7 +60,7 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className={inter.className}>
+            <body className={inter.className} suppressHydrationWarning={true}>
                 <CookieConsent />
                 <div className="flex min-h-screen flex-col">
                     <Header />

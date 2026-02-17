@@ -1,17 +1,18 @@
-const config = {
-    revision: 1, // Force re-consent if config changes
-    gui_options: {
-        consent_modal: {
-            layout: 'bar',
-            position: 'bottom',
-            equal_weight_buttons: true,
-            flip_buttons: false,
+import { CookieConsentConfig } from "vanilla-cookieconsent";
+
+const config: CookieConsentConfig = {
+    revision: 1,
+    guiOptions: {
+        consentModal: {
+            layout: 'bar', position: 'bottom',
+            equalWeightButtons: true,
+            flipButtons: false,
         },
-        preferences_modal: {
+        preferencesModal: {
             layout: 'box',
             position: 'right',
-            equal_weight_buttons: true,
-            flip_buttons: false,
+            equalWeightButtons: true,
+            flipButtons: false,
         },
     },
     categories: {
@@ -36,43 +37,39 @@ const config = {
         autoDetect: 'browser',
         translations: {
             sv: {
-                consent_modal: {
+                consentModal: {
                     title: 'Vi använder kakor',
                     description:
                         'Vi använder kakor för att förbättra din upplevelse på vår webbplats. Läs mer i vår <a href="/cookies" class="cc-link">cookiepolicy</a>.',
-                    primary_btn: {
-                        text: 'Godkänn alla',
-                        role: 'accept_all',
-                    },
-                    secondary_btn: {
-                        text: 'Neka',
-                        role: 'accept_necessary',
-                    },
+                    acceptAllBtn: 'Godkänn alla',
+                    acceptNecessaryBtn: 'Neka',
+                    showPreferencesBtn: 'Inställningar',
                 },
-                preferences_modal: {
+                preferencesModal: {
                     title: 'Inställningar för kakor',
-                    accept_all_btn: 'Godkänn alla',
-                    reject_all_btn: 'Neka alla',
-                    save_btn: 'Spara inställningar',
-                    close_btn_label: 'Stäng',
+                    acceptAllBtn: 'Godkänn alla',
+                    acceptNecessaryBtn: 'Neka alla',
+                    savePreferencesBtn: 'Spara inställningar',
+                    closeIconLabel: 'Stäng',
                     sections: [
                         {
                             title: 'Nödvändiga kakor',
                             description:
                                 'Dessa kakor är nödvändiga för att webbplatsen ska fungera korrekt.',
-                            linked_category: 'necessary',
+                            linkedCategory: 'necessary',
                         },
                         {
                             title: 'Analys',
                             description:
                                 'Dessa kakor hjälper oss att förstå hur besökare använder webbplatsen.',
-                            linked_category: 'analytics',
+                            linkedCategory: 'analytics',
                         },
                     ],
                 },
             },
         },
     },
-} as any;
+};
 
 export default config;
+
