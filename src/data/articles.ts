@@ -383,7 +383,7 @@ const rawArticles: Article[] = [
       <p>För att bli medlem i en a-kassa krävs det normalt att du har arbetat, eller arbetar just nu. Om du har ett extrajobb på kvällar eller helger, ett sommarjobb i bagaget eller nyligen har avslutat en anställning har du den grund som krävs för att kunna <strong>gå med i a-kassa under studier</strong>. Arbetskravet för medlemskap är ofta mycket lägre än vad många tror.</p>
 
       <div class="bg-blue-50 border-l-4 border-blue-600 p-8 my-12 rounded-r-2xl shadow-sm">
-        <p class="text-blue-900 font-bold mb-4 text-xl">💡 Pro-tip för studenter:</p>
+        <p class="text-blue-900 font-bold mb-4 text-xl">Pro-tip för studenter:</p>
         <p class="text-blue-800 text-lg leading-relaxed m-0">Även om du bara jobbar några timmar i månaden, så börjar klockan ticka för ditt medlemsvillkor från den dag du går med. Detta är avgörande för vad som händer den dagen din utbildning är slut.</p>
       </div>
 
@@ -483,11 +483,11 @@ const rawArticles: Article[] = [
       <h2>5 vanliga misstag att undvika</h2>
       <div class="grid md:grid-cols-2 gap-4 mb-8">
         <div class="border border-red-100 bg-red-50 p-4 rounded-xl">
-          <h4 class="font-bold text-red-700 mb-2">❌ För långt</h4>
+          <h4 class="font-bold text-red-700 mb-2">För långt</h4>
           <p class="text-sm text-red-900">Håll det till max 2 sidor. Rekryterare skumläser snabbt.</p>
         </div>
         <div class="border border-red-100 bg-red-50 p-4 rounded-xl">
-          <h4 class="font-bold text-red-700 mb-2">❌ Stavfel</h4>
+          <h4 class="font-bold text-red-700 mb-2">Stavfel</h4>
           <p class="text-sm text-red-900">Ger ett slarvigt intryck. Läs igenom noga!</p>
         </div>
       </div>
