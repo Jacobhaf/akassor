@@ -27,9 +27,12 @@ export default function SitemapPage() {
                         <h2 className="text-xl font-bold text-gray-900 mb-6 border-b pb-2">Huvudsidor</h2>
                         <ul className="space-y-3">
                             <li><Link href="/" className="text-gray-600 hover:text-blue-600 hover:underline">Hem</Link></li>
+                            <li><Link href="/jamfor" className="text-gray-600 hover:text-blue-600 hover:underline">Jämför a-kassa</Link></li>
                             <li><Link href="/akassor" className="text-gray-600 hover:text-blue-600 hover:underline">Alla a-kassor</Link></li>
                             <li><Link href="/yrken" className="text-gray-600 hover:text-blue-600 hover:underline">Alla yrken</Link></li>
                             <li><Link href="/inkomstforsakring" className="text-gray-600 hover:text-blue-600 hover:underline">Inkomstförsäkring</Link></li>
+                            <li><Link href="/aktivitetsstod" className="text-gray-600 hover:text-blue-600 hover:underline">Aktivitetsstöd & Karens</Link></li>
+                            <li><Link href="/akassa-egenforetagare" className="text-gray-600 hover:text-blue-600 hover:underline">A-kassa för egenföretagare</Link></li>
                             <li><Link href="/vanliga-fragor" className="text-gray-600 hover:text-blue-600 hover:underline">Vanliga frågor</Link></li>
                             <li><Link href="/akassa-regler" className="text-gray-600 hover:text-blue-600 hover:underline">A-kassa regler</Link></li>
                             <li><Link href="/byta-a-kassa" className="text-gray-600 hover:text-blue-600 hover:underline">Byta a-kassa</Link></li>
@@ -37,6 +40,18 @@ export default function SitemapPage() {
                             <li><Link href="/ordlista" className="text-gray-600 hover:text-blue-600 hover:underline">Ordlista</Link></li>
                             <li><Link href="/friskvardsbidrag" className="text-gray-600 hover:text-blue-600 hover:underline">Friskvårdsbidrag</Link></li>
                             <li><Link href="/artiklar" className="text-gray-600 hover:text-blue-600 hover:underline">Artiklar</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Verktyg */}
+                    <div>
+                        <h2 className="text-xl font-bold text-gray-900 mb-6 border-b pb-2">Verktyg</h2>
+                        <ul className="space-y-3">
+                            <li><Link href="/hur-bra-ar-mitt-cv" className="text-gray-600 hover:text-blue-600 hover:underline">Hur bra är mitt CV?</Link></li>
+                            <li><Link href="/verktyg/cv-byggare" className="text-gray-600 hover:text-blue-600 hover:underline">AI CV-Byggare</Link></li>
+                        </ul>
+                        <h2 className="text-xl font-bold text-gray-900 mt-10 mb-6 border-b pb-2">Om oss</h2>
+                        <ul className="space-y-3">
                             <li><Link href="/om-oss" className="text-gray-600 hover:text-blue-600 hover:underline">Om oss</Link></li>
                             <li><Link href="/kontakt" className="text-gray-600 hover:text-blue-600 hover:underline">Kontakt</Link></li>
                             <li><Link href="/integritetspolicy" className="text-gray-600 hover:text-blue-600 hover:underline">Integritetspolicy</Link></li>
