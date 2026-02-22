@@ -28,12 +28,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
     const targetYrkenNames = [
-        "Lärare",
         "Sjuksköterska",
-        "Undersköterska",
+        "Lagerarbetare",
         "Elektriker",
+        "Frisör",
+        "Barnskötare",
         "Snickare",
-        "Ekonom"
+        "Säljare",
+        "Ingenjör",
+        "Lärare",
+        "Vaktmästare"
     ];
 
     const popularYrken = targetYrkenNames

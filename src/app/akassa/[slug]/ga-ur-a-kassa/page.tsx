@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import FaqAccordion from "@/components/FaqAccordion";
 
+import JsonLd from "@/components/JsonLd";
+
 interface Props {
     params: {
         slug: string;
@@ -21,8 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
+    const isAlfakassan = akassa.id === 'alfa';
+    const title = isAlfakassan
+        ? `Gå ur Alfakassan 2026 – Steg-för-steg: Så avslutar du medlemskapet`
+        : `Gå ur ${akassa.name} – Avsluta medlemskap & Regler 2026`;
+
     return {
-        title: `Gå ur ${akassa.name} – Avsluta medlemskap & Regler 2026`,
+        title: title,
         description: `Ska du gå ur ${akassa.name}? Läs vår guide om hur du avslutar medlemskapet korrekt hos ${akassa.name}, vad du bör tänka på och konsekvenser.`,
     };
 }
@@ -45,8 +52,57 @@ export default function LeaveAkassaPage({ params }: Props) {
         notFound();
     }
 
+    const faqItems = [
+        {
+            question: `Hur gör jag för att gå ur ${akassa.name}?`,
+            answer: `För att gå ur ${akassa.name} behöver du kontakta a-kassan direkt. Det görs oftast via:\n\n* Mina sidor på ${akassa.name}s webbplats\n* Ett digitalt formulär eller e-post\n* I vissa fall via brev\n\nUppsägningen gäller normalt från den dag a-kassan registrerar avslutet.`
+        },
+        {
+            question: `Kan jag gå ur ${akassa.name} när som helst?`,
+            answer: `Ja, medlemskap i a-kassa är frivilligt och kan avslutas när som helst. När du lämnar ${akassa.name} upphör ditt medlemskap och rätten till ersättning från a-kassan.`
+        },
+        {
+            question: `Behöver jag gå ur ${akassa.name} om jag byter jobb?`,
+            answer: `Nej. A-kassan är inte kopplad till din arbetsgivare utan till dig som person. Du kan vara kvar i ${akassa.name} även om du byter arbetsplats.\n\nEtt byte av a-kassa kan vara aktuellt om du byter yrkesområde och vill tillhöra en annan a-kassa.`
+        },
+        {
+            question: `Vad händer om jag går ur ${akassa.name} och blir arbetslös?`,
+            answer: `Om du inte är medlem i en a-kassa när du blir arbetslös har du normalt inte rätt till inkomstbaserad ersättning. För att få full ersättning igen behöver du vanligtvis:\n\n* vara medlem i en a-kassa i minst 12 månader\n* uppfylla arbetsvillkoret`
+        },
+        {
+            question: `Kan jag gå ur ${akassa.name} och byta till en annan a-kassa?`,
+            answer: `Ja. Om du vill byta a-kassa är det viktigt att inte själv avsluta medlemskapet i ${akassa.name} först. Ansök istället om medlemskap i den nya a-kassan. Den nya a-kassan sköter då överflyttningen så att din medlemstid kan räknas vidare.`
+        },
+        {
+            question: `Får jag tillbaka avgiften om jag går ur ${akassa.name}?`,
+            answer: `Nej. Medlemsavgiften betalas normalt månadsvis och återbetalas vanligtvis inte, även om du avslutar medlemskapet mitt i en betalningsperiod.`
+        },
+        {
+            question: `Påverkas inkomstförsäkringen om jag går ur ${akassa.name}?`,
+            answer: `Ja. De flesta inkomstförsäkringar kräver att du är medlem i en a-kassa. Om du går ur ${akassa.name} kan även eventuell inkomstförsäkring upphöra att gälla.`
+        },
+        {
+            question: `När kan det vara olämpligt att gå ur ${akassa.name}?`,
+            answer: `Det kan innebära en ekonomisk risk att stå utan a-kassa om du exempelvis:\n\n* har en tidsbegränsad anställning\n* arbetar som konsult eller egenföretagare\n* befinner dig i en osäker arbetssituation\n\nA-kassan är grunden för ersättning vid arbetslöshet.`
+        }
+    ];
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer.replace(/\n\n/g, ' ').replace(/\*/g, '')
+            }
+        }))
+    };
+
     return (
         <main className="bg-white">
+            <JsonLd data={faqSchema} />
             {/* Hero Section */}
             <section className="relative bg-[#0B1B3F] text-white py-20 lg:py-32 overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-20">
@@ -147,40 +203,7 @@ export default function LeaveAkassaPage({ params }: Props) {
 
                     <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Vanliga frågor om att gå ur {akassa.name}</h3>
 
-                    <FaqAccordion items={[
-                        {
-                            question: `Hur gör jag för att gå ur ${akassa.name}?`,
-                            answer: `För att gå ur ${akassa.name} behöver du kontakta a-kassan direkt. Det görs oftast via:\n\n* Mina sidor på ${akassa.name}s webbplats\n* Ett digitalt formulär eller e-post\n* I vissa fall via brev\n\nUppsägningen gäller normalt från den dag a-kassan registrerar avslutet.`
-                        },
-                        {
-                            question: `Kan jag gå ur ${akassa.name} när som helst?`,
-                            answer: `Ja, medlemskap i a-kassa är frivilligt och kan avslutas när som helst. När du lämnar ${akassa.name} upphör ditt medlemskap och rätten till ersättning från a-kassan.`
-                        },
-                        {
-                            question: `Behöver jag gå ur ${akassa.name} om jag byter jobb?`,
-                            answer: `Nej. A-kassan är inte kopplad till din arbetsgivare utan till dig som person. Du kan vara kvar i ${akassa.name} även om du byter arbetsplats.\n\nEtt byte av a-kassa kan vara aktuellt om du byter yrkesområde och vill tillhöra en annan a-kassa.`
-                        },
-                        {
-                            question: `Vad händer om jag går ur ${akassa.name} och blir arbetslös?`,
-                            answer: `Om du inte är medlem i en a-kassa när du blir arbetslös har du normalt inte rätt till inkomstbaserad ersättning. För att få full ersättning igen behöver du vanligtvis:\n\n* vara medlem i en a-kassa i minst 12 månader\n* uppfylla arbetsvillkoret`
-                        },
-                        {
-                            question: `Kan jag gå ur ${akassa.name} och byta till en annan a-kassa?`,
-                            answer: `Ja. Om du vill byta a-kassa är det viktigt att inte själv avsluta medlemskapet i ${akassa.name} först. Ansök istället om medlemskap i den nya a-kassan. Den nya a-kassan sköter då överflyttningen så att din medlemstid kan räknas vidare.`
-                        },
-                        {
-                            question: `Får jag tillbaka avgiften om jag går ur ${akassa.name}?`,
-                            answer: `Nej. Medlemsavgiften betalas normalt månadsvis och återbetalas vanligtvis inte, även om du avslutar medlemskapet mitt i en betalningsperiod.`
-                        },
-                        {
-                            question: `Påverkas inkomstförsäkringen om jag går ur ${akassa.name}?`,
-                            answer: `Ja. De flesta inkomstförsäkringar kräver att du är medlem i en a-kassa. Om du går ur ${akassa.name} kan även eventuell inkomstförsäkring upphöra att gälla.`
-                        },
-                        {
-                            question: `När kan det vara olämpligt att gå ur ${akassa.name}?`,
-                            answer: `Det kan innebära en ekonomisk risk att stå utan a-kassa om du exempelvis:\n\n* har en tidsbegränsad anställning\n* arbetar som konsult eller egenföretagare\n* befinner dig i en osäker arbetssituation\n\nA-kassan är grunden för ersättning vid arbetslöshet.`
-                        }
-                    ]} />
+                    <FaqAccordion items={faqItems} />
 
                     <div className="mt-12 p-6 bg-blue-50 rounded-xl text-center">
                         <p className="text-blue-900 font-medium text-lg mb-4">

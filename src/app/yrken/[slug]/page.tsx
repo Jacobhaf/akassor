@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, HelpCircle, Briefcase, RefreshCw, ArrowRight, ShieldCheck, Info } from "lucide-react";
 
+import JsonLd from "@/components/JsonLd";
+
 interface Props {
     params: {
         slug: string;
@@ -20,14 +22,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
+    const prioritySlugs = [
+        'sjukskoterska',
+        'lagerarbetare',
+        'elektriker',
+        'frisor',
+        'barnskotare',
+        'snickare',
+        'saljare',
+        'ingenjor',
+        'vaktmastare',
+        'lastbilschauffor'
+    ];
+
+    const isPriority = prioritySlugs.includes(yrke.slug);
+
+    // Aggressive title for priority professions
+    const title = isPriority
+        ? `Bästa a-kassan för ${yrke.name} 2026 – Jämför & Hitta rätt`
+        : `A-kassa för ${yrke.name} 2026 – vilken ska du välja?`;
+
     return {
-        title: `A-kassa för ${yrke.name} 2026 – vilken ska du välja?`,
+        title: title,
         description: `Se vilken a-kassa som passar ${yrke.name}. Jämför alternativ, läs tips och byt a-kassa utan glapp. Gratis oberoende guide för 2026.`,
         alternates: {
             canonical: `/yrken/${yrke.slug}`,
         },
         openGraph: {
-            title: `A-kassa för ${yrke.name} 2026 – vilken ska du välja?`,
+            title: title,
             description: `Se vilken a-kassa som passar ${yrke.name}. Jämför alternativ, läs tips och byt a-kassa utan glapp. Gratis guide.`,
             url: `https://www.valjaakassa.se/yrken/${yrke.slug}`,
             images: [
@@ -72,7 +94,7 @@ export default function YrkePage({ params }: Props) {
             a: `Den a-kassa som oftast rekommenderas för ${yrke.name} är ${akassa.name}. Detta beror på att de har stor erfarenhet av branschen och organiserar många som arbetar inom liknande områden. Du kan dock välja en annan kassa om du uppfyller deras medlemsvillkor.`
         },
         {
-            q: "Can jag byta a-kassa om jag byter jobb?",
+            q: "Kan jag byta a-kassa om jag byter jobb?",
             a: "Ja, det är absolut möjligt att byta a-kassa. Om du byter jobb till en helt annan bransch kan det vara klokt att se över om en annan kassa passar bättre. Kom ihåg att göra bytet utan glapp för att behålla din intjänade medlemstid."
         },
         {
@@ -89,8 +111,22 @@ export default function YrkePage({ params }: Props) {
         }
     ];
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.a
+            }
+        }))
+    };
+
     return (
         <main className="min-h-screen bg-slate-50">
+            <JsonLd data={faqSchema} />
             {/* Hero Section */}
             <div className="relative isolate overflow-hidden bg-[#0B1B3F] py-20 sm:py-24">
                 <div className="absolute inset-0 -z-10 h-full w-full">
@@ -225,6 +261,19 @@ export default function YrkePage({ params }: Props) {
                                 </div>
                             </div>
 
+                            <div className="mt-8 pt-8 border-t border-white/10">
+                                <h4 className="font-bold text-sm mb-4">Bra resurser</h4>
+                                <div className="flex flex-col gap-3">
+                                    <Link href="/jamfor" className="flex items-center justify-between p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all group">
+                                        <span className="text-xs font-medium text-blue-300 group-hover:text-white">Jämför alla a-kassor</span>
+                                        <ArrowRight className="w-3 h-3 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                    <Link href="/byta-a-kassa" className="flex items-center justify-between p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all group">
+                                        <span className="text-xs font-medium text-blue-300 group-hover:text-white">Guide: Byta a-kassa</span>
+                                        <ArrowRight className="w-3 h-3 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                </div>
+                            </div>
                             <div className="mt-8 pt-8 border-t border-white/10">
                                 <h4 className="font-bold text-sm mb-4">Relaterade yrken</h4>
                                 <div className="flex flex-col gap-2">
