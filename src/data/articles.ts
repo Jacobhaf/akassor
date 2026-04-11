@@ -62,7 +62,7 @@ const rawArticles: Article[] = [
 
       <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Begär arbetsgivarintyg direkt</h2>
       <p>Din tidigare arbetsgivare är skyldig att lämna arbetsgivarintyg. Det är detta dokument som avgör hur mycket pengar du får.</p>
-      <p>Be om det så tidigt som möjligt, helst via den digitala tjänsten Arbetsgivarintyg.nu. Väntar du här kan hela din ersättning bli försenad.</p>
+      <p>Be om det så tidigt som möjligt, helst via den digitala tjänsten <a href="https://www.arbetsgivarintyg.nu" rel="nofollow" class="text-blue-600 hover:underline">Arbetsgivarintyg.nu</a>. Väntar du här kan hela din ersättning bli försenad.</p>
 
       <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Uppdatera CV och börja söka jobb direkt</h2>
       <p>Många gör misstaget att vänta tills allt administrativt är klart innan de börjar söka jobb. Det finns ingen anledning att vänta.</p>
