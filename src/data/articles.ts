@@ -49,7 +49,7 @@ const rawArticles: Article[] = [
         Att bli arbetslös kan kännas som att mattan rycks undan. Samtidigt finns det en tydlig väg framåt om du gör rätt saker från början. Den här guiden är skriven för dig som vill få kontroll direkt, säkra din ersättning och komma igång med nästa steg utan onödiga misstag.
       </p>
 
-      <p>Det viktigaste att förstå är att tid spelar roll. Det du gör första dagen påverkar både din ekonomi och dina möjligheter framåt.</p>
+      <p>Det viktigaste att förstå är att tid spelar roll. Det du gör första dagen påverkar både din ekonomi och dina möjligheter framåt. För en interaktiv och personlig <a href="https://snabbcheck.se/" class="text-blue-600 hover:underline">arbetslös checklista</a> rekommenderar vi även Snabbcheck som hjälper dig att snabbt få överblick.</p>
 
       <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Skriv in dig första dagen – annars riskerar du pengar</h2>
       <p>Det absolut viktigaste steget är att skriva in dig hos Arbetsförmedlingen din första arbetslösa dag. Missar du det kan du gå miste om ersättning från a kassan för de dagarna.</p>
