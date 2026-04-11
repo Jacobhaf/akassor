@@ -15,6 +15,107 @@ export interface Article {
 
 const rawArticles: Article[] = [
   {
+    slug: "checklista-arbetslos",
+    title: "Checklista arbetslös – exakt vad du ska göra dag 1 och framåt",
+    summary: "Komplett checklista när du blir arbetslös. Så skriver du in dig hos Arbetsförmedlingen, ansöker om a kassa och kommer igång med jobbsökandet direkt.",
+    image: "/artiklar/checklista-arbetslos.png",
+    publishedAt: "2026-04-11",
+    metaTitle: "Checklista arbetslös 2026 – steg för steg till a kassa och nytt jobb",
+    metaDescription: "Komplett checklista när du blir arbetslös. Så skriver du in dig hos Arbetsförmedlingen, ansöker om a kassa och kommer igång med jobbsökandet direkt.",
+    faq: [
+      {
+        question: "När ska man skriva in sig på Arbetsförmedlingen?",
+        answer: "Du ska skriva in dig din första arbetslösa dag. Väntar du kan du förlora ersättning."
+      },
+      {
+        question: "Måste man vara med i a kassa?",
+        answer: "Nej, men det ger betydligt högre ersättning. Annars kan du ansöka via Alfa kassan."
+      },
+      {
+        question: "Hur lång tid tar det att få ersättning?",
+        answer: "Det varierar men ofta flera veckor. Därför är det viktigt att ansöka direkt."
+      },
+      {
+        question: "Vad händer om jag inte aktivitetsrapporterar?",
+        answer: "Du riskerar att bli av med ersättning under en period."
+      },
+      {
+        question: "Kan man jobba extra samtidigt?",
+        answer: "Ja, men du måste rapportera alla inkomster till din a kassa."
+      }
+    ],
+    content: `
+      <p class="text-xl leading-relaxed text-slate-600 mb-12 italic border-l-4 border-blue-500 pl-6">
+        Att bli arbetslös kan kännas som att mattan rycks undan. Samtidigt finns det en tydlig väg framåt om du gör rätt saker från början. Den här guiden är skriven för dig som vill få kontroll direkt, säkra din ersättning och komma igång med nästa steg utan onödiga misstag.
+      </p>
+
+      <p>Det viktigaste att förstå är att tid spelar roll. Det du gör första dagen påverkar både din ekonomi och dina möjligheter framåt.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Skriv in dig första dagen – annars riskerar du pengar</h2>
+      <p>Det absolut viktigaste steget är att skriva in dig hos Arbetsförmedlingen din första arbetslösa dag. Missar du det kan du gå miste om ersättning från a kassan för de dagarna.</p>
+      <p>Det här är inte en formalitet utan en grundförutsättning för att få ersättning. Samtidigt skyddar du din SGI hos Försäkringskassan.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Ansök om a kassa direkt</h2>
+      <p>När du är inskriven är nästa steg att ansöka om ersättning. Det gör du via din a kassa eller via Sveriges a-kassor om du behöver hitta rätt.</p>
+      <p>Om du inte är medlem kan du fortfarande ansöka via Alfa-kassan.</p>
+      <p>Många väntar här i onödan. Det är ett misstag. Din ansökan kan ta tid att handlägga, så ju tidigare du skickar in den desto bättre.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Begär arbetsgivarintyg direkt</h2>
+      <p>Din tidigare arbetsgivare är skyldig att lämna arbetsgivarintyg. Det är detta dokument som avgör hur mycket pengar du får.</p>
+      <p>Be om det så tidigt som möjligt, helst via den digitala tjänsten Arbetsgivarintyg.nu. Väntar du här kan hela din ersättning bli försenad.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Uppdatera CV och börja söka jobb direkt</h2>
+      <p>Många gör misstaget att vänta tills allt administrativt är klart innan de börjar söka jobb. Det finns ingen anledning att vänta.</p>
+      <p>Se över ditt CV direkt. Tydlighet slår allt. Vad du gjort, vad du kan och vad du bidragit med ska fram snabbt.</p>
+      <p>Ett bra personligt brev är inte långt. Det är relevant. <a href="/artiklar/hur-skriver-man-ett-bra-cv" class="text-blue-600 hover:underline">Läs vår guide om hur du skriver ett bra CV här</a>.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Aktivitetsrapportera varje månad</h2>
+      <p>När du är inskriven behöver du visa att du aktivt söker jobb. Det gör du genom aktivitetsrapporten hos Arbetsförmedlingen.</p>
+      <p>Missar du rapporteringen riskerar du att bli av med ersättning. Det här är en av de vanligaste orsakerna till problem.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Meddela förändringar direkt</h2>
+      <p>Får du jobb, börjar studera eller blir sjuk måste du meddela både Arbetsförmedlingen och din a kassa.</p>
+      <p>Det gäller även mindre saker som extrainkomster. Att vara transparent här är avgörande för att undvika återkrav.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Under uppsägningstiden – det många missar</h2>
+      <p>Redan innan du blir arbetslös finns det saker du bör göra.</p>
+      <p>Be om ett tjänstgöringsbetyg. Det kan bli avgörande i framtida rekryteringar. Ett bra betyg stärker din position mer än många tror.</p>
+      <p>Om du blivit uppsagd på grund av arbetsbrist har du också rätt att söka jobb på arbetstid. Utnyttja det.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Planeringssamtalet – din riktning framåt</h2>
+      <p>När du skriver in dig får du ofta ett planeringssamtal. Det är här du sätter riktningen.</p>
+      <p>Förbered dig genom att tänka igenom vad du vill göra, inte bara vad du har gjort. Ju tydligare du är här, desto bättre stöd får du.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Hur många jobb måste man söka?</h2>
+      <p>Det finns inget exakt antal som gäller för alla. Det avgörs i din planering tillsammans med Arbetsförmedlingen.</p>
+      <p>Det viktiga är att du söker jobb aktivt och kan visa det. Kvalitet är lika viktigt som antal.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Så maxar du dina chanser att få jobb snabbt</h2>
+      <p>Det som fungerar bäst i praktiken är en kombination av struktur och initiativ.</p>
+      <p>Sök jobb löpande men kontakta också företag direkt. Många jobb tillsätts utan att annonseras.</p>
+      <p>Använd nätverk. Tidigare kollegor, kontakter och branschforum är ofta snabbare vägar än traditionella ansökningar.</p>
+
+      <div class="bg-slate-900 rounded-2xl p-8 my-12 text-white shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <h3 class="text-white text-2xl font-semibold mb-6">Läs vidare</h3>
+        <ul class="space-y-4 relative z-10">
+          <li>
+            <a href="https://valjaakassa.se/guider/valja-akassa" class="flex items-center gap-3 text-blue-300 hover:text-white transition-colors">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              Läs mer om hur du väljer rätt a-kassa
+            </a>
+          </li>
+          <li>
+            <a href="https://valjaakassa.se/guider/ersattning-akassa" class="flex items-center gap-3 text-blue-300 hover:text-white transition-colors">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              Så fungerar ersättning från a-kassan
+            </a>
+          </li>
+        </ul>
+      </div>
+    `
+  },
+  {
     slug: "bakgrundskontroll-vid-jobbsokning",
     title: "Bakgrundskontroll vid jobbsökning – komplett guide till vad arbetsgivare faktiskt ser",
     summary: "Lär dig vad en bakgrundskontroll innebär, vad arbetsgivare får kontrollera, vilka rättigheter du har och hur du kan ligga steget före i rekryteringen.",
@@ -492,10 +593,15 @@ const rawArticles: Article[] = [
         </div>
       </div>
 
-      <div class="bg-indigo-900 text-white p-8 rounded-2xl text-center mt-12">
-        <h3 class="text-2xl font-bold mb-4 text-white">Vill du veta hur bra ditt CV är?</h3>
-        <p class="mb-6 opacity-90">Vår nya AI-tjänst granskar ditt CV på sekunder och ger dig konkreta förbättringsförslag. Helt gratis.</p>
-        <a href="/hur-bra-ar-mitt-cv" class="inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition-colors">Testa CV-analys nu</a>
+      <div class="bg-indigo-900 text-white p-10 rounded-[2.5rem] text-center mt-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <h3 class="text-3xl font-black mb-4 text-white uppercase tracking-tight">Klar att ta nästa steg?</h3>
+        <p class="mb-8 text-indigo-100 text-lg font-medium max-w-xl mx-auto">Våra AI-verktyg hjälper dig att både granska ditt nuvarande CV och bygga ett helt nytt från grunden.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/hur-bra-ar-mitt-cv" class="w-full sm:w-auto bg-white text-indigo-900 font-black py-4 px-8 rounded-2xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl">Granska mitt CV</a>
+          <a href="/verktyg/cv-byggare" class="w-full sm:w-auto bg-blue-600 text-white font-black py-4 px-8 rounded-2xl hover:bg-blue-700 transition-all hover:scale-105 shadow-xl border border-blue-400/30">Bygg nytt CV med AI</a>
+        </div>
       </div>
     `
   },

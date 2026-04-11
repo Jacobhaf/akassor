@@ -228,17 +228,18 @@ export default function Home() {
                     <h2 className="text-3xl font-bold text-center mb-16">Relaterade guider</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                         {[
+                            { title: "AI CV-Byggare (Nyhet)", href: "/verktyg/cv-byggare" },
                             { title: "Byta a-kassa", href: "/byta-a-kassa" },
+                            { title: "Checklista: Arbetslös dag 1", href: "/artiklar/checklista-arbetslos" },
                             { title: "Inkomstförsäkring", href: "/inkomstforsakring" },
                             { title: "A-kassa regler 2026", href: "/akassa-regler" },
                             { title: "Karens och ersättning", href: "/aktivitetsstod" },
                             { title: "A-kassa för studenter", href: "/artiklar/a-kassa-for-studenter" },
-                            { title: "A-kassa för egenföretagare", href: "/artiklar/a-kassa-for-egenforetagare-och-foretagare" }
                         ].map((guide, i) => (
                             <Link
                                 key={i}
                                 href={guide.href}
-                                className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all text-center font-bold text-slate-800"
+                                className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all text-center font-bold text-slate-800 text-sm md:text-base"
                             >
                                 {guide.title}
                             </Link>

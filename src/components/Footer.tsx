@@ -113,7 +113,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/artiklar/hur-skriver-man-ett-bra-cv" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">
+                                <Link href="/verktyg/cv-byggare" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">
+                                    AI CV-Byggare (Nyhet)
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/artiklar/hur-skriver-man-ett-bra-cv" className="text-slate-300 hover:text-white transition-colors text-sm">
                                     Guide: Skriva CV
                                 </Link>
                             </li>
