@@ -805,8 +805,54 @@ const rawArticles: Article[] = [
         <li><strong>Dubbelkolla datumen:</strong> Se till att utträdet ur den gamla kassan sker sista dagen i månaden och inträdet i den nya sker första dagen i nästa månad.</li>
       </ol>
 
+      </ol>
+
       <h2>Vad händer om jag glömmer betala eller får glapp?</h2>
       <p>Om du får ens en dags glapp mellan dina medlemskap nollställs din medlemsperiod. Det innebär att du måste vara medlem i 12 nya månader innan du har rätt till inkomstbasrad ersättning igen. Var därför extremt noggrann.</p>
+    `
+  },
+  {
+    slug: "influencer-akassa",
+    title: "A-kassa för influencers och kreatörer – så fungerar det 2026",
+    summary: "Att navigera i a-kassans regler som influencer eller youtuber innebär flera utmaningar. Lär dig hur din verksamhet bedöms, riskerna med att uppdatera kanaler och hur du säkrar din inkomst.",
+    image: "/artiklar/influencer_akassa.png",
+    publishedAt: "2026-04-12",
+    metaTitle: "A-kassa för influencer & youtuber 2026 – Regler och tips",
+    metaDescription: "Fungerar a-kassan för influencers och youtubers? Ja, men regelverket är komplext. Vi förklarar bedömningen av inkomster och riskerna med sociala medier.",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-600 mb-12 italic border-l-4 border-blue-500 pl-6">
+        För den som arbetar med sociala medier kan gränsen mellan fritid och arbete vara otydlig. När det handlar om rätten till arbetslöshetsersättning blir dock denna osynliga linje avgörande. Det som känns som en harmlös uppdatering för att hålla engagemanget uppe kan i värsta fall leda till stora återkrav. Här får du klarhet i vad som gäller för dig.
+      </p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Hur systemet ser på ditt yrke</h2>
+      <p>I grund och botten är ersättningssystemet byggt för traditionella anställningar. För kreatörer uppstår ofta frågor, vilket märks då sökningar på <em>akassa influencer</em> och <em>youtuber a kassa</em> stadigt ökar. Huvudregeln är att du bedöms enligt reglerna för företagande eller yrkesmässig hobby. Om du tjänar pengar via exempelvis partnerprogram, visningar eller sponsrade inlägg ser systemet det som att du driver en rörelse.</p>
+      
+      <p>För att få ut din ersättning krävs normalt sett att denna rörelse läggs vilande alternativt upphör helt. Det betyder ett absolut avbrott från allt som i förlängningen bygger varumärke eller genererar intäkter. Att bara administrera kanaler eller söka framtida samarbeten räknas som arbete även om det inte ger pengar i stunden.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Risken att förlora allt vid publicering</h2>
+      <p>Att pausa sitt content kan kännas som karriärmässigt självmord för en kreatör. Att kombinera vilande företag och fortsatt närvaro online är dock en mycket riskabel väg. Fortsätter du publicera material eller starta nya koncept under din tid som arbetssökande försvinner din rätt till stöd på dagen.</p>
+      
+      <p>Många förstår inte denna koppling och riskerar rejäla återkrav. Om det framkommer att du underhållit dina kanaler samtidigt som du tagit emot arbetslöshetsstöd blir du skyldig att betala tillbaka hela summan. Det enda trygga tillvägagångssättet är absolut transparens mot handläggaren innan du vidtar några som helst åtgärder på dina konton.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Var noga med pappersarbetet</h2>
+      <p>En modern kreatör har ofta ojämna intäkter, särskilt under uppstartsfasen. Att söka rätt på <em>egenföretagare a kassa sociala medier</em> leder ofta till samma råd: dokumentation är helt ovärderligt. Spara varenda litet intyg, mailkonversationer och plattformskvitton.</p>
+
+      <p>För att bevisa att ditt inkomstbringande arbete verkligen upphört måste du kunna styrka exakt när samarbeten avslutades och när sista utbetalningen gjordes. Ordning bland pappren förkortar handläggningstiden markant och motverkar missförstånd kring vilande perioder.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Utbrändhet och skiftande intäkter</h2>
+      <p>En annan tydlig trend inom branschen är att ett stort antal aktörer lämnar den digitala scenen. Det är en spännande bransch men de skiftande algoritmernas krav och den ekonomiska osäkerheten orsakar tyvärr utbrändhet och stress.</p>
+
+      <p>En betydande andel väljer därför att byta spår de första åren för att hitta en stabilare grund att stå på. Givetvis finns det framgångssagor, men spektrumet av intäkter är brett. Vill du sätta nivån i perspektiv går det att studera faktiska utbetalningar hos några av Sveriges <a href="https://tvkandis.se/influencer-loner-sverige" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">mest kända influencers</a>.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Nya medlemsregler från oktober 2025</h2>
+      <p>Ett viktigt skifte för alla på arbetsmarknaden inträder den första oktober 2025, vilket gör frågan om <em>influencer a kassa</em> och <em>a kassa influencer</em> ännu mer aktuell. Då ändras reglerna så att just längden på ditt medlemskap får mycket större tyngd vid beräkningen av din ersättning.</p>
+
+      <p>För personer i mediebranschen betyder detta att ett tidigt medlemskap kan utgöra stor skillnad. Om du väntar tills varningsklockorna redan ringer riskerar du en betydligt lägre täckning eftersom systemet kommer att prioritera dem som visat långsiktighet genom att vara med länge.</p>
+
+      <h2 class="text-2xl font-semibold text-slate-900 mb-4 mt-12">Välj rätt partner för din framtid</h2>
+      <p>För att verkligen få ro i ditt kreativa värv måste den ekonomiska bottenplattan vara säkrad. Det handlar om att hitta en organisation som faktiskt begriper din unika arbetssituation och inte bara antar att du sitter på hundra procent tillsvidareanställning.</p>
+
+      <p>Ett mycket relevant och seriöst alternativ för dig som stundtals fakturerar och stundtals tar frilansuppdrag är <a href="https://www.valjaakassa.se/akassa/smaforetagarnas-akassa" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">Småföretagarnas a-kassa</a>, vilka förstår de särskilda omständigheter som följer med en rörlig vardag. Om du skyddar dig i tid kan du fortsätta skapa med glädje och känna dig säker oavsett hur branschen vänder.</p>
     `
   }
 ];
